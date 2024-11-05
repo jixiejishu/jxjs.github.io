@@ -52,10 +52,10 @@ http://xhztv.top/dc
 
 常用导航
 饭太硬（本身也是接口）
-https://www.饭太硬com
+https://www.饭太硬.com
 
 肥猫宝贝（本身也是接口）
-https://肥猫宝贝.com
+https://肥猫.com
 
 
 
