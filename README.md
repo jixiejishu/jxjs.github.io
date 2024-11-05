@@ -3,10 +3,13 @@
 
 1.网络搜集线路
 1.1多线路（TVbox助手线路 +部分小盒酷玩 +部分网络搜集线路）
+
 1.多线路（TVbox助手线路 +部分小盒酷玩 +部分网络搜集线路）
 适合除了TVbox taka99 这种单线路软件之外的所有软件。
+
 主接口(codeberg)
 https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dxl/T&S.txt
+
 备用接口(Github 借用刘老备接口使用的加速)
 https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt
 
@@ -16,6 +19,7 @@ https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26
 
 主接口(codeberg)
 https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dck/duo.txt
+
 备用接口(Github 借用刘老备接口使用的加速)
 https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt
 
@@ -24,6 +28,7 @@ https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.
 
 单线路主接口(codeberg)
 https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dan/单线路.txt
+
 单线路备用接口(Github 借用刘老备接口使用的加速)
 https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt
 
@@ -53,8 +58,9 @@ https://肥猫宝贝.com
 3..0常用软件下载的网站
 
 3.1影用仓库
-网址 [https://www.wmdz.com](https://www.wmdz.com  "最全的影用软件")
+网址 https://www.wmdz.com
 最全的软件汇总有很多软件的下载分类在不同的位置。序号1的是城通网盘，下载速度慢，每次只能下载一个。
+
 序号2的是蓝奏云，下载速度快。一般软件下载使用序号2的蓝奏云，一般密码都是wmdz。部分特别老的内容是351184。
 
 3.2聚玩盒子
