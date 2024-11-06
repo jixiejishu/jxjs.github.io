@@ -91,14 +91,14 @@ TVbox资源下载  http://bbs.qiqiv.cn/thread-11997-1-1.html
 
 3.常用工具
 codebergpage平台：
+https://jixiejishu.codeberg.page/lib/推荐软件与简介.html
+https://jixiejishu.codeberg.page/lib/蓝奏云搜集软件下载.html
+https://jixiejishu.codeberg.page/lib/机顶盒模拟器的选择.html
 
-https://codeberg.org/jixiejishu/pages/raw/branch/main/推荐软件与简介.txt
-https://codeberg.org/jixiejishu/pages/raw/branch/main/蓝奏云搜集软件下载.txt
-https://codeberg.org/jixiejishu/pages/raw/branch/main/机顶盒模拟器的选择.txt
+
 Githubpage平台(手机可能打不开）：
-https://raw.kkgithub.com/jixiejishu/jxjs.github.io/main/推荐软件与简介.txt
-https://raw.kkgithub.com/jixiejishu/jxjs.github.io/main/蓝奏云搜集软件下载.txt
-https://raw.kkgithub.com/jixiejishu/jxjs.github.io/main/机顶盒模拟器的选择.txt
-
+https://jixiejishu.github.io/jxjs.github.io/推荐软件与简介.html
+https://jixiejishu.github.io/jxjs.github.io/蓝奏云搜集软件下载.html
+https://jixiejishu.github.io/jxjs.github.io/机顶盒模拟器的选择.html
 
 
