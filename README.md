@@ -97,8 +97,8 @@ https://jixiejishu.codeberg.page/lib/机顶盒模拟器的选择.html
 
 
 Githubpage平台(手机可能打不开）：
-https://jixiejishu.github.io/jxjs.github.io/推荐软件与简介.html
-https://jixiejishu.github.io/jxjs.github.io/蓝奏云搜集软件下载.html
-https://jixiejishu.github.io/jxjs.github.io/机顶盒模拟器的选择.html
+https://jixiejishu.github.io/jxjs.github.io/lib/推荐软件与简介.html
+https://jixiejishu.github.io/jxjs.github.io/lib/蓝奏云搜集软件下载.html
+https://jixiejishu.github.io/jxjs.github.io/lib/机顶盒模拟器的选择.html
 
 
