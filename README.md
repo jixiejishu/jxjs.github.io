@@ -39,13 +39,15 @@ https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.
 
 支持TVbox taka99gen99等单仓库软件
 
-单线路主接口(codeberg)
+单线路主接口(codeberg page手机一般可以访问)
 
-https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dan/单线路.txt
+https://jixiejishu.codeberg.page/jk/dan/单线路.txt
 
-单线路备用接口(Github 借用刘老备接口使用的加速)
+单线路备用接口(Github page手机可能不支持)
 
-https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt
+https://jixiejishu.github.io/jxjs.github.io/jk/dan/单线路.txt
+
+
 
 
 
