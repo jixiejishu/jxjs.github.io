@@ -1,8 +1,12 @@
 常用TVbox-fongmi接口
 codeberg page（手机可以正常访问）
+
+建议手机上把这个连接复制到浏览器上使用。微信和QQ内打开部分内容访问有问题
+
 https://jixiejishu.codeberg.page/
 
 Githubpage（部分手机无法正常访问）
+
 https://jixiejishu.github.io/jxjs.github.io
 
 
