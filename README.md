@@ -20,7 +20,7 @@ https://jixiejishu.github.io/jxjs.github.io
 适合除了TVbox taka99 这种单线路软件之外的所有软件。
 
 主接口(codeberg)
-https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dxl/T&S.txt
+https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dxl/T%26S.txt
 
 备用接口(Github 借用刘老备接口使用的加速)
 
