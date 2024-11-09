@@ -1,4 +1,4 @@
-常用TVbox-fongmi接口 
+常用TVbox-fongmi接口以及影音网站汇总
 
 codeberg page（手机可以正常访问）
 
@@ -26,9 +26,13 @@ https://jixiejishu.github.io/jxjs.github.io
 
 主接口(codeberg)
 
+手机长按，弹出界面选择复制
+
 https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dxl/T%26S.txt
 
 备用接口(Github 借用刘老备接口使用的加速)
+
+手机长按，弹出界面选择复制
 
 https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt
 
@@ -40,9 +44,13 @@ https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26
 
 主接口(codeberg)
 
+手机长按，弹出界面选择复制
+
 https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dck/duo.txt
 
 备用接口(Github 借用刘老备接口使用的加速)
+
+手机长按，弹出界面选择复制
 
 https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt
 
