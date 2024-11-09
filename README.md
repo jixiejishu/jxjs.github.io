@@ -149,6 +149,12 @@ codebergpage平台：
 
 https://jixiejishu.codeberg.page/lib/推荐软件与简介.html
 
+网盘说明
+
+自己搜集的软件没时间随时更新，如果不够新可以到前面的网站去下载新版。
+
+手机版的一般可以在设置-关于里面更新。TV版的需要自己下载安装新版。
+
 https://jixiejishu.codeberg.page/lib/蓝奏云搜集软件下载.html
 
 https://jixiejishu.codeberg.page/lib/机顶盒模拟器的选择.html
@@ -158,8 +164,37 @@ Githubpage平台(手机可能打不开）：
 
 https://jixiejishu.github.io/jxjs.github.io/lib/推荐软件与简介.html
 
+网盘说明
+
+自己搜集的软件没时间随时更新，如果不够新可以到前面的网站去下载新版。
+
+手机版的一般可以在设置-关于里面更新。TV版的需要自己下载安装新版。
+
 https://jixiejishu.github.io/jxjs.github.io/lib/蓝奏云搜集软件下载.html
 
 https://jixiejishu.github.io/jxjs.github.io/lib/机顶盒模拟器的选择.html
+
+
+4.常见问题
+
+1）电视节目类不能播放
+
+电视节目类员管控很严，经常失效。建议使用点播里面的电视源（一般是好趣网）。
+
+2）大部分点播节目也不能看
+
+如果点击很多个接口，节目都不能播放一般是下面的原因。少数情况是部分接口本身就有问题了。
+
+接口原因：接口需要更新了。一般的软件是在设置内，点击“缓存”按钮清理缓存。
+
+TVbox taka99gen 点击左上角标题 清除缓存。
+
+软件原因：因为一些技术原因，接口搭配新的软件才能使用，旧版软件无法支持
+
+3）安卓4系统
+
+由于接口一直在更新。旧版软件慢慢的就不能播放一些内容了。因此建议使用还在维护更新的软件。
+
+比如OK版影视  TVbox taka99gen 
 
 
