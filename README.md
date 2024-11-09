@@ -94,14 +94,19 @@ https://肥猫.com
 2..0常用软件下载的网站
 
 2.1影用仓库
+
 网址：https://www.wmdz.com 
+
 最全的软件汇总有很多软件的下载分类在不同的位置。序号1的是城通网盘，下载速度慢，每次只能下载一个。
 
 序号2的是蓝奏云，下载速度快。一般软件下载使用序号2的蓝奏云，一般密码都是wmdz。部分特别老的内容是351184。
 
 2.2聚玩盒子
+
 https://juwanhezi.com
+
 有很多软件和介绍 ，但是软件介绍不全 ，有的比较夸张。有很多苹果手机系统的伪装上架的软件，
+
 按提示操作就可以用了。 数据源和直播源里面一些内容更新不及时失效了。
 
 点播接口:https://juwanhezi.com/other/jsonlist   
@@ -110,27 +115,51 @@ https://juwanhezi.com
 
 
 2.3iptvindex
+
 网址：https://www.iptvindex.com
+
 内容分类，比较全，更新比较快。
 
 2.4 奇奇
 微信公众号奇奇乐分享/奇奇老友会/奇友会
+
 资源推荐合集：  http://qiqiv.cn/zy.php 
+
 公众号奇奇乐老友会/奇友会内看广告后查看内容的小程序，获取密码
+
 TVbox资源下载  http://bbs.qiqiv.cn/thread-11997-1-1.html
+
+蓝奏云网盘（本地包、蜂蜜、壳助手密码到公众号里面看广告获取密码）
+
+https://qiqi2020.lanzouw.com/b09svqv1c
+
+夸克网盘,夸克浏览器（手机）或者夸克网盘（电脑）下载
+
+https://pan.quark.cn/s/5cb9978c7a6a#/list/share 
+
+UC网盘,夸克浏览器（手机）或者夸克网盘（电脑）下载
+
+https://drive.uc.cn/s/e2c474c324574#/list/share
 
 
 
 3.常用工具
+
 codebergpage平台：
+
 https://jixiejishu.codeberg.page/lib/推荐软件与简介.html
+
 https://jixiejishu.codeberg.page/lib/蓝奏云搜集软件下载.html
+
 https://jixiejishu.codeberg.page/lib/机顶盒模拟器的选择.html
 
 
 Githubpage平台(手机可能打不开）：
+
 https://jixiejishu.github.io/jxjs.github.io/lib/推荐软件与简介.html
+
 https://jixiejishu.github.io/jxjs.github.io/lib/蓝奏云搜集软件下载.html
+
 https://jixiejishu.github.io/jxjs.github.io/lib/机顶盒模拟器的选择.html
 
 
