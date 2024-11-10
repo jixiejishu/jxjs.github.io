@@ -219,3 +219,29 @@ Githubpage平台(手机可能打不开）：
 
 https://jixiejishu.github.io/jxjs.github.io/lib/自用软件.html
 
+6.野草助手
+
+比较热门的一款软件分享平台，一款应用安装和分享工具。用户上传应用本网站后得到口令，
+
+其他用户输入该口令后自动安装该口令对应应用未登录用户临时存储 24 小时，
+
+登录用户临时存储 7 天，临时存储免费。目前只支持安卓软件。有TV版和触屏版两个版本
+
+口令主义字母大小写，这个软件大写和小写不同
+
+官网
+
+https://www.yecao.net/
+
+网页版（下面也有一些常用的口令）
+
+https://www.yecao.net/command//
+
+客户端下载（下面也有一些常用的口令）
+
+https://www.yecao.net/download/
+
+百度贴吧*(有很多口令，每天会更新）
+
+https://tieba.baidu.com/f?kw=%E9%87%8E%E8%8D%89%E5%8A%A9%E6%89%8B&ie=utf-8
+
