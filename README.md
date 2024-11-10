@@ -206,3 +206,16 @@ TVbox taka99gen 点击左上角标题 清除缓存。
 比如OK版影视  TVbox taka99gen 
 
 
+
+5.自用软件
+
+内容和《蓝奏云搜集软件下载》差不多，选取常用的一些软件
+
+codebergpage平台：
+
+https://jixiejishu.codeberg.page/lib/自用软件.html
+
+Githubpage平台(手机可能打不开）：
+
+https://jixiejishu.github.io/jxjs.github.io/lib/自用软件.html
+
