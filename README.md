@@ -14,6 +14,10 @@ Githubpage（部分手机无法正常访问）
 
 https://jixiejishu.github.io/jxjs.github.io
 
+接口使用：由于许多接口对影视（fongmi）进行适配，建议首选 影视（fongmi）、OK版影视（OK版fongmi）
+
+、Easybox（仅有手机版）；其中521等二次开发版有可能不兼容。其它的软件很多接口有一部分功能无法使用。
+
 
 
 1.网络搜集线路
