@@ -88,10 +88,10 @@ https://fmbox.cc
 http://47.99.102.252/xc.json 
  🐹T┃喵影视:
 http://meowtv.cn/tv 
- 🐹T┃青龙:
-https://codeberg.org/yiwu369/6758/raw/branch/main/1.json 
- 🐹T┃青龙/备:
+ 🐹T┃青龙gitee:
 https://gitee.com/yiwu369/6758/raw/master/1.json 
+ 🐹T┃青龙codeberg:
+https://codeberg.org/33137585/6758/raw/master/1.json 
  🐹T┃天微/恒星:
 https://11256.kstore.space/TWYS/api.json 
  🐹T┃月光/宝盒:
