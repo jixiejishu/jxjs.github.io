@@ -167,6 +167,8 @@ https://jixiejishu.codeberg.page/lib/推荐软件与简介.html
 
 手机版的一般可以在设置-关于里面更新。TV版的需要自己下载安装新版。
 
+网盘内有简单的视频教程，限于网盘格式限制，需要下载之后解压播放
+
 https://jixiejishu.codeberg.page/lib/蓝奏云搜集软件下载.html
 
 https://jixiejishu.codeberg.page/lib/机顶盒模拟器的选择.html
@@ -181,6 +183,8 @@ https://jixiejishu.github.io/jxjs.github.io/lib/推荐软件与简介.html
 自己搜集的软件没时间随时更新，如果不够新可以到前面的网站去下载新版。
 
 手机版的一般可以在设置-关于里面更新。TV版的需要自己下载安装新版。
+
+网盘内有简单的视频教程，限于网盘格式限制，需要下载之后解压播放
 
 https://jixiejishu.github.io/jxjs.github.io/lib/蓝奏云搜集软件下载.html
 
