@@ -14,6 +14,11 @@ Githubpage（部分手机无法正常访问）
 
 https://jixiejishu.github.io/jxjs.github.io
 
+【腾讯文档】常用TVbox-fongmi接口以及影音网站汇总
+
+https://docs.qq.com/doc/DSXRHdURpbFN2UmR6
+
+
 接口使用：由于许多接口对影视（fongmi）进行适配，建议首选 影视（fongmi）、OK版影视（OK版fongmi）
 
 、Easybox（仅有手机版）；其中521等二次开发版有可能不兼容。其它的软件很多接口有一部分功能无法使用。
@@ -188,6 +193,35 @@ https://jixiejishu.github.io/jxjs.github.io/lib/蓝奏云搜集软件下载.html
 
 https://jixiejishu.github.io/jxjs.github.io/lib/机顶盒模拟器的选择.html
 
+腾讯文档：
+
+【腾讯文档】推荐软件与简介
+
+https://docs.qq.com/doc/DSUlNZGlUUlZ6aXlH
+
+【腾讯文档】蓝奏云搜集软件
+
+https://docs.qq.com/doc/DSVhmTGFkWXpjdHVa
+
+【腾讯文档】机顶盒模拟器的选择
+
+https://docs.qq.com/doc/DSUVOdXBiblFlVWl3
+
+金山文档
+
+【金山文档 | WPS云文档】 推荐软件与简介
+
+https://kdocs.cn/l/cglfOteufoBY
+
+【金山文档 | WPS云文档】 蓝奏云搜集软件
+
+https://kdocs.cn/l/cuYVBtKzIYXe
+
+【金山文档 | WPS云文档】 机顶盒模拟器的选择
+
+https://kdocs.cn/l/cclt8mKwYXgt
+
+
 
 4.常见问题
 
@@ -212,7 +246,6 @@ TVbox taka99gen 点击左上角标题 清除缓存。
 比如OK版影视  TVbox taka99gen 
 
 
-
 5.自用软件
 
 内容和《蓝奏云搜集软件下载》差不多，选取常用的一些软件
@@ -224,6 +257,15 @@ https://jixiejishu.codeberg.page/lib/自用软件.html
 Githubpage平台(手机可能打不开）：
 
 https://jixiejishu.github.io/jxjs.github.io/lib/自用软件.html
+
+【腾讯文档】自用软件
+
+https://docs.qq.com/doc/DSUppS3Rrb29nZ0Jm
+
+【金山文档 | WPS云文档】 文字文稿
+
+https://kdocs.cn/l/clzHBcfW3UDI
+
 
 6.野草助手
 
