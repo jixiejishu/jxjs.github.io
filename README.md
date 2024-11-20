@@ -24,8 +24,6 @@ https://jixiejishu.github.io/jxjs.github.io
 
 1.1多线路（TVbox助手线路 +部分小盒酷玩 +部分网络搜集线路）
 
-1.多线路（TVbox助手线路 +部分小盒酷玩 +部分网络搜集线路）
-
 适合除了TVbox taka99 这种单线路软件之外的所有软件。
 
 主接口(codeberg)
@@ -123,7 +121,7 @@ https://juwanhezi.com
 
 点播接口:https://juwanhezi.com/other/jsonlist   
 
-直播接口:(https://juwanhezi.com/more/live   
+直播接口:https://juwanhezi.com/more/live   
 
 
 2.3iptvindex
