@@ -28,6 +28,25 @@ https://kdocs.cn/l/cmtH0eJbE44X
 、Easybox（仅有手机版）；其中521等二次开发版有可能不兼容。其它的软件很多接口有一部分功能无法使用。
 
 
+初次使用点击这里
+
+codeberg page（手机可以正常访问）
+
+https://jixiejishu.codeberg.page/lib/首次使用.html
+
+githubpage（部分手机无法正常访问）
+
+https://jixiejishu.codeberg.page/lib/首次使用.html
+
+【腾讯文档】初次使用
+
+https://docs.qq.com/doc/DSVhBVlVQa0F2bXln
+
+【金山文档 | WPS云文档】 初次使用
+
+https://kdocs.cn/l/cjoNH5vJzrx8
+
+
 
 1.网络搜集线路
 
