@@ -169,6 +169,8 @@ TVbox资源下载  http://bbs.qiqiv.cn/thread-11997-1-1.html
 
 蓝奏云网盘（本地包、蜂蜜、壳助手密码到公众号里面看广告获取密码）
 
+蜂蜜版就是影视（fongmi），密码目前是：769
+
 https://qiqi2020.lanzouw.com/b09svqv1c
 
 夸克网盘,夸克浏览器（手机）或者夸克网盘（电脑）下载
@@ -333,4 +335,13 @@ https://www.yecao.net/download/
 百度贴吧*(有很多口令，每天会更新）
 
 https://tieba.baidu.com/f?kw=%E9%87%8E%E8%8D%89%E5%8A%A9%E6%89%8B&ie=utf-8
+
+
+7 不同品牌电视机的安装教程
+
+智能电视网（当贝的一个网站）
+
+下面的网页内有不同的品牌电视机的教程，参考这个教程安装APK就可以了
+
+https://www.znds.com/jc/
 
