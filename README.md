@@ -36,7 +36,7 @@ https://jixiejishu.codeberg.page/lib/首次使用.html
 
 githubpage（部分手机无法正常访问）
 
-https://jixiejishu.codeberg.page/lib/首次使用.html
+https://jixiejishu.github.io/jxjs.github.io/lib/首次使用.html
 
 【腾讯文档】初次使用
 
