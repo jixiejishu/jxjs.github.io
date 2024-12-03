@@ -1,350 +1,199 @@
-常用TVbox-fongmi接口以及影音网站汇总
-
-codeberg page（手机可以正常访问）
-
-建议手机上把这个连接复制到浏览器上使用。微信和QQ内打开部分内容访问有问题
-
-水平有限，网页用最简单的HTML写成，没有任何美化，凑合着用
-
-没有设计弹出页面，点击后直接进入链接的页面，后退可以返回主页面，或者重新打开链接进入主页面
-
-https://jixiejishu.codeberg.page/
-
-Githubpage（部分手机无法正常访问）
-
-https://jixiejishu.github.io/jxjs.github.io
-
-【腾讯文档】常用TVbox-fongmi接口以及影音网站汇总
-
-https://docs.qq.com/doc/DSXRHdURpbFN2UmR6
-
-【金山文档 | WPS云文档】 常用TVbox-fongmi接口以及影音网站
-
-https://kdocs.cn/l/cmtH0eJbE44X
-
-
-接口使用：由于许多接口对影视（fongmi）进行适配，建议首选 影视（fongmi）、OK版影视（OK版fongmi）
-
-、Easybox（仅有手机版）；其中521等二次开发版有可能不兼容。其它的软件很多接口有一部分功能无法使用。
-
-
-初次使用点击这里
-
-codeberg page（手机可以正常访问）
-
-https://jixiejishu.codeberg.page/lib/首次使用.html
-
-githubpage（部分手机无法正常访问）
-
-https://jixiejishu.github.io/jxjs.github.io/lib/首次使用.html
-
-【腾讯文档】初次使用
-
-https://docs.qq.com/doc/DSVhBVlVQa0F2bXln
-
-【金山文档 | WPS云文档】 初次使用
-
-https://kdocs.cn/l/cjoNH5vJzrx8
-
-
-
-1.网络搜集线路
-
-1.1多线路（TVbox助手线路 +部分小盒酷玩 +部分网络搜集线路）
-
-适合除了TVbox taka99 这种单线路软件之外的所有软件。
-
-主接口(codeberg)
-
-手机长按，弹出界面选择复制
-
-https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dxl/T%26S.txt
-
-备用接口(Github 借用刘老备接口使用的加速)
-
-手机长按，弹出界面选择复制
-
-https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt
-
-1.2多仓库接口（ 实际上是欧歌多仓库+1.1多线路+小盒酷玩多线路）
-
-多仓库接口（ 欧歌多仓库+网络搜集自制多线路+小盒酷玩多线路）
-
-影视(fongmi)、OK版fongmi（OK影视），不支持多仓
-
-主接口(codeberg)
-
-手机长按，弹出界面选择复制
-
-https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dck/duo.txt
-
-备用接口(Github 借用刘老备接口使用的加速)
-
-手机长按，弹出界面选择复制
-
-https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt
-
-1.3单线路接口（TVbox助手线路 +部分小盒酷玩 +部分网络搜集线路）
-
-支持TVbox taka99gen99等单仓库软件
-
-单线路主接口(codeberg page手机一般可以访问)
-
-https://jixiejishu.codeberg.page/jk/dan/单线路.txt
-
-单线路备用接口(Github page手机可能不支持)
-
-https://jixiejishu.github.io/jxjs.github.io/jk/dan/单线路.txt
-
-
-
-
-
-
-1.4.常用接口
-
-欧歌多仓库（特殊处理，也支持影视）
-
-http://tv.nxog.top
-
-小盒多仓（实际上是多线路）
-
-http://xhztv.top/DC.txt
-
-小盒多仓备用（实际上是多线路）
-
-http://xhztv.top/dc
-
-
-1.5 常用导航
-
-饭太硬（本身也是接口）
-
-https://www.饭太硬.com
-
-
-肥猫宝贝（本身也是接口）
-
-https://肥猫.com
-
-
-
-2..0常用软件下载的网站
-
-2.1影用仓库
-
-网址：https://www.wmdz.com 
-
+# 常用TVbox-fongmi接口以及影音网站汇总
+codeberg page（手机可以正常访问）  
+ **建议手机上把这个连接复制到浏览器上使用。微信和QQ内打开部分内容访问有问题**    
+ **水平有限，网页用最简单的HTML写成，没有任何美化，凑合着用**   
+ **没有设计弹出页面，点击后直接进入链接的页面，后退可以返回主页面，或者重新打开链接进入主页面**   
+https://jixiejishu.codeberg.page/  
+Githubpage（部分手机无法正常访问）  
+https://jixiejishu.github.io/jxjs.github.io  
+【腾讯文档】常用TVbox-fongmi接口以及影音网站汇总  
+https://docs.qq.com/doc/DSXRHdURpbFN2UmR6  
+【金山文档 | WPS云文档】 常用TVbox-fongmi接口以及影音网站  
+https://kdocs.cn/l/cmtH0eJbE44X  
+ **接口使用：由于许多接口对影视（fongmi）进行适配，建议首选 影视（fongmi）、OK版影视（OK版fongmi）**     
+ **、Easybox（仅有手机版）；其中521等二次开发版有可能不兼容。其它的软件很多接口有一部分功能无法使用。**     
+
+
+# 初次使用点击这里
+codeberg page（手机可以正常访问）  
+https://jixiejishu.codeberg.page/lib/首次使用.html  
+githubpage（部分手机无法正常访问）  
+https://jixiejishu.github.io/jxjs.github.io/lib/首次使用.html  
+【腾讯文档】初次使用  
+https://docs.qq.com/doc/DSVhBVlVQa0F2bXln  
+【金山文档 | WPS云文档】 初次使用  
+https://kdocs.cn/l/cjoNH5vJzrx8  
+
+
+
+# 1.网络搜集线路
+## 1.1多线路（TVbox助手线路 +部分小盒酷玩 +部分网络搜集线路）  
+适合除了TVbox taka99 这种单线路软件之外的所有软件。  
+主接口(codeberg)  
+ **手机长按，弹出界面选择复制**    
+https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dxl/T%26S.txt  
+备用接口(Github 借用刘老备接口使用的加速)  
+ **手机长按，弹出界面选择复制**    
+https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt  
+
+## 1.2多仓库接口（ 实际上是欧歌多仓库+1.1多线路+小盒酷玩多线路）  
+多仓库接口（ 欧歌多仓库+网络搜集自制多线路+小盒酷玩多线路）  
+影视(fongmi)、OK版fongmi（OK影视），不支持多仓  
+主接口(codeberg)  
+ **手机长按，弹出界面选择复制**    
+https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dck/duo.txt  
+备用接口(Github 借用刘老备接口使用的加速)  
+ **手机长按，弹出界面选择复制**     
+https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt  
+
+## 1.3单线路接口（TVbox助手线路 +部分小盒酷玩 +部分网络搜集线路）  
+支持TVbox taka99gen99等单仓库软件  
+单线路主接口(codeberg page手机一般可以访问)  
+https://jixiejishu.codeberg.page/jk/dan/单线路.txt  
+单线路备用接口(Github page手机可能不支持)  
+https://jixiejishu.github.io/jxjs.github.io/jk/dan/单线路.txt  
+
+
+## 1.4.常用接口
+
+欧歌多仓库（特殊处理，也支持影视）  
+http://tv.nxog.top  
+小盒多仓（实际上是多线路）  
+http://xhztv.top/DC.txt  
+小盒多仓备用（实际上是多线路）  
+http://xhztv.top/dc  
+
+## 1.5 常用导航
+饭太硬（本身也是接口）  
+https://www.饭太硬.com  
+肥猫宝贝（本身也是接口）  
+https://肥猫.com  
+
+## 1.6封锁问题处理  
+ **部分地区对线路和接口有封锁可以试试本地包**  
+ **江苏地区封锁特别严重.**    
+本地包使用教程（视频和简单文字教程密码：2024yy）：  
+ https://wwrb.lanzn.com/b00rnhy2xi  
+
+如果只是对github和codeberg封锁可以试试直接把配置文件当本地包使用： 
+链接内有使用教程(密码：1234）  
+https://wwrb.lanzn.com/b00rnjo4sh  
+
+# 2.0常用软件下载的网站
+## 2.1影用仓库
+网址：https://www.wmdz.com
 最全的软件汇总有很多软件的下载分类在不同的位置。序号1的是城通网盘，下载速度慢，每次只能下载一个。
-
-序号2的是蓝奏云，下载速度快。一般软件下载使用序号2的蓝奏云，一般密码都是wmdz。部分特别老的内容是351184。
-
-2.2聚玩盒子
-
-https://juwanhezi.com
-
-有很多软件和介绍 ，但是软件介绍不全 ，有的比较夸张。有很多苹果手机系统的伪装上架的软件，
-
-按提示操作就可以用了。 数据源和直播源里面一些内容更新不及时失效了。
-
-点播接口:https://juwanhezi.com/other/jsonlist   
-
-直播接口:https://juwanhezi.com/more/live   
-
-
-2.3iptvindex
-
-网址：https://www.iptvindex.com
-
-内容分类，比较全，更新比较快。
-
-2.4 奇奇
-微信公众号奇奇乐分享/奇奇老友会/奇友会
-
-资源推荐合集：  http://qiqiv.cn/zy.php 
-
-公众号奇奇乐老友会/奇友会内看广告后查看内容的小程序，获取密码
-
-TVbox资源下载  http://bbs.qiqiv.cn/thread-11997-1-1.html
-
-蓝奏云网盘（本地包、蜂蜜、壳助手密码到公众号里面看广告获取密码）
-
-蜂蜜版就是影视（fongmi），密码目前是：769
-
-https://qiqi2020.lanzouw.com/b09svqv1c
-
-夸克网盘,夸克浏览器（手机）或者夸克网盘（电脑）下载
-
-https://pan.quark.cn/s/5cb9978c7a6a#/list/share 
-
-UC网盘,夸克浏览器（手机）或者夸克网盘（电脑）下载
-
-https://drive.uc.cn/s/e2c474c324574#/list/share
-
-
-
-3.常用工具
-
-蓝奏云搜集软件下载内有简单的视频教程和详细的文字教程。初次使用可以看看简单的视频教程。
-
-由于蓝奏云限制上传格式。视频因此做成了压缩包。
-
-开始使用可以使用OK版影视（ok版fongmi）。熟悉了可以看其它的软件（俗称壳子）大体相同。
-
-codebergpage平台：
-
-https://jixiejishu.codeberg.page/lib/推荐软件与简介.html
-
-https://jixiejishu.codeberg.page/lib/蓝奏云搜集软件下载.html
-
-https://jixiejishu.codeberg.page/lib/机顶盒模拟器的选择.html
-
-
-Githubpage平台(手机可能打不开）：
-
-https://jixiejishu.github.io/jxjs.github.io/lib/推荐软件与简介.html
-
-https://jixiejishu.github.io/jxjs.github.io/lib/蓝奏云搜集软件下载.html
-
-https://jixiejishu.github.io/jxjs.github.io/lib/机顶盒模拟器的选择.html
-
-腾讯文档：
-
-【腾讯文档】推荐软件与简介
-
-https://docs.qq.com/doc/DSUlNZGlUUlZ6aXlH
-
-【腾讯文档】蓝奏云搜集软件
-
-https://docs.qq.com/doc/DSVhmTGFkWXpjdHVa
-
-【腾讯文档】机顶盒模拟器的选择
-
-https://docs.qq.com/doc/DSUVOdXBiblFlVWl3
-
-金山文档
-
-【金山文档 | WPS云文档】 推荐软件与简介
-
-https://kdocs.cn/l/cglfOteufoBY
-
-【金山文档 | WPS云文档】 蓝奏云搜集软件
-
-https://kdocs.cn/l/cuYVBtKzIYXe
-
-【金山文档 | WPS云文档】 机顶盒模拟器的选择
-
-https://kdocs.cn/l/cclt8mKwYXgt
-
-
-
-4.常见问题
-
-1）电视节目类不能播放
-
-电视节目类员管控很严，经常失效。建议使用点播里面的电视源（一般是好趣网）。
-
-2）大部分点播节目也不能看
-
-如果点击很多个接口，节目都不能播放一般是下面的原因。少数情况是部分接口本身就有问题了。
-
-接口原因：接口需要更新了。一般的软件是在设置内，点击“缓存”按钮清理缓存。
-
-TVbox taka99gen 点击左上角标题 清除缓存。
-
-软件原因：因为一些技术原因，接口搭配新的软件才能使用，旧版软件无法支持
-
-3）安卓4系统
-
-由于接口一直在更新。旧版软件慢慢的就不能播放一些内容了。因此建议使用还在维护更新的软件。
-
-比如OK版影视  TVbox taka99gen 
-
-4）QQ微信 网页打不开
-
-原因是腾讯故意搞这种限制。把网页复制粘贴到浏览器里面打开就行了。
-
-5）QQ 微信 apk文件问题
-
-QQ和微信内 apk文件会自动变成 apk.1
-
-方法1 安装QQ浏览器  适用于手机
-
-可以下载好之后修改后缀（手机长按，电脑在查看里面勾选文件格式，然后修改）。
-
-手机上可以安装一个QQ浏览器，这样就可以安装了。腾讯为了推自己家浏览器故意的。
-
-方法2 修改扩展名 适用于所有设备
-
-原理：apk格式的后缀不区分大小写。
-
-也可以把扩展名也就是后缀的apk三个字母的一个或者三个都改成大写，
-
-然后再用微信发送，QQ可以发送或者分享到群共享。
-
-手机和模拟器仍然可以正常使用。
-
-方法3仅支持QQ,不支持微信
-
-后缀改成apk.rename
-
-5.自用软件
-
-内容和《蓝奏云搜集软件下载》差不多，选取常用的一些软件
-
-codebergpage平台：
-
-https://jixiejishu.codeberg.page/lib/自用软件.html
-
-Githubpage平台(手机可能打不开）：
-
-https://jixiejishu.github.io/jxjs.github.io/lib/自用软件.html
-
-【腾讯文档】自用软件
-
-https://docs.qq.com/doc/DSUppS3Rrb29nZ0Jm
-
-【金山文档 | WPS云文档】 文字文稿
-
-https://kdocs.cn/l/clzHBcfW3UDI
-
-
-6.野草助手
-
-比较热门的一款软件分享平台，一款应用安装和分享工具。用户上传应用本网站后得到口令，
-
-其他用户输入该口令后自动安装该口令对应应用未登录用户临时存储 24 小时，
-
-登录用户临时存储 7 天，临时存储免费。目前只支持安卓软件。有TV版和触屏版两个版本
-
-口令注意区分字母大小写
-
-注意，这个平台没有保密性，软件会被官方扫描分享给别人（野草助手的群里就有）
-
-一些不适合或者不愿意分享的软件不要用这个平台。
-
-官网
-
-https://www.yecao.net/
-
-网页版（下面也有一些常用的口令）
-
-https://www.yecao.net/command//
-
-客户端下载（下面也有一些常用的口令）
-
-https://www.yecao.net/download/
-
-百度贴吧*(有很多口令，每天会更新）
-
-https://tieba.baidu.com/f?kw=%E9%87%8E%E8%8D%89%E5%8A%A9%E6%89%8B&ie=utf-8
-
-
-7 不同品牌电视机的安装教程
-
-智能电视网（当贝的一个网站）
-
-下面的网页内有不同的品牌电视机的教程，参考这个教程安装APK就可以了
-
-https://www.znds.com/jc/
+序号2的是蓝奏云，下载速度快。一般软件下载使用序号2的蓝奏云，一般密码都是wmdz。部分特别老的内容是351184。  
+
+## 2.2聚玩盒子
+https://juwanhezi.com  
+有很多软件和介绍 ，但是软件介绍不全 ，有的比较夸张。有很多苹果手机系统的伪装上架的软件，  
+按提示操作就可以用了。 数据源和直播源里面一些内容更新不及时失效了。  
+点播接口:https://juwanhezi.com/other/jsonlist     
+直播接口:https://juwanhezi.com/more/live     
+
+
+## 2.3iptvindex
+网址：https://www.iptvindex.com  
+内容分类，比较全，更新比较快。  
+
+## 2.4 奇奇
+微信公众号奇奇乐分享/奇奇老友会/奇友会  
+资源推荐合集：  http://qiqiv.cn/zy.php   
+公众号奇奇乐老友会/奇友会内看广告后查看内容的小程序，获取密码  
+TVbox资源下载  http://bbs.qiqiv.cn/thread-11997-1-1.html  
+蓝奏云网盘（本地包、蜂蜜、壳助手密码到公众号里面看广告获取密码）  
+蜂蜜版就是影视（fongmi），密码目前是：769  
+https://qiqi2020.lanzouw.com/b09svqv1c  
+夸克网盘,夸克浏览器（手机）或者夸克网盘（电脑）下载  
+https://pan.quark.cn/s/5cb9978c7a6a#/list/share   
+UC网盘,夸克浏览器（手机）或者夸克网盘（电脑）下载  
+https://drive.uc.cn/s/e2c474c324574#/list/share  
+
+# 3.常用工具
+蓝奏云搜集软件下载内有简单的视频教程和详细的文字教程。初次使用可以看看简单的视频教程。  
+由于蓝奏云限制上传格式。视频因此做成了压缩包。  
+开始使用可以使用OK版影视（ok版fongmi）。熟悉了可以看其它的软件（俗称壳子）大体相同。  
+
+codebergpage平台：  
+[推荐软件与简介](https://jixiejishu.codeberg.page/lib/推荐软件与简介.html  "推荐软件与简介")  
+[蓝奏云搜集软件下载](https://jixiejishu.codeberg.page/lib/蓝奏云搜集软件下载.html  "蓝奏云搜集软件下载")  
+[机顶盒模拟器的选择](https://jixiejishu.codeberg.page/lib/机顶盒模拟器的选择.html  "机顶盒模拟器的选择")  
+
+Githubpage平台(手机可能打不开）：  
+[推荐软件与简介](https://jixiejishu.github.io/jxjs.github.io/lib/推荐软件与简介.html   "推荐软件与简介")  
+[蓝奏云搜集软件下载](https://jixiejishu.github.io/jxjs.github.io/lib/蓝奏云搜集软件下载.html   "蓝奏云搜集软件下载")  
+[机顶盒模拟器的选择](https://jixiejishu.github.io/jxjs.github.io/lib/机顶盒模拟器的选择.html   "机顶盒模拟器的选择")  
+
+腾讯文档：  
+[【腾讯文档】推荐软件与简介](https://docs.qq.com/doc/DSUlNZGlUUlZ6aXlH  "推荐软件与简介")  
+[【腾讯文档】蓝奏云搜集软件](https://docs.qq.com/doc/DSVhmTGFkWXpjdHVa  "蓝奏云搜集软件下载")  
+[【腾讯文档】机顶盒模拟器的选择](https://docs.qq.com/doc/DSUVOdXBiblFlVWl3  "机顶盒模拟器的选择")  
+
+金山文档  
+[【金山文档 | WPS云文档】 推荐软件与简介](https://kdocs.cn/l/cglfOteufoBY  "推荐软件与简介")  
+[【【金山文档 | WPS云文档】 蓝奏云搜集软件](https://kdocs.cn/l/cuYVBtKzIYXe "蓝奏云搜集软件下载")  
+[【金山文档 | WPS云文档】 机顶盒模拟器的选择](https://kdocs.cn/l/cclt8mKwYXgt "机顶盒模拟器的选择")  
+
+# 4.常见问题
+1）电视节目类不能播放  
+电视节目类员管控很严，经常失效。建议使用点播里面的电视源（一般是好趣网）。  
+2）大部分点播节目也不能看  
+如果点击很多个接口，节目都不能播放一般是下面的原因。少数情况是部分接口本身就有问题了。  
+接口原因：接口需要更新了。一般的软件是在设置内，点击“缓存”按钮清理缓存。  
+TVbox taka99gen 点击左上角标题 清除缓存。  
+软件原因：因为一些技术原因，接口搭配新的软件才能使用，旧版软件无法支持  
+3）安卓4系统  
+由于接口一直在更新。旧版软件慢慢的就不能播放一些内容了。因此建议使用还在维护更新的软件。  
+比如OK版影视  TVbox taka99gen   
+4）QQ微信 网页打不开  
+原因是腾讯故意搞这种限制。把网页复制粘贴到浏览器里面打开就行了。  
+5）QQ 微信 apk文件问题  
+QQ和微信内 apk文件会自动变成 apk.1  
+方法1 安装QQ浏览器  适用于手机  
+可以下载好之后修改后缀（手机长按，电脑在查看里面勾选文件格式，然后修改）。  
+手机上可以安装一个QQ浏览器，这样就可以安装了。腾讯为了推自己家浏览器故意的。    
+方法2 修改扩展名 适用于所有设备  
+原理：apk格式的后缀不区分大小写。  
+也可以把扩展名也就是后缀的apk三个字母的一个或者三个都改成大写，  
+然后再用微信发送，QQ可以发送或者分享到群共享。  
+手机和模拟器仍然可以正常使用。  
+方法3仅支持QQ,不支持微信  
+后缀改成apk.rename  
+
+# 5.自用软件
+
+
+codebergpage平台：  
+[自用软件](https://jixiejishu.codeberg.page/lib/自用软件.html "内容和《蓝奏云搜集软件下载》差不多，选取常用的一些软件 ")  
+
+Githubpage平台(手机可能打不开）：  
+[自用软件](https://jixiejishu.github.io/jxjs.github.io/lib/自用软件.html "内容和《蓝奏云搜集软件下载》差不多，选取常用的一些软件 ")  
+ 
+【腾讯文档】自用软件  
+[自用软件](https://docs.qq.com/doc/DSUppS3Rrb29nZ0Jm "内容和《蓝奏云搜集软件下载》差不多，选取常用的一些软件 ")  
+
+【金山文档 | WPS云文档】 文字文稿  
+[自用软件](https://kdocs.cn/l/clzHBcfW3UDI   "内容和《蓝奏云搜集软件下载》差不多，选取常用的一些软件 ")  
+
+# 6.野草助手
+比较热门的一款软件分享平台，一款应用安装和分享工具。用户上传应用本网站后得到口令，  
+其他用户输入该口令后自动安装该口令对应应用未登录用户临时存储 24 小时，  
+登录用户临时存储 7 天，临时存储免费。目前只支持安卓软件。有TV版和触屏版两个版本  
+ **口令注意区分字母大小写**   
+ **注意，这个平台没有保密性，软件会被官方扫描分享给别人（野草助手的群里就有**     
+ **一些不适合或者不愿意分享的软件不要用这个平台。**      
+官网  
+https://www.yecao.net/  
+网页版（下面也有一些常用的口令）  
+https://www.yecao.net/command  
+客户端下载（下面也有一些常用的口令）  
+https://www.yecao.net/download/  
+百度贴吧*(有很多口令，每天会更新）  
+[野草助手吧](https://tieba.baidu.com/f?kw=%E9%87%8E%E8%8D%89%E5%8A%A9%E6%89%8B&ie=utf-8   "TV版和触屏版两个版本 ")  
+
+# 7 不同品牌电视机的安装教程  
+智能电视网（当贝的一个网站）  
+下面的网页内有不同的品牌电视机的教程，参考这个教程安装APK就可以了  
+https://www.znds.com/jc/  
 
