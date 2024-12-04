@@ -194,3 +194,13 @@ https://www.yecao.net/download/
 下面的网页内有不同的品牌电视机的教程，参考这个教程安装APK就可以了  
 https://www.znds.com/jc/  
 
+# 8.ios  
+1） 聚玩盒子:  
+更新很快，但是一些文章的说法不太准确，有的夸大其词  
+[https://juwanhezi.com/tag/IOS ](https://juwanhezi.com/tag/IOS  "更新很快，但是一些文章的说法不太准确，有的夸大其词 ")   
+2）奇奇  
+ 微信公众号奇奇乐分享、奇奇老友会、奇友会也有一些分享  
+奇乐分享_资源推荐合集（包含苹果伪装上架）  
+[http://bbs.qiqiv.cn/thread-11996-1-1.html   ](http://bbs.qiqiv.cn/thread-11996-1-1.html "微信公众号内的伪装上架合集 ")  
+常用的伪装上架地址。按照说明操作就可以了：  
+“3.常用工具”推荐软件与简介内的“5.ios简单软件"内有更多的介绍  
