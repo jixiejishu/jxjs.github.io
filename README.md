@@ -54,14 +54,11 @@ https://jixiejishu.codeberg.page/jk/dan/单线路.txt
 https://jixiejishu.github.io/jxjs.github.io/jk/dan/单线路.txt  
 
 
-## 1.4.常用接口
-
-欧歌多仓库（特殊处理，也支持影视）  
-http://tv.nxog.top  
-小盒多仓（实际上是多线路）  
-http://xhztv.top/DC.txt  
-小盒多仓备用（实际上是多线路）  
-http://xhztv.top/dc  
+## 1.4.常用接口  
+欧歌接口（在影视内是多线路，其它壳子里面是多仓库）  
+[http://tv.nxog.top](http://tv.nxog.top  "网站内有很多接口")    
+奇奇单仓（也是奇奇的源地址）  
+[http://z.qiqiv.cn/123](http://z.qiqiv.cn/123  "网站内有很多接口")    
 
 ## 1.5 常用导航
 饭太硬（本身也是接口）  
