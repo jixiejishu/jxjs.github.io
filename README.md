@@ -170,7 +170,7 @@ Githubpage平台(手机可能打不开）：
 【腾讯文档】自用软件  
 [自用软件](https://docs.qq.com/doc/DSUppS3Rrb29nZ0Jm "内容和《蓝奏云搜集软件下载》差不多，选取常用的一些软件 ")  
 
-【金山文档 | WPS云文档】 文字文稿  
+【金山文档 | WPS云文档】 自用软件  
 [自用软件](https://kdocs.cn/l/clzHBcfW3UDI   "内容和《蓝奏云搜集软件下载》差不多，选取常用的一些软件 ")  
 
 # 6.野草助手
@@ -204,3 +204,18 @@ https://www.znds.com/jc/
 [http://bbs.qiqiv.cn/thread-11996-1-1.html   ](http://bbs.qiqiv.cn/thread-11996-1-1.html "微信公众号内的伪装上架合集 ")  
 常用的伪装上架地址。按照说明操作就可以了：  
 “3.常用工具”推荐软件与简介内的“5.ios简单软件"内有更多的介绍  
+
+
+# 9.自用软件
+codebergpage平台：  
+[https://jixiejishu.codeberg.page/lib/常见接口部分节目介绍.html](https://jixiejishu.codeberg.page/lib/常见接口部分节目介绍.html )  
+
+Githubpage平台(手机可能打不开）：  
+[https://jixiejishu.github.io/jxjs.github.io/lib/常见接口部分节目介绍.html](https://jixiejishu.github.io/jxjs.github.io/lib/常见接口部分节目介绍.html )  
+ 
+【腾讯文档】常见接口部分节目介绍    
+[https://docs.qq.com/doc/DSVducUpvdnV3V3Ri](https://docs.qq.com/doc/DSVducUpvdnV3V3Ri)   
+
+【金山文档 | WPS云文档】 常见接口部分节目介绍    
+[https://kdocs.cn/l/cfrSJM3f1zHO](https://kdocs.cn/l/cfrSJM3f1zHO)  
+
