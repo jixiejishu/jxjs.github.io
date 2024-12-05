@@ -206,7 +206,7 @@ https://www.znds.com/jc/
 “3.常用工具”推荐软件与简介内的“5.ios简单软件"内有更多的介绍  
 
 
-# 9.自用软件
+# 9.常见接口部分节目介绍
 codebergpage平台：  
 [https://jixiejishu.codeberg.page/lib/常见接口部分节目介绍.html](https://jixiejishu.codeberg.page/lib/常见接口部分节目介绍.html )  
 
