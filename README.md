@@ -58,8 +58,23 @@ https://jixiejishu.github.io/jxjs.github.io/jk/dan/单线路.txt
 欧歌接口（在影视内是多线路，其它壳子里面是多仓库）  
 [http://tv.nxog.top](http://tv.nxog.top  "网站内有很多接口")    
 奇奇单仓（也是奇奇的源地址）  
-[http://z.qiqiv.cn/123](http://z.qiqiv.cn/123  "网站内有很多接口")    
+[http://z.qiqiv.cn/123](http://z.qiqiv.cn/123  "网站内有很多接口")   
 
+zyt（基于奇奇本地包的开心线路和道长的源。主要是电视节目部分视频网站、体育节目和有声书） 
+
+codeberg接口：  
+https://codeberg.org/jixiejishu/zyt/raw/branch/main/api.txt  
+
+github接口（已经加速，下面几个接口内容是一样的）： 
+借用刘老备的项目加速：   
+https://raw.kkgithub.com/jixiejishu/zyt/main/api.txt  
+https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/api.txt  
+https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/api.txt  
+借用欧歌的加速：  
+https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/api.txt  
+
+
+ 
 ## 1.5 常用导航
 饭太硬（本身也是接口）  
 https://www.饭太硬.com  
