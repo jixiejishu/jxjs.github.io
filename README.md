@@ -35,6 +35,15 @@ https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/d
 备用接口(Github 借用刘老备接口使用的加速)  
  **手机长按，弹出界面选择复制**    
 https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt  
+ **如果不能使用选择下面的接口，内容都一样：**    
+欧歌加速  
+https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt  
+https://ghp.ci/加速  
+https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt  
+凯速接口：  
+https://d.kstore.dev/download/7731/tvbox/tvboxtools/jk/dxl/T%EF%B9%A0S.txt  
+gitee接口：  
+https://gitee.com/jixiejishu/tvboxinformation/raw/main/tvboxtools/jk/dxl/T%26S.txt  
 
 ## 1.2多仓库接口（ 实际上是欧歌多仓库+1.1多线路+小盒酷玩多线路）  
 多仓库接口（ 欧歌多仓库+网络搜集自制多线路+小盒酷玩多线路）  
@@ -45,6 +54,15 @@ https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/d
 备用接口(Github 借用刘老备接口使用的加速)  
  **手机长按，弹出界面选择复制**     
 https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt  
+ **如果不能使用选择下面的接口，内容都一样：**    
+欧歌加速  
+https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt  
+https://ghp.ci加速地址：  
+https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt  
+kstore（凯速）  
+https://d.kstore.dev/download/7731/tvbox/tvboxtools/jk/dck/duo.txt  
+gitee  
+https://gitee.com/jixiejishu/tvboxinformation/raw/main/tvboxtools/jk/dck/duo.txt  
 
 ## 1.3单线路接口（TVbox助手线路 +部分小盒酷玩 +部分网络搜集线路）  
 支持TVbox taka99gen99等单仓库软件  
@@ -72,7 +90,11 @@ https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/
 https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/api.txt  
 借用欧歌的加速：  
 https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/api.txt  
-
+凯速接口  
+https://d.kstore.dev/download/7731/zyt/api.txt  
+gitee接口  
+https://gitee.com/jixiejishu/zyt/raw/main/api.txt  
+ 
 
  
 ## 1.5 常用导航
