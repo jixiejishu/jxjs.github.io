@@ -137,7 +137,7 @@ https://juwanhezi.com
 公众号奇奇乐老友会/奇友会内看广告后查看内容的小程序，获取密码  
 TVbox资源下载  http://bbs.qiqiv.cn/thread-11997-1-1.html  
 蓝奏云网盘（本地包、蜂蜜、壳助手密码到公众号里面看广告获取密码）  
-蜂蜜版就是影视（fongmi），密码目前是：769  
+蜂蜜版就是影视（fongmi）    
 https://qiqi2020.lanzouw.com/b09svqv1c  
 夸克网盘,夸克浏览器（手机）或者夸克网盘（电脑）下载  
 https://pan.quark.cn/s/5cb9978c7a6a#/list/share   
