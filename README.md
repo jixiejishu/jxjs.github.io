@@ -40,8 +40,9 @@ https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26
  **如果不能使用选择下面的接口，内容都一样：**    
 欧歌加速  
 https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt  
-https://ghp.ci/加速  
-https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt  
+其它加速  
+https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt
+https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt  
 凯速接口：  
 https://d.kstore.dev/download/7731/tvbox/tvboxtools/jk/dxl/T%EF%B9%A0S.txt  
 gitee接口：  
@@ -59,8 +60,9 @@ https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.
  **如果不能使用选择下面的接口，内容都一样：**    
 欧歌加速  
 https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt  
-https://ghp.ci加速地址：  
-https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt  
+其它加速  
+https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt
+https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt 
 kstore（凯速）  
 https://d.kstore.dev/download/7731/tvbox/tvboxtools/jk/dck/duo.txt  
 gitee  
