@@ -205,18 +205,16 @@ QQ和微信内 apk文件会自动变成 apk.1
 
 # 5.自用软件
 
-
-codebergpage平台：  
-[自用软件](https://jixiejishu.codeberg.page/lib/自用软件.html "内容和《蓝奏云搜集软件下载》差不多，选取常用的一些软件 ")  
-
-Githubpage平台(手机可能打不开）：  
-[自用软件](https://jixiejishu.github.io/jxjs.github.io/lib/自用软件.html "内容和《蓝奏云搜集软件下载》差不多，选取常用的一些软件 ")  
- 
-【腾讯文档】自用软件  
-[自用软件](https://docs.qq.com/doc/DSUppS3Rrb29nZ0Jm "内容和《蓝奏云搜集软件下载》差不多，选取常用的一些软件 ")  
-
-【金山文档 | WPS云文档】 自用软件  
-[自用软件](https://kdocs.cn/l/clzHBcfW3UDI   "内容和《蓝奏云搜集软件下载》差不多，选取常用的一些软件 ")  
+# 5.推荐软件列表  
+因为软件需要根据发布情况更新，因此没有打包成一整个压缩包。   
+根据常用情况制作了一个手机版和电视版的列表。  
+  
+小飞机网盘    
+[https://share.feijipan.com/s/lREEcKzG?code=1234 ](https://share.feijipan.com/s/lREEcKzG?code=1234 )    
+蓝奏云盘：  
+[https://wwrb.lanzn.com/b00rnkxs9c   ](https://wwrb.lanzn.com/b00rnkxs9c )    
+密码:1234    
+根据列表到蓝奏云盘列表下载。  
 
 # 6.野草助手
 比较热门的一款软件分享平台，一款应用安装和分享工具。用户上传应用本网站后得到口令，  
