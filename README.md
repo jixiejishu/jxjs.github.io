@@ -15,14 +15,16 @@ https://kdocs.cn/l/cmtH0eJbE44X
 
 
 # 初次使用点击这里
+小飞机网盘:  
+[https://share.feijipan.com/s/NZEEITs9?code=1234](https://share.feijipan.com/s/NZEEITs9?code=1234  "建议使用OK版影视")   
 codeberg page（手机可以正常访问）  
-https://jixiejishu.codeberg.page/lib/首次使用.html  
+[https://jixiejishu.codeberg.page/lib/首次使用.html](https://jixiejishu.codeberg.page/lib/首次使用.html   "建议使用OK版影视")   
 githubpage（部分手机无法正常访问）  
-https://jixiejishu.github.io/jxjs.github.io/lib/首次使用.html  
+[https://jixiejishu.github.io/jxjs.github.io/lib/首次使用.html](https://jixiejishu.github.io/jxjs.github.io/lib/首次使用.html  "建议使用OK版影视")   
 【腾讯文档】初次使用  
-https://docs.qq.com/doc/DSVhBVlVQa0F2bXln  
+[https://docs.qq.com/doc/DSVhBVlVQa0F2bXln](https://docs.qq.com/doc/DSVhBVlVQa0F2bXln  "建议使用OK版影视")   
 【金山文档 | WPS云文档】 初次使用  
-https://kdocs.cn/l/cjoNH5vJzrx8  
+[https://kdocs.cn/l/cjoNH5vJzrx8](https://kdocs.cn/l/cjoNH5vJzrx8  "建议使用OK版影视")   
 
 
 
@@ -168,6 +170,12 @@ Githubpage平台(手机可能打不开）：
 [【金山文档 | WPS云文档】 推荐软件与简介](https://kdocs.cn/l/cglfOteufoBY  "推荐软件与简介")  
 [【【金山文档 | WPS云文档】 蓝奏云搜集软件](https://kdocs.cn/l/cuYVBtKzIYXe "蓝奏云搜集软件下载")  
 [【金山文档 | WPS云文档】 机顶盒模拟器的选择](https://kdocs.cn/l/cclt8mKwYXgt "机顶盒模拟器的选择")  
+
+ **软件与教程下载 （小飞机云盘)**   
+已经添加密码的链接      
+[https://share.feijipan.com/s/AnEEQTwX?code=1234](https://share.feijipan.com/s/AnEEQTwX?code=1234 "已添加密码")    
+      
+
 
 # 4.常见问题
 1）电视节目类不能播放  
