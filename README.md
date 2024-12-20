@@ -15,8 +15,6 @@ https://kdocs.cn/l/cmtH0eJbE44X
 
 
 # 初次使用点击这里
-小飞机网盘:  
-[https://share.feijipan.com/s/NZEEITs9?code=1234](https://share.feijipan.com/s/NZEEITs9?code=1234  "建议使用OK版影视")   
 codeberg page（手机可以正常访问）  
 [https://jixiejishu.codeberg.page/lib/首次使用.html](https://jixiejishu.codeberg.page/lib/首次使用.html   "建议使用OK版影视")   
 githubpage（部分手机无法正常访问）  
@@ -176,7 +174,9 @@ Githubpage平台(手机可能打不开）：
  **软件与教程下载 （小飞机云盘)**   
 已经添加密码的链接      
 [https://share.feijipan.com/s/AnEEQTwX?code=1234](https://share.feijipan.com/s/AnEEQTwX?code=1234 "已添加密码")    
-      
+123网盘（需要注册并登陆下载。网页版每天1G下载流量 客户端没有限制）  
+https://www.123684.com/s/utZ7Vv-fFZdd?提取码:1234  
+https://www.123865.com/s/utZ7Vv-fFZdd?提取码:1234        
 
 
 # 4.常见问题
@@ -212,6 +212,9 @@ QQ和微信内 apk文件会自动变成 apk.1
   
 小飞机网盘    
 [https://share.feijipan.com/s/lREEcKzG?code=1234 ](https://share.feijipan.com/s/lREEcKzG?code=1234 )    
+123网盘（需要注册并登陆下载。网页版每天1G下载流量 客户端没有限制）    
+https://www.123684.com/s/utZ7Vv-JFZdd提取码:1234     
+https://www.123865.com/s/utZ7Vv-JFZdd提取码:1234      
 蓝奏云盘：  
 [https://wwrb.lanzn.com/b00rnkxs9c   ](https://wwrb.lanzn.com/b00rnkxs9c )    
 密码:1234    
