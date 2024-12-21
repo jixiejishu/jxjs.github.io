@@ -3,13 +3,13 @@ codeberg page（手机可以正常访问）
  **建议手机上把这个连接复制到浏览器上使用。微信和QQ内打开部分内容访问有问题**    
  **水平有限，网页用最简单的HTML写成，没有任何美化，凑合着用**   
  **没有设计弹出页面，点击后直接进入链接的页面，后退可以返回主页面，或者重新打开链接进入主页面**   
-https://jixiejishu.codeberg.page/  
+[https://jixiejishu.codeberg.page/](https://jixiejishu.codeberg.page/)    
 Githubpage（部分手机无法正常访问）  
-https://jixiejishu.github.io/jxjs.github.io  
+[https://jixiejishu.github.io/jxjs.github.io](https://jixiejishu.github.io/jxjs.github.io)    
 【腾讯文档】常用TVbox-fongmi接口以及影音网站汇总  
-https://docs.qq.com/doc/DSXRHdURpbFN2UmR6  
-【金山文档 | WPS云文档】 常用TVbox-fongmi接口以及影音网站  
-https://kdocs.cn/l/cmtH0eJbE44X  
+[https://docs.qq.com/doc/DSXRHdURpbFN2UmR6](https://docs.qq.com/doc/DSXRHdURpbFN2UmR6)      
+【金山文档 | WPS云文档】 常用TVbox-fongmi接口以及影音网站 
+[https://kdocs.cn/l/cmtH0eJbE44X  ](https://kdocs.cn/l/cmtH0eJbE44X  )   
  **接口使用：由于许多接口对影视（fongmi）进行适配，建议首选 影视（fongmi）、OK版影视（OK版fongmi）**     
  **、Easybox（仅有手机版）；其中521等二次开发版有可能不兼容。其它的软件很多接口有一部分功能无法使用。**     
 
@@ -96,11 +96,18 @@ https://gitee.com/jixiejishu/zyt/raw/main/api.txt
 ## 1.4单线路接口（TVbox助手线路 +部分小盒酷玩 +部分网络搜集线路）  
 支持TVbox taka99gen99等单仓库软件  
 单线路主接口(codeberg page手机一般可以访问)  
-https://jixiejishu.codeberg.page/jk/dan/单线路.txt  
+[https://jixiejishu.codeberg.page/jk/dan/单线路.txt  ](https://jixiejishu.codeberg.page/jk/dan/单线路.txt )   
 单线路备用接口(Github page手机可能不支持)  
-https://jixiejishu.github.io/jxjs.github.io/jk/dan/单线路.txt  
-
-
+[https://jixiejishu.github.io/jxjs.github.io/jk/dan/单线路.txt  ](https://jixiejishu.github.io/jxjs.github.io/jk/dan/单线路.txt  )   
+欧歌加速    
+[https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  ](https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  )   
+其它加速：  
+[https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  ](https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  )   
+[https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  ](https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  )  
+kstore（凯速）   
+[https://d.kstore.dev/download/7731/tvbox/tvboxtools/jk/dan/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt ](https://d.kstore.dev/download/7731/tvbox/tvboxtools/jk/dan/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt )  
+gitee   
+[https://gitee.com/jixiejishu/tvboxinformation/raw/main/tvboxtools/jk/dan/单线路.txt  ](https://gitee.com/jixiejishu/tvboxinformation/raw/main/tvboxtools/jk/dan/单线路.txt ) 
 ## 1.5.常用接口  
 欧歌接口（在影视内是多线路，其它壳子里面是多仓库）  
 [http://tv.nxog.top](http://tv.nxog.top  "网站内有很多接口")    
@@ -112,50 +119,47 @@ https://jixiejishu.github.io/jxjs.github.io/jk/dan/单线路.txt
  
 ## 1.6 常用导航
 饭太硬（本身也是接口）  
-https://www.饭太硬.com  
+[https://www.饭太硬.com](https://www.饭太硬.com)    
 肥猫宝贝（本身也是接口）  
-https://肥猫.com  
-
+[https://肥猫.com](https://肥猫.com)    
 ## 1.7封锁问题处理  
  **部分地区对线路和接口有封锁可以试试本地包**  
  **江苏地区封锁特别严重.**    
 本地包使用教程（视频和简单文字教程密码：2024yy）：  
- https://wwrb.lanzn.com/b00rnhy2xi  
-
+[ https://wwrb.lanzn.com/b00rnhy2xi]( https://wwrb.lanzn.com/b00rnhy2xi)    
 如果只是对github和codeberg封锁可以试试直接把配置文件当本地包使用： 
-链接内有使用教程(密码：1234）  
-https://wwrb.lanzn.com/b00rnjo4sh  
-
+链接内有使用教程(密码：1234）    
+[https://wwrb.lanzn.com/b00rnjo4sh](https://wwrb.lanzn.com/b00rnjo4sh)    
 # 2.0常用软件下载的网站
 ## 2.1影用仓库
-网址：https://www.wmdz.com
+网址：[https://www.wmdz.com](https://www.wmdz.com)    
 最全的软件汇总有很多软件的下载分类在不同的位置。序号1的是城通网盘，下载速度慢，每次只能下载一个。
 序号2的是蓝奏云，下载速度快。一般软件下载使用序号2的蓝奏云，一般密码都是wmdz。部分特别老的内容是351184。  
 
 ## 2.2聚玩盒子
-https://juwanhezi.com  
+[https://juwanhezi.com](https://juwanhezi.com)    
 有很多软件和介绍 ，但是软件介绍不全 ，有的比较夸张。有很多苹果手机系统的伪装上架的软件，  
 按提示操作就可以用了。 数据源和直播源里面一些内容更新不及时失效了。  
-点播接口:https://juwanhezi.com/other/jsonlist     
-直播接口:https://juwanhezi.com/more/live     
+点播接口:[https://juwanhezi.com/other/jsonlist](https://juwanhezi.com/other/jsonlist)         
+直播接口:[https://juwanhezi.com/more/live](https://juwanhezi.com/more/live)         
 
 
 ## 2.3iptvindex
-网址：https://www.iptvindex.com  
+网址：[https://www.iptvindex.com](https://www.iptvindex.com)     
 内容分类，比较全，更新比较快。  
 
 ## 2.4 奇奇
 微信公众号奇奇乐分享/奇奇老友会/奇友会  
-资源推荐合集：  http://qiqiv.cn/zy.php   
+资源推荐合集： [http://qiqiv.cn/zy.php](http://qiqiv.cn/zy.php)       
 公众号奇奇乐老友会/奇友会内看广告后查看内容的小程序，获取密码  
-TVbox资源下载  http://bbs.qiqiv.cn/thread-11997-1-1.html  
+TVbox资源下载 [http://bbs.qiqiv.cn/thread-11997-1-1.html](http://bbs.qiqiv.cn/thread-11997-1-1.html)      
 蓝奏云网盘（本地包、蜂蜜、壳助手密码到公众号里面看广告获取密码）  
-蜂蜜版就是影视（fongmi）    
-https://qiqi2020.lanzouw.com/b09svqv1c  
+蜂蜜版就是影视（fongmi） 
+[https://qiqi2020.lanzouw.com/b09svqv1c ](https://qiqi2020.lanzouw.com/b09svqv1c )      
 夸克网盘,夸克浏览器（手机）或者夸克网盘（电脑）下载  
-https://pan.quark.cn/s/5cb9978c7a6a#/list/share   
+[https://pan.quark.cn/s/5cb9978c7a6a#/list/share](https://pan.quark.cn/s/5cb9978c7a6a#/list/share)   
 UC网盘,夸克浏览器（手机）或者夸克网盘（电脑）下载  
-https://drive.uc.cn/s/e2c474c324574#/list/share  
+[https://drive.uc.cn/s/e2c474c324574#/list/share](https://drive.uc.cn/s/e2c474c324574#/list/share)   
 
 # 3.常用工具
 蓝奏云搜集软件下载内有简单的视频教程和详细的文字教程。初次使用可以看看简单的视频教程。  
@@ -186,10 +190,10 @@ Githubpage平台(手机可能打不开）：
 密码：1234       
 [https://share.feijipan.com/s/AnEEQTwX](https://share.feijipan.com/s/AnEEQTwX )    
 123网盘（需要注册并登陆下载。网页版每天1G下载流量 客户端没有限制）
-密码：1234          
-https://www.123684.com/s/utZ7Vv-fFZdd   
-https://www.123865.com/s/utZ7Vv-fFZdd           
-
+密码：1234      
+[https://www.123684.com/s/utZ7Vv-fFZdd](https://www.123684.com/s/utZ7Vv-fFZdd)    
+[https://www.123865.com/s/utZ7Vv-fFZdd](https://www.123865.com/s/utZ7Vv-fFZdd)    
+         
 
 # 4.常见问题
 1）电视节目类不能播放  
@@ -234,9 +238,9 @@ Githubpage平台(手机可能打不开）：
 密码 1234  
 [https://share.feijipan.com/s/lREEcKzG ](https://share.feijipan.com/s/lREEcKzG )    
 123网盘（需要注册并登陆下载。网页版每天1G下载流量 客户端没有限制） 
-密码 1234   
-https://www.123684.com/s/utZ7Vv-JFZdd 
-https://www.123865.com/s/utZ7Vv-JFZdd       
+密码 1234  
+[https://www.123684.com/s/utZ7Vv-JFZdd](https://www.123684.com/s/utZ7Vv-JFZdd)     
+[https://www.123865.com/s/utZ7Vv-JFZdd](https://www.123865.com/s/utZ7Vv-JFZdd)     
 蓝奏云盘：  
 [https://wwrb.lanzn.com/b00rnkxs9c   ](https://wwrb.lanzn.com/b00rnkxs9c )    
 密码:1234    
@@ -250,11 +254,11 @@ https://www.123865.com/s/utZ7Vv-JFZdd
  **注意，这个平台没有保密性，软件会被官方扫描分享给别人（野草助手的群里就有**     
  **一些不适合或者不愿意分享的软件不要用这个平台。**      
 官网  
-https://www.yecao.net/  
-网页版（下面也有一些常用的口令）  
-https://www.yecao.net/command  
-客户端下载（下面也有一些常用的口令）  
-https://www.yecao.net/download/  
+[https://www.yecao.net/  ](https://www.yecao.net/  )   
+网页版（下面也有一些常用的口令） 
+[https://www.yecao.net/command](https://www.yecao.net/command)   
+客户端下载（下面也有一些常用的口令）
+[https://www.yecao.net/download/](https://www.yecao.net/download/)   
 百度贴吧*(有很多口令，每天会更新）  
 [野草助手吧](https://tieba.baidu.com/f?kw=%E9%87%8E%E8%8D%89%E5%8A%A9%E6%89%8B&ie=utf-8   "TV版和触屏版两个版本 ")  
 
@@ -263,7 +267,9 @@ https://www.yecao.net/download/
 ## 7.1不同品牌电视机的安装教程  
 智能电视网（当贝的一个网站） 
 下面的网页内有不同的品牌电视机的教程，参考这个教程安装APK就可以了  
-https://www.znds.com/jc/  
+[https://www.znds.com/jc/  ](https://www.znds.com/jc/  )  
+如果想看更详细和直观的办法，可以搜索“XX品牌 XX型号”软件安装。  
+可以在哔哩哔哩 抖音快手等平台搜索视频教程。  
 
 ## 7.2软件选择  
 1）机顶盒一般选择32位软件。其中瑞芯微芯片的机顶盒系统是64位的。  
