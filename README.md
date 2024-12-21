@@ -172,11 +172,12 @@ Githubpage平台(手机可能打不开）：
 [【金山文档 | WPS云文档】 机顶盒模拟器的选择](https://kdocs.cn/l/cclt8mKwYXgt "机顶盒模拟器的选择")  
 
  **软件与教程下载 （小飞机云盘)**   
-已经添加密码的链接      
-[https://share.feijipan.com/s/AnEEQTwX?code=1234](https://share.feijipan.com/s/AnEEQTwX?code=1234 "已添加密码")    
-123网盘（需要注册并登陆下载。网页版每天1G下载流量 客户端没有限制）  
-https://www.123684.com/s/utZ7Vv-fFZdd?提取码:1234  
-https://www.123865.com/s/utZ7Vv-fFZdd?提取码:1234        
+密码：1234       
+[https://share.feijipan.com/s/AnEEQTwX](https://share.feijipan.com/s/AnEEQTwX )    
+123网盘（需要注册并登陆下载。网页版每天1G下载流量 客户端没有限制）
+密码：1234          
+https://www.123684.com/s/utZ7Vv-fFZdd   
+https://www.123865.com/s/utZ7Vv-fFZdd           
 
 
 # 4.常见问题
@@ -206,15 +207,25 @@ QQ和微信内 apk文件会自动变成 apk.1
 后缀改成apk.rename  
 
 # 5.推荐软件列表  
+codebergpage平台：  
+[https://codeberg.org/jixiejishu/pages/raw/branch/main/lib/自用软件.html](https://codeberg.org/jixiejishu/pages/raw/branch/main/lib/自用软件.html)  
+Githubpage平台(手机可能打不开）：   
+[https://jixiejishu.github.io/jxjs.github.io/lib/自用软件.html](https://jixiejishu.github.io/jxjs.github.io/lib/自用软件.html)  
+【腾讯文档】自用软件    
+[https://docs.qq.com/doc/DSUppS3Rrb29nZ0Jm](https://docs.qq.com/doc/DSUppS3Rrb29nZ0Jm)  
+【金山文档 | WPS云文档】 自用软件  
+[https://kdocs.cn/l/clzHBcfW3UDI](https://kdocs.cn/l/clzHBcfW3UDI)  
 
 因为软件需要根据发布情况更新，因此没有打包成一整个压缩包。   
 根据常用情况制作了一个手机版和电视版的列表。  
   
 小飞机网盘    
-[https://share.feijipan.com/s/lREEcKzG?code=1234 ](https://share.feijipan.com/s/lREEcKzG?code=1234 )    
-123网盘（需要注册并登陆下载。网页版每天1G下载流量 客户端没有限制）    
-https://www.123684.com/s/utZ7Vv-JFZdd提取码:1234     
-https://www.123865.com/s/utZ7Vv-JFZdd提取码:1234      
+密码 1234  
+[https://share.feijipan.com/s/lREEcKzG ](https://share.feijipan.com/s/lREEcKzG )    
+123网盘（需要注册并登陆下载。网页版每天1G下载流量 客户端没有限制） 
+密码 1234   
+https://www.123684.com/s/utZ7Vv-JFZdd 
+https://www.123865.com/s/utZ7Vv-JFZdd       
 蓝奏云盘：  
 [https://wwrb.lanzn.com/b00rnkxs9c   ](https://wwrb.lanzn.com/b00rnkxs9c )    
 密码:1234    
