@@ -66,21 +66,14 @@ https://d.kstore.dev/download/7731/tvbox/tvboxtools/jk/dck/duo.txt
 gitee  
 https://gitee.com/jixiejishu/tvboxinformation/raw/main/tvboxtools/jk/dck/duo.txt  
 
-## 1.3单线路接口（TVbox助手线路 +部分小盒酷玩 +部分网络搜集线路）  
-支持TVbox taka99gen99等单仓库软件  
-单线路主接口(codeberg page手机一般可以访问)  
-https://jixiejishu.codeberg.page/jk/dan/单线路.txt  
-单线路备用接口(Github page手机可能不支持)  
-https://jixiejishu.github.io/jxjs.github.io/jk/dan/单线路.txt  
-
-
-## 1.4.常用接口  
-欧歌接口（在影视内是多线路，其它壳子里面是多仓库）  
-[http://tv.nxog.top](http://tv.nxog.top  "网站内有很多接口")    
-奇奇单仓（也是奇奇的源地址）  
-[http://z.qiqiv.cn/123](http://z.qiqiv.cn/123  "网站内有很多接口")   
-
-zyt（基于奇奇本地包的开心线路和道长的源。主要是电视节目部分视频网站、体育节目和有声书） 
+## 1.3zyt
+单线路  
+基于奇奇本地包的开心线路和道长的源。主要是电视节目部分视频网站、体育节目和有声书）
+应用商店使用注意：  
+1）仅支持影视（fongmi）和OK版影视（OK版fongmi），部分二次开发版更新慢的可能不支持会提示无法解析。  
+2）应软件部分来源于github项目，有时候可能下载有问题。  
+3）应用商店部分放在凯速云盘，免费的高速流量每个月5G，使用完之后下载速度会比较慢。  
+4）软件和网盘的是一样的，如果无法正常使用就下载网盘的软件。  
 
 codeberg接口：  
 https://codeberg.org/jixiejishu/zyt/raw/branch/main/api.txt  
@@ -88,6 +81,9 @@ https://codeberg.org/jixiejishu/zyt/raw/branch/main/api.txt
 github接口（已经加速，下面几个接口内容是一样的）： 
 借用刘老备的项目加速：   
 https://raw.kkgithub.com/jixiejishu/zyt/main/api.txt  
+借用欧歌的加速：  
+https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/api.txt  
+其它加速：  
 https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/api.txt  
 https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/api.txt  
 借用欧歌的加速：  
@@ -97,15 +93,30 @@ https://d.kstore.dev/download/7731/zyt/api.txt
 gitee接口  
 https://gitee.com/jixiejishu/zyt/raw/main/api.txt  
  
+## 1.4单线路接口（TVbox助手线路 +部分小盒酷玩 +部分网络搜集线路）  
+支持TVbox taka99gen99等单仓库软件  
+单线路主接口(codeberg page手机一般可以访问)  
+https://jixiejishu.codeberg.page/jk/dan/单线路.txt  
+单线路备用接口(Github page手机可能不支持)  
+https://jixiejishu.github.io/jxjs.github.io/jk/dan/单线路.txt  
+
+
+## 1.5.常用接口  
+欧歌接口（在影视内是多线路，其它壳子里面是多仓库）  
+[http://tv.nxog.top](http://tv.nxog.top  "网站内有很多接口")    
+奇奇单仓（也是奇奇的源地址）  
+[http://z.qiqiv.cn/123](http://z.qiqiv.cn/123  "网站内有很多接口")   
+
+
 
  
-## 1.5 常用导航
+## 1.6 常用导航
 饭太硬（本身也是接口）  
 https://www.饭太硬.com  
 肥猫宝贝（本身也是接口）  
 https://肥猫.com  
 
-## 1.6封锁问题处理  
+## 1.7封锁问题处理  
  **部分地区对线路和接口有封锁可以试试本地包**  
  **江苏地区封锁特别严重.**    
 本地包使用教程（视频和简单文字教程密码：2024yy）：  
