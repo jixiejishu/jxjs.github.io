@@ -210,7 +210,17 @@ Githubpage平台(手机可能打不开）：
 密码：1234      
 [https://www.123684.com/s/utZ7Vv-SYZdd](https://www.123684.com/s/utZ7Vv-SYZdd)    
 [https://www.123865.com/s/utZ7Vv-SYZdd](https://www.123865.com/s/utZ7Vv-SYZdd)    
-         
+
+ **肥羊工具**    
+密码：1234    
+蓝奏云盘   
+[https://wwrb.lanzn.com/b00rnly1qj](https://wwrb.lanzn.com/b00rnly1qj)  
+小飞机资料   
+[https://share.feijipan.com/s/YGE1Ppky](https://share.feijipan.com/s/YGE1Ppky)  
+123网盘   
+[https://www.123684.com/s/utZ7Vv-z2Zdd ](https://www.123684.com/s/utZ7Vv-z2Zdd )    
+[https://www.123865.com/s/utZ7Vv-z2Zdd](https://www.123865.com/s/utZ7Vv-z2Zdd)   
+          
 
 # 4.常见问题
 1）电视节目类不能播放  
