@@ -24,12 +24,15 @@ githubpage（部分手机无法正常访问）
 【金山文档 | WPS云文档】 初次使用  
 [https://kdocs.cn/l/cjoNH5vJzrx8](https://kdocs.cn/l/cjoNH5vJzrx8  "建议使用OK版影视")   
 
-
-
 # 1.网络搜集线路
  **由于不同的地区网络情况不同，所以放在了多个平台，下面多个线路内容都是一样的。不能用就换一平台。**     
 ## 1.1多线路（TVbox助手线路 +部分小盒酷玩 +部分网络搜集线路）
 适合除了TVbox taka99 这种单线路软件之外的所有软件。  
+后面加上不同的后缀出现不同的线路  
+T&S.txt           不需要修改，常用接口没OK线路。  
+T&S.txtOK      添加“OK”包含OK在线线路,非OK影视会提示填入激活码，需要从公众号获取，目前无法取消和退出。  
+T&S.txtOKPG  添加“OKPG”  OKPG版影视专用。整合了肥羊工具，可以自动获取直播源。在其它的壳子上没有这个功能。  
+
  **手机长按，弹出界面选择复制**      
 主接口(codeberg)  
 https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dxl/T%26S.txt  
@@ -54,6 +57,10 @@ https://gitee.com/jixiejishu/tvboxinformation/raw/main/tvboxtools/jk/dxl/T%26S.t
 ## 1.2多仓库接口（ 实际上是欧歌多仓库+1.1多线路+小盒酷玩多线路）  
 多仓库接口（ 欧歌多仓库+网络搜集自制多线路+小盒酷玩多线路）  
 影视(fongmi)、OK版fongmi（OK影视），不支持多仓  
+后面加上不同的后缀出现不同的线路  
+duo.txt              不需要修改，常用多仓库，没OK线路。    
+duo.txtOK        添加“OK”常用多仓库。单仓在线。包含OK在线线路,非OK影视会提示填入激活码，需要从公众号获取，目前无法取消和退出。  
+
  **手机长按，弹出界面选择复制**    
 主接口(codeberg)   
 https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dck/duo.txt   
