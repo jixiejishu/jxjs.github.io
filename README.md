@@ -85,6 +85,15 @@ https://gitee.com/jixiejishu/tvboxinformation/raw/main/tvboxtools/jk/dck/duo.txt
 ## 1.3zyt
 单线路  
 基于奇奇本地包的开心线路和道长的源。主要是电视节目部分视频网站、体育节目和有声书）
+
+因为大部分直播接口项目在github上，后面加上不同的后缀直播内使用的不同的加速线路。  
+因为经常会有变化，因此加速会调整，下面是目前使用加速项目：  
+直播不支持https://cdn.jsdelivr.net/ 加速  
+api.txt            默认是https://ghgo.xyz/  
+api.txt1          添加“1”使用的https://mirror.ghproxy.com/  
+api.txt2          添加“2”使用的刘老备接口的加速  
+api.txt3          添加“3”使用的欧歌接口的加速  
+
 应用商店使用注意：  
 1）仅支持影视（fongmi）和OK版影视（OK版fongmi），部分二次开发版更新慢的可能不支持会提示无法解析。  
 2）应软件部分来源于github项目，有时候可能下载有问题。  
