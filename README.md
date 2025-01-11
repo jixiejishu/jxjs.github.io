@@ -49,10 +49,7 @@ https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/tvboxinforma
 其它加速    
 https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt
 https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt  
-凯速接口：  
-https://d.kstore.dev/download/7731/tvbox/tvboxtools/jk/dxl/T%EF%B9%A0S.txt  
-gitee接口：  
-https://gitee.com/jixiejishu/tvboxinformation/raw/main/tvboxtools/jk/dxl/T%26S.txt  
+
 
 ## 1.2多仓库接口（ 实际上是欧歌多仓库+1.1多线路+小盒酷玩多线路）  
 多仓库接口（ 欧歌多仓库+网络搜集自制多线路+小盒酷玩多线路）  
@@ -77,10 +74,7 @@ https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/tvboxinforma
 其它加速  
 https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt
 https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt 
-kstore（凯速）  
-https://d.kstore.dev/download/7731/tvbox/tvboxtools/jk/dck/duo.txt  
-gitee  
-https://gitee.com/jixiejishu/tvboxinformation/raw/main/tvboxtools/jk/dck/duo.txt  
+
 
 ## 1.3zyt
 单线路  
@@ -89,10 +83,12 @@ https://gitee.com/jixiejishu/tvboxinformation/raw/main/tvboxtools/jk/dck/duo.txt
 因为大部分直播接口项目在github上，后面加上不同的后缀直播内使用的不同的加速线路。  
 因为经常会有变化，因此加速会调整，下面是目前使用加速项目：  
 直播不支持https://cdn.jsdelivr.net/ 加速  
-api.txt            默认是https://ghgo.xyz/  
-api.txt1          添加“1”使用的https://mirror.ghproxy.com/  
-api.txt2          添加“2”使用的刘老备接口的加速  
-api.txt3          添加“3”使用的欧歌接口的加速  
+fm.pnga            默认是https://ghgo.xyz/  
+fm.pnga1          添加“1”使用的https://mirror.ghproxy.com/  
+fm.pnga2          添加“2”使用的欧歌接口的加速   
+fm.pnga3          添加“3”使用的刘老备接口的加速   
+最后的/和点之间的字母代表不同的线路。可以根据需要自己替换。  
+fm=肥猫版  ffy=饭太硬版 xm=小米版 og=欧歌版，上面的例子是肥猫版的。  
 
 应用商店使用注意：  
 1）仅支持影视（fongmi）和OK版影视（OK版fongmi），部分二次开发版更新慢的可能不支持会提示无法解析。  
@@ -101,26 +97,23 @@ api.txt3          添加“3”使用的欧歌接口的加速
 4）软件和网盘的是一样的，如果无法正常使用就下载网盘的软件。  
 
 codeberg接口：  
-https://codeberg.org/jixiejishu/zyt/raw/branch/main/api.txt   
+https://codeberg.org/jixiejishu/zyt/raw/branch/main/fm.pnga2   
 极狐接口（gitlab）：  
-https://gitlab.com/jixiejishu/zyt/-/raw/main/api.txt   
+https://gitlab.com/jixiejishu/zyt/-/raw/main/fm.pnga2   
 jsdelivr cdn 加速:  
-https://cdn.jsdelivr.net/gh/jixiejishu/zyt@main/api.txt  
+https://cdn.jsdelivr.net/gh/jixiejishu/zyt@main/fm.pnga2  
 备用接口:   
 Github 借用刘老备接口使用的加速:   
-https://raw.kkgithub.com/jixiejishu/zyt/main/api.txt   
+https://raw.kkgithub.com/jixiejishu/zyt/main/fm.pnga2   
 github接口（已经加速，下面几个接口内容是一样的）：  
 借用欧歌的加速：  
-https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/api.txt  
+https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/fm.pnga2  
 其它加速：  
-https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/api.txt  
-https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/api.txt  
+https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/fm.pnga2  
+https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/fm.pnga2  
 借用欧歌的加速：  
-https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/api.txt  
-凯速接口  
-https://d.kstore.dev/download/7731/zyt/api.txt  
-gitee接口  
-https://gitee.com/jixiejishu/zyt/raw/main/api.txt  
+https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/fm.pnga2  
+
  
 ## 1.4单线路接口（TVbox助手线路 +部分小盒酷玩 +部分网络搜集线路）  
 支持TVbox taka99gen99等单仓库软件  
@@ -137,10 +130,7 @@ jsdelivr cdn 加速:
 其它加速：  
 [https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  ](https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  )   
 [https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  ](https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  )  
-kstore（凯速）   
-[https://d.kstore.dev/download/7731/tvbox/tvboxtools/jk/dan/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt ](https://d.kstore.dev/download/7731/tvbox/tvboxtools/jk/dan/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt )  
-gitee   
-[https://gitee.com/jixiejishu/tvboxinformation/raw/main/tvboxtools/jk/dan/单线路.txt  ](https://gitee.com/jixiejishu/tvboxinformation/raw/main/tvboxtools/jk/dan/单线路.txt ) 
+
 ## 1.5.常用接口  
 欧歌接口（在影视内是多线路，其它壳子里面是多仓库）  
 [http://tv.nxog.top](http://tv.nxog.top  "网站内有很多接口")    
