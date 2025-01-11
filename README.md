@@ -78,7 +78,7 @@ https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinf
 
 ## 1.3zyt
 单线路  
-基于奇奇本地包的开心线路和道长的源。主要是电视节目部分视频网站、体育节目和有声书）
+主要是电视节目部分视频网站、体育节目和有声书   
 
 因为大部分直播接口项目在github上，后面加上不同的后缀直播内使用的不同的加速线路。  
 因为经常会有变化，因此加速会调整，下面是目前使用加速项目：  
