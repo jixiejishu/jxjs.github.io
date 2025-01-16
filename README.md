@@ -36,7 +36,7 @@ T&S.txtOKPG  添加“OKPG”  OKPG版影视专用。整合了肥羊工具，可
  **手机长按，弹出界面选择复制**      
 主接口(codeberg)  
 https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dxl/T%26S.txt  
-极狐接口（gitlab）：  
+gitlab接口：  
 https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dxl/T%26S.txt  
 jsdelivr cdn 加速:  
 https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dxl/T%26S.txt  
@@ -61,7 +61,7 @@ duo.txtOK        添加“OK”常用多仓库。单仓在线。包含OK在线�
  **手机长按，弹出界面选择复制**    
 主接口(codeberg)   
 https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dck/duo.txt   
-极狐接口（gitlab）：  
+gitlab接口：  
 https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dck/duo.txt   
 jsdelivr cdn 加速:  
 https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dck/duo.txt  
@@ -92,13 +92,11 @@ fm=肥猫版  ffy=饭太硬版 xm=小米版 og=欧歌版，上面的例子是肥
 
 应用商店使用注意：  
 1）仅支持影视（fongmi）和OK版影视（OK版fongmi），部分二次开发版更新慢的可能不支持会提示无法解析。  
-2）应软件部分来源于github项目，有时候可能下载有问题。  
-3）应用商店部分放在凯速云盘，免费的高速流量每个月5G，使用完之后下载速度会比较慢。  
-4）软件和网盘的是一样的，如果无法正常使用就下载网盘的软件。  
+2）应用商店软件只有部分提供下载地址的github项目，部分文件下载可能有问题，网盘的软件更多一些，下载也方便一些。    
 
 codeberg接口：  
 https://codeberg.org/jixiejishu/zyt/raw/branch/main/fm.pnga2   
-极狐接口（gitlab）：  
+gitlab接口：  
 https://gitlab.com/jixiejishu/zyt/-/raw/main/fm.pnga2   
 jsdelivr cdn 加速:  
 https://cdn.jsdelivr.net/gh/jixiejishu/zyt@main/fm.pnga2  
@@ -119,17 +117,17 @@ https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zyt/refs/hea
 支持TVbox taka99gen99等单仓库软件  
 单线路主接口(codeberg page手机一般可以访问)  
 [https://jixiejishu.codeberg.page/jk/dan/单线路.txt  ](https://jixiejishu.codeberg.page/jk/dan/单线路.txt )   
-极狐接口（gitlab）：  
-[https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dan/单线路.txt  ](https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dan/单线路.txt  )
-jsdelivr cdn 加速:
-[https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dan/单线路.txt](https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dan/单线路.txt)
-单线路备用接口(Github page手机可能不支持)  
+gitlab接口：  
+[https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dan/单线路.txt  ](https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dan/单线路.txt  )  
+jsdelivr cdn 加速:   
+[https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dan/单线路.txt](https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dan/单线路.txt)  
+单线路备用接口(Github page手机可能不支持)    
 [https://jixiejishu.github.io/jxjs.github.io/jk/dan/单线路.txt  ](https://jixiejishu.github.io/jxjs.github.io/jk/dan/单线路.txt  )   
 欧歌加速    
-[https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  ](https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  )   
+[https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  ](https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  )     
 其它加速：  
 [https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  ](https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  )   
-[https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  ](https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  )  
+[https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  ](https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  )    
 
 ## 1.5.常用接口  
 欧歌接口（在影视内是多线路，其它壳子里面是多仓库）  
