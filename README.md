@@ -26,8 +26,12 @@ githubpage（部分手机无法正常访问）
 
 # 1.网络搜集线路
  **由于不同的地区网络情况不同，所以放在了多个平台，下面多个线路内容都是一样的。不能用就换一平台。**     
-## 1.1多线路（TVbox助手线路 +部分小盒酷玩 +部分网络搜集线路）
-适合除了TVbox taka99 这种单线路软件之外的所有软件。  
+如果无法导入接口可以尝试更换DNS。在设备系统内更换或者软件更换。  
+在软件内更换，一般在设置-安全DNS。影视 OK影视等名字是DoH。  
+比如欧歌线路。某些地区需要更换DNS才能使用。  
+
+## 1.1多线路（TVbox助手线路 +部分小盒酷玩 +部分网络搜集线路）  
+适合除了TVbox taka99 这种单线路软件之外的所有软件。    
 后面加上不同的后缀出现不同的线路  
 T&S.txt           不需要修改，常用接口没OK线路。  
 T&S.txtOK      添加“OK”包含OK在线线路,非OK影视会提示填入激活码，需要从公众号获取，目前无法取消和退出。  
@@ -130,8 +134,12 @@ jsdelivr cdn 加速:
 [https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  ](https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  )    
 
 ## 1.5.常用接口  
-欧歌接口（在影视内是多线路，其它壳子里面是多仓库）  
+欧歌接口（在影视内是多线路，其它壳子里面是多仓库）,下面几个是一样的。    
+部分地区需要修改DNS（DOH）  
 [http://tv.nxog.top](http://tv.nxog.top  "网站内有很多接口")    
+[https://tv.nxog.top](https://tv.nxog.top  "网站内有很多接口")    
+[http://vip.nxog.top](http://vip.nxog.top  "网站内有很多接口")    
+[https://vip.nxog.top](http://vip.nxog.top  "网站内有很多接口")    
 奇奇单仓（也是奇奇的源地址）  
 [http://z.qiqiv.cn/123](http://z.qiqiv.cn/123  "网站内有很多接口")   
 
@@ -151,6 +159,12 @@ jsdelivr cdn 加速:
 如果只是对github和codeberg封锁可以试试直接把配置文件当本地包使用： 
 链接内有使用教程(密码：1234）    
 [https://wwrb.lanzn.com/b00rnjo4sh](https://wwrb.lanzn.com/b00rnjo4sh)    
+
+接口在部分地区无法使用。  
+如果无法导入接口可以尝试更换DNS。在设备系统内更换或者软件更换。  
+在软件内更换，一般在设置-安全DNS。影视 OK影视等名字是DoH。  
+比如欧歌线路。某些地区需要更换DNS才能使用。  
+
 # 2.0常用软件下载的网站
 ## 2.1影用仓库
 网址：[https://www.wmdz.com](https://www.wmdz.com)    
