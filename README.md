@@ -170,6 +170,7 @@ jsdelivr cdn 加速:
 网址：[https://www.wmdz.com](https://www.wmdz.com)    
 最全的软件汇总有很多软件的下载分类在不同的位置。序号1的是城通网盘，下载速度慢，每次只能下载一个。
 序号2的是蓝奏云，下载速度快。一般软件下载使用序号2的蓝奏云，一般密码都是wmdz。部分特别老的内容是351184。  
+蓝奏云有限制。手机使用需要修改UA。参考3常用工具。  
 
 ## 2.2聚玩盒子
 [https://juwanhezi.com](https://juwanhezi.com)    
