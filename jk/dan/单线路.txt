@@ -81,32 +81,75 @@ https://py.nxog.eu.org/https://raw.githubusercontent.com/gaotianliuyun/gao/maste
 http://box.ufuzi.com/tv/qq/短剧频道/api.json
 🌳常┃奇奇儿童:
 https://jihulab.com/ymz1231/xymz/-/raw/main/ymshaoer
-🌳常┃PG:
-http://www.fish2018.us.kg/p/jsm.json
-🌳常┃PG备:
-http://tv.devopser.org/p/jsm.json
-🌳常┃真心:
-http://www.fish2018.us.kg/z/FongMi.json
-🌳常┃真心备:
-http://tv.devopser.org/z/FongMi.json
-🌳常┃zytcodeberg:
-https://codeberg.org/jixiejishu/zyt/raw/branch/main/api.txt
-🌳常┃zytgitlab:
-https://gitlab.com/jixiejishu/zyt/-/raw/main/api.txt
-🌳常┃zytjsdelivr:
-https://cdn.jsdelivr.net/gh/jixiejishu/zyt@main/api.txt
-🌳常┃zyt刘加速:
-https://raw.kkgithub.com/jixiejishu/zyt/main/api.txt
-🌳常┃zytghproxy:
-https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/api.txt
-🌳常┃zytghp.ci:
-https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/api.txt
-🌳常┃zyt欧歌加速:
-https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/api.txt
-🌳常┃zyt凯速:
-https://d.kstore.dev/download/7731/zyt/api.txt
-🌳常┃zytgitee:
-https://gitee.com/jixiejishu/zyt/raw/main/api.txt
+ 🌳常┃真心:
+http://www.fish2018.us.kg/z/FongMi.json 
+ 🌳常┃真心备:
+https://cnb.cool/fish2018/zx/-/git/raw/master/FongMi.json 
+
+
+
+
+
+
+
+//zyt 目前默认是欧歌:
+
+//通过更改后缀切换不同的加速平台：:
+
+//.pnga=https://ghgo.xyz:
+
+//后面加1:
+
+//.pnga1=https://mirror.ghproxy.com/:
+
+//后面加2:
+
+//.pnga2=借用欧歌加速:
+
+//后面加3:
+
+//.pnga3=借用刘老备加速:
+
+📺zyt┃饭太硬c:
+https://codeberg.org/jixiejishu/zytzx/raw/branch/main/fty.pnga2
+📺zyt┃饭太硬lab:
+https://gitlab.com/jixiejishu/zytzx/-/raw/main/fty.pnga2
+📺zyt┃饭太硬hub:
+https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/zytzx/refs/heads/main/fty.pnga2
+📺zyt┃饭太硬欧歌加速:
+https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zytzx/refs/heads/main/fty.pnga2
+📺zyt┃饭太硬刘加速:
+https://raw.kkgithub.com/jixiejishu/zytzx/main/fty.pnga2
+📺zyt┃肥猫codeberg:
+https://codeberg.org/jixiejishu/zytzx/raw/branch/main/fm.pnga2
+📺zyt┃肥猫gitlab:
+https://gitlab.com/jixiejishu/zytzx/-/raw/main/fm.pnga2
+📺zyt┃肥猫github:
+https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/zytzx/refs/heads/main/fm.pnga2
+📺zyt┃肥猫欧歌加速:
+https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zytzx/refs/heads/main/fm.pnga2
+📺zyt┃肥猫刘加速:
+https://raw.kkgithub.com/jixiejishu/zytzx/main/fm.pnga2
+📺zyt┃欧歌codeberg:
+https://codeberg.org/jixiejishu/zytzx/raw/branch/main/og.pnga2
+📺zyt┃欧歌gitlab:
+https://gitlab.com/jixiejishu/zytzx/-/raw/main/og.pnga2
+📺zyt┃欧歌github:
+https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/zytzx/refs/heads/main/og.pnga2
+📺zyt┃欧歌欧歌加速:
+https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zytzx/refs/heads/main/og.pnga2
+📺zyt┃欧歌刘加速:
+https://raw.kkgithub.com/jixiejishu/zytzx/main/og.pnga2
+📺zyt┃潇洒c:
+https://codeberg.org/jixiejishu/zyt/raw/branch/main/api.pnga2
+📺zyt┃潇洒ab:
+https://gitlab.com/jixiejishu/zyt/-/raw/main/api.pnga2
+📺zyt┃潇洒hub:
+https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/api.pnga2
+📺zyt┃潇洒og:
+https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/api.pnga2
+📺zyt┃潇洒l:
+https://raw.kkgithub.com/jixiejishu/zyt/main/api.pnga2
 
 
 
@@ -123,8 +166,7 @@ http://www.uuneed.cn/yydsys/duoapi/raw/master/jsm.json
 https://raw.kkgithub.com/leevi0709/one/main/jsm.json
 🚀T┃One/欧歌借用:
 https://py.nxog.eu.org/https://raw.githubusercontent.com/leevi0709/one/main/jsm.json
-//18+🚀T┃道长:
-https://gitlab.com/duomv/dzhipy/-/raw/main/index.json
+
 //接口格式修改🚀T┃D老魔改:
 https://download.kstore.space/download/2883/nzk/nzk0722.json
 🚀T┃D老魔改:
@@ -199,8 +241,6 @@ https://git.acwing.com/iduoduo/orange/-/raw/main/jsm.json
 https://www.yingm.cc/dm/dm.json
 //接口失效🏄️盒┃dxawi ：
 https://dxawi.github.io/0/0.json
-//伦理片🏄️盒┃HG线：
-https://api.hgyx.vip/hgyx.json
 
 
 
@@ -270,7 +310,6 @@ https://gongdian.top/tvbox/ok.json
 
 
 
-
 //欧歌的线路新版没有直接引用其它线路二是选用了几个线路。把配置文件内引用的文件变成在线版，包含jar.其中PG是原版
 //大部分功能可以正常使用，部分功能不正常比如饭太硬的牛播一无法使用，有些接口实际上已经停更，比如荷茶秀秀
 
@@ -330,3 +369,17 @@ http://11.yy.xn--dkw.xn--6qq986b3xl/1/20.php?ou=https://mirror.ghproxy.com/raw.g
 http://11.yy.xn--dkw.xn--6qq986b3xl/1/21.php?ou=https://xn--dkw0c.v.xn--dkw.xn--6qq986b3xl/m/333.php?ou=公众号欧歌app&mz=index&jar=index 
  📢tv收集不分排名📢:
 https://tv.nxog.top/m/333.php?ou=公众号欧歌app&mz=1&jar=all&b=tv 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
