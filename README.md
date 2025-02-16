@@ -51,7 +51,7 @@ https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26
 欧歌加速    
 https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt  
 其它加速    
-https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt
+https://ghfast.top/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt
 https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt  
 
 
@@ -76,7 +76,7 @@ https://raw.kkgithub.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.
 欧歌加速  
 https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt  
 其它加速  
-https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt
+https://ghfast.top/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt
 https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt 
 
 
@@ -111,7 +111,7 @@ github接口（已经加速，下面几个接口内容是一样的）：
 借用欧歌的加速：  
 https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/fm.pnga2  
 其它加速：  
-https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/fm.pnga2  
+https://ghfast.top/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/fm.pnga2  
 https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/fm.pnga2  
 借用欧歌的加速：  
 https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/fm.pnga2  
@@ -130,7 +130,7 @@ jsdelivr cdn 加速:
 欧歌加速    
 [https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  ](https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  )     
 其它加速：  
-[https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  ](https://ghp.ci/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  )   
+[https://ghfast.top/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  ](https://ghfast.top/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  )   
 [https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  ](https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt  )    
 
 ## 1.5.常用接口  
