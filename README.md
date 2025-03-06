@@ -332,6 +332,17 @@ Githubpage平台(手机可能打不开）：
 密码：1234       
 [https://share.feijipan.com/s/AnEEQTwX](https://share.feijipan.com/s/AnEEQTwX )    
 123网盘（需要注册并登陆下载。网页版每天1G下载流量 客户端没有限制）
+
+轻享云盘  
+密码：1234     
+[https://pan.beecld.com/s/6W7Id](https://pan.beecld.com/s/6W7Id )    
+
+杏仁云盘（会提示不安全）  
+密码：1234    
+[https://acbox.app/s/DgBGFv](https://acbox.app/s/DgBGFv )    
+
+
+123网盘（需要注册并登陆下载。网页版每天1G下载流量 客户端没有限制）  
 密码：1234      
 [https://www.123684.com/s/utZ7Vv-SYZdd](https://www.123684.com/s/utZ7Vv-SYZdd)    
 [https://www.123865.com/s/utZ7Vv-SYZdd](https://www.123865.com/s/utZ7Vv-SYZdd)    
