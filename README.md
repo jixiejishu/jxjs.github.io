@@ -96,8 +96,13 @@ fm.pnga3          添加“3”使用的刘老备接口的加速
 fm=肥猫版  ffy=饭太硬版 xm=小米版 og=欧歌版，上面的例子是肥猫版的。  
 
 应用商店使用注意：  
-1）仅支持影视（fongmi）和OK版影视（OK版fongmi），部分二次开发版更新慢的可能不支持会提示无法解析。  
-2）应用商店软件只有部分提供下载地址的github项目，部分文件下载可能有问题，网盘的软件更多一些，下载也方便一些。    
+1）仅支持影视（fongmi）和OK版影视 影视仓的新版等更新比较快的软件。  
+2）如果提示无法解析就是下载资源出了问题，这时候可以使用网盘的资源。  
+3）潇洒的包2025.3.7版之后，可以使用阿里 夸克 UC的网盘内的资源直接安装APK。  
+第一步,注册网盘之后，保存分享的资源。夸克的盘容量比较小。目前UC比较合适。  
+UC的资源会随着分享者更新而同步更新。  
+第二步,在“配置中心”中按提示扫码登录或者输入相关资料。  
+第三步,在"我的｜阿里网盘","我的｜UC网盘","我的｜夸克网盘",中打开APK 转存的默认一般在分享里面。  
 
 codeberg接口：  
 https://codeberg.org/jixiejishu/zyt/raw/branch/main/fm.pnga2   
@@ -276,7 +281,8 @@ jsdelivr cdn 加速:
 有很多软件和介绍 ，但是软件介绍不全 ，有的比较夸张。有很多苹果手机系统的伪装上架的软件，  
 按提示操作就可以用了。 数据源和直播源里面一些内容更新不及时失效了。  
 点播接口:[https://juwanhezi.com/other/jsonlist](https://juwanhezi.com/other/jsonlist)         
-直播接口:[https://juwanhezi.com/more/live](https://juwanhezi.com/more/live)         
+直播接口:[https://juwanhezi.com/more/live](https://juwanhezi.com/more/live)  
+本地包:[https://juwanhezi.com/other/jsonlist?type=local](https://juwanhezi.com/other/jsonlist?type=local)   
 
 
 ## 2.3iptvindex
@@ -289,12 +295,20 @@ jsdelivr cdn 加速:
 公众号奇奇乐老友会/奇友会内看广告后查看内容的小程序，获取密码  
 TVbox资源下载 [http://bbs.qiqiv.cn/thread-11997-1-1.html](http://bbs.qiqiv.cn/thread-11997-1-1.html)      
 蓝奏云网盘（本地包、蜂蜜、壳助手密码到公众号里面看广告获取密码）  
-蜂蜜版就是影视（fongmi） 
-[https://qiqi2020.lanzouw.com/b09svqv1c ](https://qiqi2020.lanzouw.com/b09svqv1c )      
-夸克网盘,夸克浏览器（手机）或者夸克网盘（电脑）下载  
-[https://pan.quark.cn/s/5cb9978c7a6a#/list/share](https://pan.quark.cn/s/5cb9978c7a6a#/list/share)   
-UC网盘,夸克浏览器（手机）或者夸克网盘（电脑）下载  
-[https://drive.uc.cn/s/e2c474c324574#/list/share](https://drive.uc.cn/s/e2c474c324574#/list/share)   
+## 2.5网盘资源  
+潇洒网盘    
+UC网盘    
+[https://drive.uc.cn/s/ba531661b3eb4?public=1](https://drive.uc.cn/s/ba531661b3eb4?public=1)    
+夸克网盘    
+[https://pan.quark.cn/s/2a68318af1a7](https://pan.quark.cn/s/2a68318af1a7)    
+
+OK版影视：
+UC盘：[https://drive.uc.cn/s/01bc89c897034](https://drive.uc.cn/s/01bc89c897034)    
+夸克：[https://pan.quark.cn/s/6fead79bddaf](https://pan.quark.cn/s/6fead79bddaf)   
+饭太硬（软件更新慢一些）   
+应用工具合集: (提取码：bdnn)      
+地址1（UC）：[https://drive.uc.cn/s/8efe230949314#/list/share](https://drive.uc.cn/s/8efe230949314#/list/share)    
+地址2（迅雷）:[https://pan.xunlei.com/s/VO4KPd68xHazX9u1VNQNsCqpA1?pwd=bdnn](https://pan.xunlei.com/s/VO4KPd68xHazX9u1VNQNsCqpA1?pwd=bdnn)   
 
 # 3.常用工具
 蓝奏云搜集软件下载内有简单的视频教程和详细的文字教程。初次使用可以看看简单的视频教程。   
@@ -353,6 +367,12 @@ Githubpage平台(手机可能打不开）：
 [https://wwrb.lanzn.com/b00rnly1qj](https://wwrb.lanzn.com/b00rnly1qj)  
 小飞机资料   
 [https://share.feijipan.com/s/YGE1Ppky](https://share.feijipan.com/s/YGE1Ppky)  
+
+轻享云盘    
+[https://pan.beecld.com/s/DNOCm](https://pan.beecld.com/s/DNOCm)  
+杏仁云盘（会提示不安全）  
+[https://acbox.app/s/ePNjUZ](https://acbox.app/s/ePNjUZ)   
+
 123网盘   
 [https://www.123684.com/s/utZ7Vv-z2Zdd ](https://www.123684.com/s/utZ7Vv-z2Zdd )    
 [https://www.123865.com/s/utZ7Vv-z2Zdd](https://www.123865.com/s/utZ7Vv-z2Zdd)   
@@ -412,18 +432,24 @@ Githubpage平台(手机可能打不开）：
 
 因为软件需要根据发布情况更新，因此没有打包成一整个压缩包。   
 根据常用情况制作了一个手机版和电视版的列表。  
-  
+密码 1234   
+蓝奏云盘：  
+[https://wwrb.lanzn.com/b00rnkxs9c   ](https://wwrb.lanzn.com/b00rnkxs9c )      
+根据列表到蓝奏云盘列表下载。
+
+轻享云盘：   
+[https://pan.beecld.com/s/jq6iM](https://pan.beecld.com/s/jq6iM)   
+
+杏仁云盘：  
+[https://acbox.app/s/yeNRcy ](https://acbox.app/s/yeNRcy )    
+ 
 小飞机网盘    
-密码 1234  
 [https://share.feijipan.com/s/lREEcKzG ](https://share.feijipan.com/s/lREEcKzG )    
+
 123网盘（需要注册并登陆下载。网页版每天1G下载流量 客户端没有限制） 
-密码 1234  
 [https://www.123684.com/s/utZ7Vv-JFZdd](https://www.123684.com/s/utZ7Vv-JFZdd)     
 [https://www.123865.com/s/utZ7Vv-JFZdd](https://www.123865.com/s/utZ7Vv-JFZdd)     
-蓝奏云盘：  
-[https://wwrb.lanzn.com/b00rnkxs9c   ](https://wwrb.lanzn.com/b00rnkxs9c )    
-密码:1234    
-根据列表到蓝奏云盘列表下载。  
+
 
 # 6.野草助手
 比较热门的一款软件分享平台，一款应用安装和分享工具。用户上传应用本网站后得到口令，  
@@ -504,6 +530,10 @@ Githubpage平台(手机可能打不开）：
 [https://wwrb.lanzn.com/b00rnlmtrg](https://wwrb.lanzn.com/b00rnlmtrg)   
 小飞机网盘  
 [https://share.feijipan.com/s/pvEXyynY](https://share.feijipan.com/s/pvEXyynY)  
+轻享云盘  
+[https://pan.beecld.com/s/w3Oil](https://pan.beecld.com/s/w3Oil)  
+杏仁云盘（会提示不安全）  
+[https://acbox.app/s/xJNxUy](https://acbox.app/s/xJNxUy)    
 123网盘  
 [https://www.123684.com/s/utZ7Vv-LPZdd](https://www.123684.com/s/utZ7Vv-LPZdd)   
 [https://www.123865.com/s/utZ7Vv-LPZdd](https://www.123865.com/s/utZ7Vv-LPZdd)   
