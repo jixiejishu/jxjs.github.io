@@ -322,6 +322,7 @@ UC盘：[https://drive.uc.cn/s/01bc89c897034](https://drive.uc.cn/s/01bc89c89703
 
 
 # 3.常用工具
+## 3.1常用软件下载  
 蓝奏云搜集软件下载内有简单的视频教程和详细的文字教程。初次使用可以看看简单的视频教程。   
 
 由于蓝奏云限制上传格式。视频因此做成了压缩包。  
@@ -353,27 +354,28 @@ Githubpage平台(手机可能打不开）：
 [【【金山文档 | WPS云文档】 蓝奏云搜集软件](https://kdocs.cn/l/cuYVBtKzIYXe "蓝奏云搜集软件下载")  
 [【金山文档 | WPS云文档】 机顶盒模拟器的选择](https://kdocs.cn/l/cclt8mKwYXgt "机顶盒模拟器的选择")  
 
- **软件与教程下载 （小飞机云盘)**   
+ **软件与教程下载 **   
 密码：1234       
-[https://share.feijipan.com/s/AnEEQTwX](https://share.feijipan.com/s/AnEEQTwX )    
-123网盘（需要注册并登陆下载。网页版每天1G下载流量 客户端没有限制）
+六一云盘  
+[https://www.now61.com/s/lJDDim](https://www.now61.com/s/lJDDim)    
 
-轻享云盘  
-密码：1234     
+小飞机云盘  
+[https://share.feijipan.com/s/AnEEQTwX](https://share.feijipan.com/s/AnEEQTwX )    
+
+轻享云盘   
 [https://pan.beecld.com/s/6W7Id](https://pan.beecld.com/s/6W7Id )    
 
 杏仁云盘（会提示不安全）  
-密码：1234    
 [https://acbox.app/s/DgBGFv](https://acbox.app/s/DgBGFv )    
 
-
 123网盘（需要注册并登陆下载。网页版每天1G下载流量 客户端没有限制）  
-密码：1234      
 [https://www.123684.com/s/utZ7Vv-SYZdd](https://www.123684.com/s/utZ7Vv-SYZdd)    
 [https://www.123865.com/s/utZ7Vv-SYZdd](https://www.123865.com/s/utZ7Vv-SYZdd)    
 
  **肥羊工具**    
 密码：1234    
+六一云盘  
+[https://www.now61.com/s/NBqYFL](https://www.now61.com/s/NBqYFL)    
 蓝奏云盘   
 [https://wwrb.lanzn.com/b00rnly1qj](https://wwrb.lanzn.com/b00rnly1qj)  
 小飞机资料   
@@ -405,6 +407,36 @@ PG接口
 1#饭太硬牛播一无法正常使用  
 20#南风网络不好的时候feiyang无法使用  
 5#PG和原版相同  
+
+
+## 3.2下载与推送    
+### 3.2.1X浏览器说明    
+应用仓库版X浏览器    
+浏览器内已经设置好，打开蓝奏云会直接使用电脑版。并且已经内置了影用仓库的地址。  
+不支持遥控器操作。如果在机顶盒或者电视上使用，需要使用鼠标或者带鼠标功能的遥控器。  
+默认的下载地址是Download文件夹。如果在手机上可以使用各种工具推送到机顶盒或者电视上。  
+
+### 3.2.2X浏览器下载地址    
+官方下载地址（密码是wmdz。如果手机不会设置UA第一次先用①下载）：    
+《X浏览器》 超小型    
+[https://www.wmdz.com/tools.html](https://www.wmdz.com/tools.html)   
+或者  
+[https://www.wmdz.com/down.html](https://www.wmdz.com/down.html)   
+
+第三方下载地址  
+“3.1 常用软件下载”各个网盘的依次打开  
+ 影音工具，常用影音文件，助手与工具，“X浏览器”   
+### 3.2.3软件推送    
+手机或者电脑上推送到机顶盒电视机。有许多工具。下面举例说明几个常见的。  
+1）开心电视助手 只有电视版。  
+2）当贝应用商店（广告非常多）、当贝助手（无广告，在文件快传）  
+3）小白文件管理器（多屏互动）  
+4）甲壳虫ADB助手  
+5）特定硬件的专用工具  
+ 比如小米的电视和机顶盒必须用助手  三星 索尼等需要一些专用工具才能安装软件。  
+6）各种TV版影视软件的推送功能 比如影视 影视仓 TVbox  
+
+
 # 4.常见问题
 1）电视节目类不能播放  
 电视节目类员管控很严，经常失效。建议使用点播里面的电视源（一般是好趣网）。  
@@ -444,6 +476,9 @@ Githubpage平台(手机可能打不开）：
 因为软件需要根据发布情况更新，因此没有打包成一整个压缩包。   
 根据常用情况制作了一个手机版和电视版的列表。  
 密码 1234   
+
+六一云盘：  
+[https://www.now61.com/s/x3dVSj ](https://www.now61.com/s/x3dVSj)      
 蓝奏云盘：  
 [https://wwrb.lanzn.com/b00rnkxs9c   ](https://wwrb.lanzn.com/b00rnkxs9c )      
 根据列表到蓝奏云盘列表下载。
@@ -537,6 +572,8 @@ Githubpage平台(手机可能打不开）：
 # 10.kodi资料  
 一些常用的m3u播放资源。 
 密码：1234   
+六一云盘    
+[https://www.now61.com/s/7d61FR](https://www.now61.com/s/7d61FR)     
 蓝奏云盘   
 [https://wwrb.lanzn.com/b00rnlmtrg](https://wwrb.lanzn.com/b00rnlmtrg)   
 小飞机网盘  
