@@ -88,10 +88,10 @@ https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/tvboxinf
 因为大部分直播接口项目在github上，后面加上不同的后缀直播内使用的不同的加速线路。  
 因为经常会有变化，因此加速会调整，下面是目前使用加速项目：  
 直播不支持https://cdn.jsdelivr.net/ 加速  
-fm.pnga            默认是https://ghgo.xyz/  
-fm.pnga1          添加“1”使用的https://mirror.ghproxy.com/  
-fm.pnga2          添加“2”使用的欧歌接口的加速   
-fm.pnga3          添加“3”使用的刘老备接口的加速   
+
+og.pnga1          添加“1”使用的欧歌接口的加速   
+og.pnga2          添加“2”使用的https://mirror.ghproxy.com/      
+og.pnga3          添加“3”使用的刘老备接口的加速   
 最后的/和点之间的字母代表不同的线路。可以根据需要自己替换。  
 fm=肥猫版  ffy=饭太硬版 xm=小米版 og=欧歌版，上面的例子是肥猫版的。  
 
@@ -106,22 +106,22 @@ fm=肥猫版  ffy=饭太硬版 xm=小米版 og=欧歌版，上面的例子是肥
 第三步,在"我的｜阿里网盘","我的｜UC网盘","我的｜夸克网盘",中打开APK 转存的默认一般在分享里面。  
 
 codeberg接口：  
-https://codeberg.org/jixiejishu/zyt/raw/branch/main/fm.pnga2   
+https://codeberg.org/jixiejishu/zyt/raw/branch/main/og.pnga1   
 gitlab接口：  
-https://gitlab.com/jixiejishu/zyt/-/raw/main/fm.pnga2   
+https://gitlab.com/jixiejishu/zyt/-/raw/main/og.pnga1   
 jsdelivr cdn 加速:  
-https://cdn.jsdelivr.net/gh/jixiejishu/zyt@main/fm.pnga2  
+https://cdn.jsdelivr.net/gh/jixiejishu/zyt@main/og.pnga1  
 备用接口:   
 Github 借用刘老备接口使用的加速:   
-https://raw.kkgithub.com/jixiejishu/zyt/main/fm.pnga2   
+https://raw.kkgithub.com/jixiejishu/zyt/main/og.pnga1   
 github接口（已经加速，下面几个接口内容是一样的）：  
 借用欧歌的加速：  
-https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/fm.pnga2  
+https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/og.pnga1  
 其它加速：  
-https://ghfast.top/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/fm.pnga2  
-https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/fm.pnga2  
+https://ghfast.top/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/og.pnga1  
+https://mirror.ghproxy.com/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/og.pnga1  
 借用欧歌的加速：  
-https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/fm.pnga2  
+https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zyt/refs/heads/main/og.pnga1  
 
 1.3.2本地包  
 从zyt接口导入本地包或者使用下面的多线路内的zyt导入本地包  
