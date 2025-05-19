@@ -40,8 +40,6 @@ T&S.txtOKPG  添加“OKPG”  OKPG版影视专用。整合了肥羊工具，可
  **手机长按，弹出界面选择复制**      
 主接口(codeberg)  
 https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dxl/T%26S.txt  
-gitlab接口：  
-https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dxl/T%26S.txt  
 jsdelivr cdn 加速:  
 https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dxl/T%26S.txt  
 备用接口   
@@ -65,8 +63,6 @@ duo.txtOK        添加“OK”常用多仓库。单仓在线。包含OK在线�
  **手机长按，弹出界面选择复制**    
 主接口(codeberg)   
 https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dck/duo.txt   
-gitlab接口：  
-https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dck/duo.txt   
 jsdelivr cdn 加速:  
 https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dck/duo.txt  
 备用接口:   
@@ -106,9 +102,7 @@ og.pnga3          添加“3”使用的刘老备接口的加速
 第三步,在"我的｜阿里网盘","我的｜UC网盘","我的｜夸克网盘",中打开APK 转存的默认一般在分享里面。  
 
 codeberg接口：  
-https://codeberg.org/jixiejishu/zyt/raw/branch/main/og.pnga1   
-gitlab接口：  
-https://gitlab.com/jixiejishu/zyt/-/raw/main/og.pnga1   
+https://codeberg.org/jixiejishu/zyt/raw/branch/main/og.pnga1     
 jsdelivr cdn 加速:  
 https://cdn.jsdelivr.net/gh/jixiejishu/zyt@main/og.pnga1  
 备用接口:   
@@ -128,9 +122,7 @@ https://py.nxog.eu.org/https://raw.githubusercontent.com/jixiejishu/zyt/refs/hea
 
 手机长按，弹出界面选择复制  
 主接口(codeberg)  
-https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dxl/bddx.txt  
-gitlab接口：  
-https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dxl/bddx.txt  
+https://codeberg.org/jixiejishu/tvboxinformation/raw/branch/main/tvboxtools/jk/dxl/bddx.txt   
 jsdelivr cdn 加速:  
 https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dxl/bddx.txt  
 备用接口：  
@@ -175,8 +167,6 @@ file://TVBoxOSC/本地仓/影视.txt
 支持TVbox taka99gen99等单仓库软件  
 单线路主接口(codeberg page手机一般可以访问)  
 [https://jixiejishu.codeberg.page/jk/dan/单线路.txt  ](https://jixiejishu.codeberg.page/jk/dan/单线路.txt )   
-gitlab接口：  
-[https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dan/单线路.txt  ](https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dan/单线路.txt  )  
 jsdelivr cdn 加速:   
 [https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dan/单线路.txt](https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dan/单线路.txt)  
 单线路备用接口(Github page手机可能不支持)    
