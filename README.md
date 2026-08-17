@@ -53,7 +53,7 @@ gitlab
 [https://github.com/FongMi/Release](https://github.com/FongMi/Release  "影视官方")  
 
 
-## 2.1 2.2 webhtv  
+## 2.2 webhtv  
 
 影视的二次开发版，因为作者名字带fish 外号鱼壳  
 软件包名和原版一致不共存  
