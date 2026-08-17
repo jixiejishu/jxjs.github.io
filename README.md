@@ -89,7 +89,6 @@ T版，黑版（界面深色）
 
 
 下载项目地址（两个版本打包发布）  
-https://github.com/o0HalfLife0o/TVBoxOSC  
 [https://github.com/o0HalfLife0o/TVBoxOSC    ](https://github.com/o0HalfLife0o/TVBoxOSC      "官方合作第三方打包")  
 
 
