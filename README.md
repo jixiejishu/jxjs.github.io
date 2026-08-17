@@ -67,7 +67,7 @@ gitlab
  webhtv的二次开发版  
 软件包名和原版不同，可以共存  
 项目地址  
-[https://github.com/Silent1566/webhtv ](https://github.com/Silent1566/webhtv   "默影视官方")  
+[https://github.com/Silent1566/webhtv ](https://github.com/Silent1566/webhtv   "鱼壳官方")  
  
 ## 2.4PeekPro  
 
