@@ -46,14 +46,15 @@ gitlab
 # 2.常用软件下载  
 
 ## 2.1 影视（fongmi）  
-基于  CatVod项目：  https://github.com/CatVodTVOfficial/CatVodTVJarLoader （已经删库）  
+基于  CatVod项目（已经删库）  
+[https://github.com/CatVodTVOfficial/CatVodTVJarLoader  ](https://github.com/CatVodTVOfficial/CatVodTVJarLoader   "TVBoxOSC官方")  
 项目地址  
 [https://github.com/FongMi/TV  ](https://github.com/FongMi/TV  "影视官方")  
 软件下载地址（另外的仓库）  
 [https://github.com/FongMi/Release](https://github.com/FongMi/Release  "影视官方")  
 
 
-## 2.2 webhtv  
+## 2.1 2.2 webhtv  
 
 影视的二次开发版，因为作者名字带fish 外号鱼壳  
 软件包名和原版一致不共存  
@@ -67,7 +68,7 @@ gitlab
  webhtv的二次开发版  
 软件包名和原版不同，可以共存  
 项目地址  
-[https://github.com/Silent1566/webhtv ](https://github.com/Silent1566/webhtv   "鱼壳官方")  
+[https://github.com/Silent1566/webhtv ](https://github.com/Silent1566/webhtv   "默影视官方")  
  
 ## 2.4PeekPro  
 
@@ -75,10 +76,11 @@ gitlab
 功能很强，类似以前的猫影视。支持多种接口  
 
 项目地址  
-[https://github.com/ingriddaleusag-dotcom/PickTV  ](https://github.com/ingriddaleusag-dotcom/PickTV    "默影视官方")  
+[https://github.com/ingriddaleusag-dotcom/PickTV  ](https://github.com/ingriddaleusag-dotcom/PickTV    "PeekPro  官方")  
 
 ## 2.5TVbox  
-基于  CatVod项目：  https://github.com/CatVodTVOfficial/TVBoxOSC （已经删库）  
+基于  TVBoxOSC （已经删库）  
+[https://github.com/CatVodTVOfficial/TVBoxOSC  ](https://github.com/CatVodTVOfficial/TVBoxOSC    "TVBoxOSC官方")  
 目前的两个版本不支持一次导入多条线路。只能单条线路导入，只支持TV，没有手机版。  
 分两个版本  
 q版，白版（界面浅色）俊版  
@@ -113,9 +115,9 @@ T版，黑版（界面深色）
 ## 3.1高天流云  
 新地址  
 
-[https://github.com/qist/tvbox     ](https://github.com/qist/tvbox     "原项目停更")  
+[https://github.com/qist/tvbox     ](https://github.com/qist/tvbox     "新项目，高天流云等大佬参与")  
 高天流云项目停更  
-[https://github.com/gaotianliuyun/gao   ](https://github.com/gaotianliuyun/gao    "新项目，高天流云等大佬参与")  
+[https://github.com/gaotianliuyun/gao   ](https://github.com/gaotianliuyun/gao    "原项目停更")  
 
 ## 3.2. 南风  
 [https://github.com/yoursmile66/TVBox  ](https://github.com/yoursmile66/TVBox   "南风项目官方")  
@@ -151,7 +153,7 @@ maflya
 
 ## 3.7 lubin776  
 项目地址  
-[https://github.com/lubin776/tvbox    ](https://github.com/lubin776/tvbox     "奇奇资源官方")  
+[https://github.com/lubin776/tvbox    ](https://github.com/lubin776/tvbox     "lubin776 ")  
 
 
 # 4.资料网站  
@@ -171,16 +173,14 @@ maflya
 ## 4.3看电视  
 [https://www.iptvindex.com/](https://www.iptvindex.com/ "看电视官方")   
   
-## 4.4  
-蓝鲨应用库  
+## 4.4  蓝鲨应用库    
 [https://www.lsapk.com](https://www.lsapk.com "蓝鲨应用库官方")   
   
 ## 4.5.小兵下载站  
 [https://www.7xiazai.com/  ](https://www.7xiazai.com/   "小兵下载站  ")   
 
 
-## 4.6  
-聚玩盒子  
+## 4.6  聚玩盒子  
 [https://juwanhezi.com/   ](https://juwanhezi.com/   "聚玩盒子  ")   
 接口部分更新较慢。广告非常多。有伪装上架（伪上架）的ios软件  
 
@@ -191,24 +191,29 @@ maflya
 
 ### 4.7.1  
 [https://github.com/youhunwl/TVAPP     ](https://github.com/youhunwl/TVAPP   "软件比较老 ")   
-
-有很多下载软件，但是版本比较老
+有很多下载软件，但是版本比较老  
 
 ### 4.7.2   
 [https://github.com/tushen6/Tomorrow       ](https://github.com/tushen6/Tomorrow     "加速网站比较多 ")   
 
 Github加速站点   
-https://gh-proxy.com/  
-https://github.catvod.com/  
-https://gh.xxooo.cf/  
-https://gh.llkk.cc/  
-https://github.ednovas.xyz/  
-https://gitdl.cn/  
-https://cf.ghproxy.cc/  
-https://ghproxy.net/  
-https://gh.aptv.app/  
-https://gitpr.xmcom.us.kg/  
-https://ghproxy.cn/  
+[https://gh-proxy.com/       ](https://gh-proxy.com/       "最常用 ")   
+[https://github.catvod.com/         ](https://github.catvod.com/    "可能已经失效 ")   
+[https://gh.xxooo.cf/         ](https://gh.xxooo.cf/    "饭太硬加速 ")   
+[https://gh.llkk.cc/         ](https://gh.llkk.cc/       "https://gh.llkk.cc/   ")   
+[https://gh.llkk.cc/        ](https://gh.llkk.cc/      "https://gh.llkk.cc/   ")   
+[https://github.ednovas.xyz/         ](https://github.ednovas.xyz/      "https://github.ednovas.xyz/   ")   
+[https://gitdl.cn/         ](https://gitdl.cn/       "https://gitdl.cn/   ")   
+[https://cf.ghproxy.cc/         ](https://cf.ghproxy.cc/      "https://cf.ghproxy.cc/   ")   
+[https://ghproxy.net/        ](https://ghproxy.net/       "https://ghproxy.net/   ")   
+[https://gh.aptv.app/         ](https://gh.aptv.app/       "https://gh.aptv.app/   ")   
+[https://gitpr.xmcom.us.kg/       ](https://gitpr.xmcom.us.kg/      "https://gitpr.xmcom.us.kg/   ")   
+[https://ghproxy.cn/       ](https://ghproxy.cn/      "https://ghproxy.cn/   ")   
+
+
+
+
+
 
 
 
@@ -258,8 +263,7 @@ Github
 [https://github.com/lyswhut/lx-music-mobile       ](https://github.com/lyswhut/lx-music-mobile     "官网 ")   
 
 
-绿色版：  
-直接解压不需要安装  
+绿色版：直接解压不需要安装    
 
 音源：  
 六音软件www.sixyin.com 搜索“音源”  (已经无法打开)  
@@ -309,7 +313,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/mhmdxahmd/mafly/refs/head
 
 # 7 ios  
 ## 7.1  
-Miraplay   
+Miraplay （ 魔力云播  ）   
 苹果应用商店上架  
 王二小  
 Miraplay 专用接口：  
@@ -319,7 +323,9 @@ md5接口 猫影视最后版本 猫爪  UZN   MIraPlay  PeeKPro 蚂蚁通用
 
 比较麻烦 需要使用非国区ID登陆安装，或者非国区苹果电脑下载后传入手机安装，
 
-类似的还有JSTV ，魔力云播  
+类似的还有JSTV
+
+
 
 ## 7.2伪上架  
 聚玩盒子  
