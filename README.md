@@ -1,6 +1,7 @@
 # 常用TVbox-fongmi接口以及影音网站汇总
 
-<img width="1280" height="720" alt="1 资料总前言与tvbox-fongmi 常见软件介绍关系2026" src="https://github.com/user-attachments/assets/456694a3-e591-448e-89a1-4351043d104d" />
+<img width="1280" height="720" alt="常见软件介绍关系2026" src="https://github.com/user-attachments/assets/9badaa50-eb41-4353-a589-ebde86917b7a" />
+
 
 # 1.影视TVbox接口  
 ## 1.1  多线路接口：  
