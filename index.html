@@ -306,13 +306,36 @@ color: var(--tag-text);
 flex-shrink: 0;
 white-space: nowrap;
 transition: all 0.2s;
+border: 1px solid transparent;
 }
-.link-row:hover .tag { background: var(--accent-blue); color: #fff; }
-.tag-type-github { background: #f0f0f0; color: #24292e; }
-.tag-type-ios { background: #e8f4fd; color: #007aff; }
-.tag-type-acc { background: #eef2ff; color: #4f46e5; }
-.tag-type-web { background: #ecfdf5; color: #059669; }
-.tag-type-warn { background: #fef3c7; color: #d97706; }
+/* hover 时标签反色：深色背景+白色文字 → 改为浅色背景+深色文字，确保可见 */
+.link-row:hover .tag,
+.link-row:focus-visible .tag {
+background: var(--accent-blue);
+color: #ffffff;
+box-shadow: 0 1px 4px rgba(99,102,241,0.35);
+}
+/* 各类型标签 - 浅色模式配色（深色字+浅色底，保证对比度） */
+.tag-type-github { background: #f0f0f0; color: #24292e; border-color: #d0d0d0; }
+.tag-type-ios     { background: #e8f4fd; color: #0056b3; border-color: #b8dff8; }
+.tag-type-acc     { background: #eef2ff; color: #4338ca; border-color: #c7d2fe; }
+.tag-type-web     { background: #ecfdf5; color: #047857; border-color: #a7f3d0; }
+.tag-type-warn    { background: #fef3c7; color: #b45309; border-color: #fde68a; }
+/* hover 时统一反色 */
+.link-row:hover .tag-type-github,
+.link-row:hover .tag-type-ios,
+.link-row:hover .tag-type-acc,
+.link-row:hover .tag-type-web,
+.link-row:hover .tag-type-warn,
+.link-row:focus-visible .tag-type-github,
+.link-row:focus-visible .tag-type-ios,
+.link-row:focus-visible .tag-type-acc,
+.link-row:focus-visible .tag-type-web,
+.link-row:focus-visible .tag-type-warn {
+background: var(--accent-blue);
+color: #ffffff;
+border-color: var(--accent-blue);
+}
 
 /* ===== 链接文本 ===== */
 .link-text {
@@ -340,6 +363,9 @@ color: var(--text-secondary);
 font-family: "SF Mono", "Fira Code", monospace;
 font-size: 13px;
 word-break: break-all;
+}
+@media (prefers-color-scheme: dark) {
+.link-text.no-link { color: #94a3b8; }
 }
 
 /* ===== 复制按钮 ===== */
@@ -958,6 +984,13 @@ margin-left: -18px;
 --bg-card: #111827;
 --border-color: #374151;
 }
+/* 投影模式标签 - 高对比 */
+.device-projector .tag-type-github { background: #1f2937; color: #f3f4f6; border-color: #4b5563; }
+.device-projector .tag-type-ios     { background: #1e3a5f; color: #93c5fd; border-color: #2563eb; }
+.device-projector .tag-type-acc     { background: #1e1b4b; color: #c7d2fe; border-color: #4338ca; }
+.device-projector .tag-type-web     { background: #064e3b; color: #6ee7b7; border-color: #059669; }
+.device-projector .tag-type-warn    { background: #451a03; color: #fcd34d; border-color: #d97706; }
+.device-projector .link-text.no-link { color: #d1d5db; }
 .device-projector .progress-thumb {
 width: 28px;
 height: 28px;
@@ -982,14 +1015,35 @@ height: 28px;
 --text-secondary: #94a3b8;
 --text-muted: #64748b;
 --tag-bg: #312e81;
---tag-text: #a5b4fc;
+--tag-text: #c7d2fe;
+}
+/* 暗色模式下各类型标签配色 - 深色底+浅色字，保证高对比 */
+.tag-type-github { background: #2d333b; color: #e6edf3; border-color: #444c56; }
+.tag-type-ios     { background: #0c2d48; color: #79c0ff; border-color: #1f6feb; }
+.tag-type-acc     { background: #312e81; color: #c7d2fe; border-color: #4f46e5; }
+.tag-type-web     { background: #064e3b; color: #6ee7b7; border-color: #059669; }
+.tag-type-warn    { background: #451a03; color: #fcd34d; border-color: #d97706; }
+/* 暗色模式 hover 时仍是蓝底白字，保持可见 */
+.link-row:hover .tag-type-github,
+.link-row:hover .tag-type-ios,
+.link-row:hover .tag-type-acc,
+.link-row:hover .tag-type-web,
+.link-row:hover .tag-type-warn,
+.link-row:focus-visible .tag-type-github,
+.link-row:focus-visible .tag-type-ios,
+.link-row:focus-visible .tag-type-acc,
+.link-row:focus-visible .tag-type-web,
+.link-row:focus-visible .tag-type-warn {
+background: var(--accent-blue);
+color: #ffffff;
+border-color: var(--accent-blue);
 }
 body { background: linear-gradient(180deg, #0f172a 0%, #1a1f3a 100%); }
 .page-header { background: linear-gradient(135deg, rgba(30,41,59,0.95), rgba(30,41,59,0.85)); border-color: rgba(255,255,255,0.08); }
 .search-box { background: #1e293b; color: #e2e8f0; border-color: #334155; }
 .tool-btn { background: #1e293b; color: #94a3b8; border-color: #334155; }
 .copy-btn { box-shadow: 0 2px 6px rgba(99,102,241,0.2); }
-.tip-block { background: #1a2438; border-left-color: #6366f1; }
+.tip-block { background: #1a2438; border-left-color: #6366f1; color: #94a3b8; }
 .collapse-card { background: #1e293b; border-color: #334155; }
 .collapse-card:nth-child(1) .card-head { background: linear-gradient(135deg, #1e1b4b, #312e81); }
 .collapse-card:nth-child(2) .card-head { background: linear-gradient(135deg, #4c1d24, #831843); }
