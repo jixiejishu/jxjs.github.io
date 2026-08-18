@@ -46,7 +46,16 @@ gitlab
 
 # 2.常用软件下载  
 
-## 2.1 影视（fongmi）  
+github项目右边的releases是下载地址  
+
+## 2.1 影视以及衍生项目（fongmi）  
+
+影视 webhtv  暗影视 版本说明    
+
+电视版32位：（电视首选）armeabi_v7a.apk ;    电视版64位：   leanback-arm64_v8a.apk     
+手机版64位：（手机首选: mobile-arm64_v8a.apk     ； 手机版32位 mobile-armeabi_v7a.apk      
+
+### 2.1.1影视（fongmi）  
 基于  CatVod项目（已经删库）  
 [https://github.com/CatVodTVOfficial/CatVodTVJarLoader  ](https://github.com/CatVodTVOfficial/CatVodTVJarLoader   "TVBoxOSC官方")  
 项目地址  
@@ -54,32 +63,62 @@ gitlab
 软件下载地址（另外的仓库）  
 [https://github.com/FongMi/Release](https://github.com/FongMi/Release  "影视官方")  
 
+电视版32位（电视首选）armeabi_v7a.apk     
+[https://gh-proxy.org/https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/leanback-armeabi_v7a.apk  ](https://gh-proxy.org/https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/leanback-armeabi_v7a.apk   电视版32位（电视首选）")  
+电视版64位   leanback-arm64_v8a.apk  
+[https://gh-proxy.org/https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/leanback-arm64_v8a.apk  ](https://gh-proxy.org/https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/leanback-arm64_v8a.apk    "电视版64位")  
+手机版  64位（手机首选） mobile-arm64_v8a.apk   
+[https://gh-proxy.org/https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/mobile-arm64_v8a.apk    ](https://gh-proxy.org/https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/mobile-arm64_v8a.apk     "手机版  64位（手机首选）")  
+手机版  32位    mobile-armeabi_v7a.apk  
+[https://gh-proxy.org/https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/mobile-armeabi_v7a.apk      ](https://gh-proxy.org/https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/mobile-armeabi_v7a.apk      "手机版 32位")  
 
-## 2.1 2.2 webhtv  
 
-影视的二次开发版，因为作者名字带fish 外号鱼壳  
-软件包名和原版一致不共存  
+
+
+### 2.1.2 webhtv  
+
+影视的二次开发版，因github项目作者名fish2018 外号鱼壳  ，软件包名和原版一致不共存  
 项目地址  
 [https://github.com/fish2018/webhtv](https://github.com/fish2018/webhtv  "鱼壳官方")  
   
 
 
-## 2.3 默影视  
+### 2.1.3 默影视  
 
  webhtv的二次开发版  
 软件包名和原版不同，可以共存  
 项目地址  
 [https://github.com/Silent1566/webhtv ](https://github.com/Silent1566/webhtv   "默影视官方")  
  
-## 2.4PeekPro  
+
+## 2.2 影视多平台版
+
+### 2.2.1 PeekPro  
 
 影视的二次开发版，最早版本PeekMill 外号羊壳，不支持TV。支持ios  
-功能很强，类似以前的猫影视。支持多种接口  
-
+功能很强，类似以前的猫影视。
+其中ios windows版 支持  t4 .md5两种格式，安卓版还支持tvbox的格式, 运行php还需要安装php。
 项目地址  
 [https://github.com/ingriddaleusag-dotcom/PickTV  ](https://github.com/ingriddaleusag-dotcom/PickTV    "PeekPro  官方")  
 
-## 2.5TVbox  
+
+### 2.2.2 FreeBox  
+影视的二次开发版，支持PC，目前功能不是很完善。不兼容影视/Tvbox的接口  
+项目地址  
+[https://github.com/kknifer7/FreeBox    ](https://github.com/kknifer7/FreeBox  "Freebox官方")  
+
+影视-K版  
+[https://github.com/kknifer7/TV-K   ](https://github.com/kknifer7/TV-K    "Freebox官方")  
+
+影视-K版与 FreeBox 搭配使用的安卓端FongMi影视，详情请去 FreeBox 项目中查看。  
+
+### 2.2.3 TV-Multiplatform  
+影视的二次开发版，支持PC，目前功能不是很完善。不兼容影视/Tvbox的接口  
+项目地址  
+[https://github.com/Greatwallcorner/TV-Multiplatform     ]https://github.com/Greatwallcorner/TV-Multiplatform     " TV-Multiplatform  官方")  
+
+## 2.3 TVbox  
+### 2.3.1TVbox  
 基于  TVBoxOSC （已经删库）  
 [https://github.com/CatVodTVOfficial/TVBoxOSC  ](https://github.com/CatVodTVOfficial/TVBoxOSC    "TVBoxOSC官方")  
 目前的两个版本不支持一次导入多条线路。只能单条线路导入，只支持TV，没有手机版。  
@@ -94,21 +133,21 @@ T版，黑版（界面深色）
 下载项目地址（两个版本打包发布）  
 [https://github.com/o0HalfLife0o/TVBoxOSC    ](https://github.com/o0HalfLife0o/TVBoxOSC      "官方合作第三方打包")  
 
-
-## 2.6影视仓  
+### 2.3.2影视仓  
 不开源。作者安卓哥开发。支持一次导入多个不同地址的仓库。  
 
 
+## 2.4网盘下载
 
-## 2.7FreeBox  
-影视的二次开发版，支持PC，目前功能不是很完善。不兼容影视/Tvbox的接口  
-项目地址  
-[https://github.com/kknifer7/FreeBox    ](https://github.com/kknifer7/FreeBox  "Freebox官方")  
+网盘（版本可能会老一些，隔一段时间才能有空更新），影视可以用下面的链接直接下载     
+[https://share.feijipan.com/s/AnEEQTwX    ](https://share.feijipan.com/s/AnEEQTwX     "小飞机网盘")  
+[https://links.8uid.com/s/5c6459b28f73e65dafa5d0c9582e40a4      ](https://links.8uid.com/s/5c6459b28f73e65dafa5d0c9582e40a4        "个人笔记网盘")  
+[https://www.go127.com/s/BdRH7      ](https://www.go127.com/s/BdRH7       "127网盘")  
+第三方网盘  
+[https://526900.xyz/     ](https://526900.xyz/    "裤佬网盘  ")  
 
-影视-K版  
-[https://github.com/kknifer7/TV-K   ](https://github.com/kknifer7/TV-K    "Freebox官方")  
 
-影视-K版与 FreeBox 搭配使用的安卓端FongMi影视，详情请去 FreeBox 项目中查看。  
+
 
 
 # 3.开源点播接口  
@@ -201,19 +240,24 @@ Github加速站点
 [https://gh-proxy.com/       ](https://gh-proxy.com/       "最常用 ")   
 [https://github.catvod.com/         ](https://github.catvod.com/    "可能已经失效 ")   
 [https://gh.xxooo.cf/         ](https://gh.xxooo.cf/    "饭太硬加速 ")   
-[https://gh.llkk.cc/         ](https://gh.llkk.cc/       "https://gh.llkk.cc/   ")   
-[https://gh.llkk.cc/        ](https://gh.llkk.cc/      "https://gh.llkk.cc/   ")   
-[https://github.ednovas.xyz/         ](https://github.ednovas.xyz/      "https://github.ednovas.xyz/   ")   
-[https://gitdl.cn/         ](https://gitdl.cn/       "https://gitdl.cn/   ")   
-[https://cf.ghproxy.cc/         ](https://cf.ghproxy.cc/      "https://cf.ghproxy.cc/   ")   
+[https://github.ednovas.xyz/         ](https://github.ednovas.xyz/      "https://github.ednovas.xyz/   ")     
 [https://ghproxy.net/        ](https://ghproxy.net/       "https://ghproxy.net/   ")   
-[https://gh.aptv.app/         ](https://gh.aptv.app/       "https://gh.aptv.app/   ")   
-[https://gitpr.xmcom.us.kg/       ](https://gitpr.xmcom.us.kg/      "https://gitpr.xmcom.us.kg/   ")   
-[https://ghproxy.cn/       ](https://ghproxy.cn/      "https://ghproxy.cn/   ")   
+[https://cdn.jsdelivr.net       ](https://cdn.jsdelivr.net      "按网站提示操作  ")   
 
 
 
-
+## 4.8常用导航网站  
+饭太硬  
+[http://www.饭太硬.cc       ](http://www.饭太硬.cc     "饭太硬  ")   
+[http://www.饭太硬.net      ](http://www.饭太硬.net     "饭太硬  ")   
+菜妮丝    
+[https://tv.菜妮丝.top  ](https://tv.菜妮丝.top  "菜妮丝    ")   
+王二小放牛娃    
+[https://www.王二小放牛娃.top/      ](https://www.王二小放牛娃.top/      "王二小放牛娃    ")   
+摸鱼儿    
+[https://摸鱼儿.cc/](https://摸鱼儿.cc/ "摸鱼儿")   
+[http://我不是.摸鱼儿.cc/ ](http://我不是.摸鱼儿.cc/ "摸鱼儿")   
+[https://www.小不点.com/ ](https://www.小不点.com/ "摸鱼儿")   
 
 
 
@@ -246,6 +290,10 @@ Github加速站点
 项目地址：  
 [https://github.com/YYDS678/uzVideo         ](https://github.com/YYDS678/uzVideo       "UZ官方，需要加tg下载新版本 ")   
 软件支持多平台，支持ios,但是不开源。tg中发布新版本  
+
+[t.me/uzvideoplay   ](t.me/uzvideoplay  "频道 t.me/uzvideoplay ")   
+[ t.me/uzVideoApp   ]( t.me/uzVideoApp "群组 t.me/uzVideoApp ")   
+
 
 
 ## 6.2 洛雪  

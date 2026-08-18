@@ -1,2150 +1,436 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>📺 TVBox 工具导航</title>
-<style>
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-:root {
-/* 主色调 */
---bg-main: #f0f2f8;
---bg-card: #ffffff;
---bg-card-hover: #f8faff;
---bg-section: #f7f9fc;
---border-color: #e2e8f0;
---text-primary: #1e293b;
---text-secondary: #64748b;
---text-muted: #94a3b8;
-/* 渐变色 */
---accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
---accent-gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
---accent-gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
---accent-gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
---accent-gradient-5: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
---accent-gradient-6: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
---accent-gradient-7: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
---accent-gradient-8: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-/* 功能色 */
---accent-blue: #6366f1;
---accent-purple: #8b5cf6;
---btn-bg: #6366f1;
---btn-success: #10b981;
---btn-danger: #ef4444;
-/* 标签色 */
---tag-bg: #eef2ff;
---tag-text: #4f46e5;
-/* 阴影 */
---shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
---shadow-md: 0 4px 12px rgba(0,0,0,0.08);
---shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
---shadow-xl: 0 20px 60px rgba(0,0,0,0.15);
-/* 圆角 */
---radius-sm: 8px;
---radius-md: 12px;
---radius-lg: 16px;
---radius-xl: 24px;
-}
-/* ===== 全局样式 ===== */
-body {
-background: linear-gradient(180deg, #e8ecf4 0%, #f0f2f8 30%, #f5f7fb 100%);
-background-attachment: fixed;
-color: var(--text-primary);
-font-family: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-padding: 32px 16px 40px;
-max-width: 1100px;
-margin: 0 auto;
-line-height: 1.7;
-min-height: 100vh;
--webkit-tap-highlight-color: transparent;
--webkit-touch-callout: none;
-text-size-adjust: 100%;
--webkit-text-size-adjust: 100%;
-}
-/* 美化滚动条 */
-::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 5px; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #c7d2fe, #a5b4fc); border-radius: 5px; border: 2px solid #f1f5f9; }
-::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #a5b4fc, #818cf8); }
-
-/* ===== 页面头部 ===== */
-.page-header {
-text-align: center;
-margin-bottom: 40px;
-padding: 40px 24px 36px;
-background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%);
-backdrop-filter: blur(20px);
-border-radius: var(--radius-xl);
-box-shadow: var(--shadow-lg);
-border: 1px solid rgba(255,255,255,0.6);
-position: relative;
-overflow: hidden;
-}
-.page-header::before {
-content: '';
-position: absolute;
-top: -50%;
-left: -50%;
-width: 200%;
-height: 200%;
-background: conic-gradient(from 0deg, transparent, rgba(99,102,241,0.03), transparent, rgba(139,92,246,0.03), transparent);
-animation: rotate 30s linear infinite;
-}
-@keyframes rotate {
-0% { transform: rotate(0deg); }
-100% { transform: rotate(360deg); }
-}
-.page-header h1 {
-font-size: 36px;
-font-weight: 800;
-background: var(--accent-gradient);
--webkit-background-clip: text;
-color: transparent;
-margin-bottom: 12px;
-position: relative;
-letter-spacing: 2px;
-}
-.page-header .desc {
-color: var(--text-secondary);
-font-size: 15px;
-position: relative;
-}
-.page-header .desc .badge {
-display: inline-block;
-padding: 2px 10px;
-background: var(--tag-bg);
-color: var(--tag-text);
-border-radius: 99px;
-font-size: 12px;
-margin: 0 3px;
-font-weight: 500;
-}
-
-/* ===== 统计信息栏 ===== */
-.stats-bar {
-display: flex;
-justify-content: center;
-gap: 24px;
-margin-top: 20px;
-flex-wrap: wrap;
-position: relative;
-}
-.stat-item {
-display: flex;
-align-items: center;
-gap: 6px;
-padding: 6px 16px;
-background: rgba(99,102,241,0.06);
-border-radius: 99px;
-font-size: 13px;
-color: var(--text-secondary);
-}
-.stat-item .stat-num {
-font-weight: 700;
-color: var(--accent-blue);
-font-size: 15px;
-}
-
-/* ===== 搜索框 ===== */
-.search-container {
-max-width: 520px;
-margin: 24px auto 0;
-position: relative;
-z-index: 1;
-}
-.search-box {
-width: 100%;
-padding: 14px 20px 14px 48px;
-border: 2px solid transparent;
-border-radius: var(--radius-lg);
-background: #fff;
-font-size: 15px;
-color: var(--text-primary);
-outline: none;
-transition: all 0.3s;
-box-shadow: var(--shadow-sm);
--webkit-appearance: none;
-appearance: none;
-}
-.search-box:focus {
-border-color: var(--accent-blue);
-box-shadow: 0 0 0 4px rgba(99,102,241,0.1);
-}
-.search-box::placeholder {
-color: var(--text-muted);
-}
-.search-icon {
-position: absolute;
-left: 16px;
-top: 50%;
-transform: translateY(-50%);
-font-size: 18px;
-color: var(--text-muted);
-pointer-events: none;
-}
-
-/* ===== 折叠分组卡片 ===== */
-.collapse-card {
-background: var(--bg-card);
-border: 1px solid var(--border-color);
-border-radius: var(--radius-lg);
-margin-bottom: 20px;
-overflow: hidden;
-box-shadow: var(--shadow-sm);
-transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.collapse-card:hover {
-box-shadow: var(--shadow-md);
-transform: translateY(-1px);
-}
-.collapse-card.open {
-box-shadow: var(--shadow-md);
-}
-.collapse-card:nth-child(1) .card-head { background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%); }
-.collapse-card:nth-child(2) .card-head { background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%); }
-.collapse-card:nth-child(3) .card-head { background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); }
-.collapse-card:nth-child(4) .card-head { background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); }
-.collapse-card:nth-child(5) .card-head { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); }
-.collapse-card:nth-child(6) .card-head { background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); }
-.collapse-card:nth-child(7) .card-head { background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); }
-.collapse-card:nth-child(8) .card-head { background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); }
-.card-head {
-padding: 16px 24px;
-cursor: pointer;
-display: flex;
-justify-content: space-between;
-align-items: center;
-user-select: none;
-position: relative;
-min-height: 56px;
-}
-.card-head::after {
-content: '';
-position: absolute;
-bottom: 0;
-left: 24px;
-right: 24px;
-height: 1px;
-background: linear-gradient(90deg, transparent, var(--border-color), transparent);
-}
-.card-head h2 {
-font-size: 17px;
-font-weight: 700;
-color: var(--text-primary);
-display: flex;
-align-items: center;
-gap: 10px;
-}
-.card-head h2 .icon-wrap {
-width: 32px;
-height: 32px;
-border-radius: 8px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 16px;
-flex-shrink: 0;
-}
-.card-head .arrow {
-font-size: 14px;
-color: var(--text-muted);
-transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-width: 28px;
-height: 28px;
-display: flex;
-align-items: center;
-justify-content: center;
-border-radius: 50%;
-background: rgba(255,255,255,0.6);
-flex-shrink: 0;
-}
-.collapse-card.open .arrow {
-transform: rotate(180deg);
-}
-.card-body {
-padding: 0 24px;
-max-height: 0;
-overflow: hidden;
-transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease;
-opacity: 0;
-}
-.collapse-card.open .card-body {
-padding: 14px 24px 20px;
-max-height: 5000px;
-opacity: 1;
-}
-
-/* ===== 提示块 ===== */
-.tip-block {
-font-size: 12px;
-font-weight: 600;
-color: var(--text-secondary);
-padding: 6px 14px;
-margin: 10px 0 6px;
-background: var(--bg-section);
-border-radius: var(--radius-sm);
-border-left: 3px solid var(--accent-blue);
-text-transform: uppercase;
-letter-spacing: 0.5px;
-}
-
-/* ===== 链接行 ===== */
-.link-row {
-display: flex;
-align-items: center;
-flex-wrap: wrap;
-gap: 12px;
-padding: 12px 14px;
-border-radius: var(--radius-md);
-margin: 4px 0;
-transition: all 0.25s ease;
-border: 1px solid transparent;
-min-height: 44px;
-}
-.link-row:hover {
-background: var(--bg-card-hover);
-border-color: rgba(99,102,241,0.1);
-transform: translateX(4px);
-}
-.link-row:hover .link-text a {
-color: var(--accent-blue);
-}
-
-/* ===== 标签 ===== */
-.tag {
-font-size: 11px;
-font-weight: 600;
-padding: 3px 10px;
-border-radius: 99px;
-background: var(--tag-bg);
-color: var(--tag-text);
-flex-shrink: 0;
-white-space: nowrap;
-transition: all 0.2s;
-}
-.link-row:hover .tag {
-background: var(--accent-blue);
-color: #fff;
-}
-.tag-type-github { background: #f0f0f0; color: #24292e; }
-.tag-type-ios { background: #e8f4fd; color: #007aff; }
-.tag-type-acc { background: #eef2ff; color: #4f46e5; }
-.tag-type-web { background: #ecfdf5; color: #059669; }
-.tag-type-warn { background: #fef3c7; color: #d97706; }
-
-/* ===== 链接文本 ===== */
-.link-text {
-flex: 1;
-min-width: 200px;
-word-break: break-all;
-font-size: 14px;
-line-height: 1.5;
-}
-.link-text a {
-color: var(--text-primary);
-text-decoration: none;
-transition: color 0.2s;
-display: inline-flex;
-align-items: center;
-gap: 4px;
-}
-.link-text a::after {
-content: '↗';
-font-size: 12px;
-opacity: 0;
-transition: opacity 0.2s;
-}
-.link-text a:hover::after {
-opacity: 1;
-}
-.link-text a:hover {
-color: var(--accent-blue);
-text-decoration: none;
-}
-.link-text.no-link {
-color: var(--text-secondary);
-font-family: "SF Mono", "Fira Code", monospace;
-font-size: 13px;
-word-break: break-all;
-}
-
-/* ===== 复制按钮 ===== */
-.copy-btn {
-background: var(--btn-bg);
-color: #fff;
-border: none;
-border-radius: var(--radius-sm);
-padding: 6px 14px;
-cursor: pointer;
-font-size: 12px;
-font-weight: 500;
-flex-shrink: 0;
-transition: all 0.25s;
-display: inline-flex;
-align-items: center;
-gap: 4px;
-box-shadow: 0 2px 6px rgba(99,102,241,0.3);
-min-height: 36px;
-min-width: 64px;
-justify-content: center;
-}
-.copy-btn:hover {
-background: #4f46e5;
-box-shadow: 0 4px 12px rgba(99,102,241,0.4);
-transform: translateY(-1px);
-}
-.copy-btn:active {
-transform: scale(0.95);
-}
-.copy-btn.success {
-background: var(--btn-success);
-box-shadow: 0 2px 6px rgba(16,185,129,0.3);
-}
-
-/* ===== 一键展开/折叠 按钮 ===== */
-.toolbar {
-display: flex;
-justify-content: flex-end;
-gap: 10px;
-margin-bottom: 20px;
-flex-wrap: wrap;
-}
-.tool-btn {
-padding: 8px 18px;
-border: 1px solid var(--border-color);
-border-radius: var(--radius-sm);
-background: #fff;
-color: var(--text-secondary);
-font-size: 13px;
-font-weight: 500;
-cursor: pointer;
-transition: all 0.25s;
-display: inline-flex;
-align-items: center;
-gap: 6px;
-min-height: 38px;
-justify-content: center;
-}
-.tool-btn:hover {
-background: var(--accent-blue);
-color: #fff;
-border-color: var(--accent-blue);
-}
-
-/* ===== 回到顶部按钮 ===== */
-.back-to-top {
-position: fixed;
-bottom: 30px;
-right: 30px;
-width: 48px;
-height: 48px;
-border-radius: 50%;
-background: var(--accent-gradient);
-color: #fff;
-border: none;
-cursor: pointer;
-font-size: 20px;
-box-shadow: var(--shadow-md);
-opacity: 0;
-visibility: hidden;
-transition: all 0.3s;
-z-index: 100;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-.back-to-top.show {
-opacity: 1;
-visibility: visible;
-}
-.back-to-top:hover {
-transform: translateY(-3px);
-box-shadow: var(--shadow-lg);
-}
-
-/* ===== 页脚 ===== */
-footer {
-margin-top: 50px;
-text-align: center;
-font-size: 13px;
-color: var(--text-muted);
-padding: 24px;
-border-top: 1px solid var(--border-color);
-}
-footer a {
-color: var(--accent-blue);
-text-decoration: none;
-}
-
-/* ===== 无搜索结果提示 ===== */
-.no-result {
-text-align: center;
-padding: 40px;
-color: var(--text-muted);
-font-size: 15px;
-display: none;
-}
-
-/* ===== 动画 ===== */
-@keyframes fadeInUp {
-from { opacity: 0; transform: translateY(20px); }
-to { opacity: 1; transform: translateY(0); }
-}
-.collapse-card {
-animation: fadeInUp 0.5s ease backwards;
-}
-.collapse-card:nth-child(1) { animation-delay: 0.05s; }
-.collapse-card:nth-child(2) { animation-delay: 0.1s; }
-.collapse-card:nth-child(3) { animation-delay: 0.15s; }
-.collapse-card:nth-child(4) { animation-delay: 0.2s; }
-.collapse-card:nth-child(5) { animation-delay: 0.25s; }
-.collapse-card:nth-child(6) { animation-delay: 0.3s; }
-.collapse-card:nth-child(7) { animation-delay: 0.35s; }
-.collapse-card:nth-child(8) { animation-delay: 0.4s; }
-
-/* ===== Toast 通知 ===== */
-.toast {
-position: fixed;
-top: 24px;
-left: 50%;
-transform: translateX(-50%) translateY(-80px);
-background: var(--btn-success);
-color: #fff;
-padding: 12px 28px;
-border-radius: var(--radius-md);
-font-size: 14px;
-font-weight: 500;
-box-shadow: var(--shadow-lg);
-transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-z-index: 1000;
-display: flex;
-align-items: center;
-gap: 8px;
-}
-.toast.show {
-transform: translateX(-50%) translateY(0);
-}
-
-/* ============================================
-   ===== 音乐播放器（核心修复区域） =====
-   ============================================ */
-.music-player {
-background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-border-radius: var(--radius-lg);
-padding: 20px 24px;
-margin: 20px 0 16px;
-color: #fff;
-box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 0 1px rgba(99,102,241,0.15);
-position: relative;
-overflow: hidden;
-z-index: 10;
-}
-.music-player::before {
-content: '';
-position: absolute;
-top: -50%;
-left: -50%;
-width: 200%;
-height: 200%;
-background: conic-gradient(from 0deg, transparent, rgba(99,102,241,0.05), transparent, rgba(139,92,246,0.05), transparent);
-animation: rotate 40s linear infinite;
-pointer-events: none;
-}
-
-/* 播放器主体布局 - 桌面端（两行布局：上行封面+按钮，下行进度条） */
-.music-player .player-content {
-position: relative;
-z-index: 1;
-display: flex;
-flex-direction: column;
-gap: 12px;
-}
-
-/* 上行：封面+信息 和 控制按钮 并排 */
-.music-player .player-top {
-display: flex;
-align-items: center;
-gap: 20px;
-}
-
-/* 左侧：专辑封面 + 歌曲信息 */
-.music-player .now-playing {
-display: flex;
-align-items: center;
-gap: 14px;
-flex: 1;
-min-width: 0;
-}
-
-/* 专辑封面 */
-.music-player .album-cover {
-width: 64px;
-height: 64px;
-border-radius: 14px;
-background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 28px;
-flex-shrink: 0;
-animation: rotate 15s linear infinite;
-animation-play-state: paused;
-box-shadow: 0 4px 20px rgba(99,102,241,0.5);
-}
-.music-player.playing .album-cover {
-animation-play-state: running;
-}
-
-/* 歌曲信息 */
-.music-player .track-info {
-flex: 1;
-min-width: 0;
-max-width: 260px;
-}
-.music-player .track-name {
-font-size: 16px;
-font-weight: 700;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-}
-.music-player .track-artist {
-font-size: 12px;
-color: rgba(255,255,255,0.7);
-margin-top: 2px;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-}
-.music-player .track-album {
-font-size: 11px;
-color: rgba(255,255,255,0.5);
-margin-top: 1px;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-}
-
-/* 右侧：控制按钮 */
-.music-player .controls-row {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 8px;
-flex: 0 0 auto;
-}
-
-/* 中间：进度条 + 时间（独占一行，全宽） */
-.music-player .player-center {
-width: 100%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-}
-
-/* 进度条区域 */
-.music-player .progress-wrap {
-margin: 0;
-padding: 4px 0;
-width: 100%;
-}
-.music-player .progress-bar {
-height: 28px;
-background: rgba(255,255,255,0.10);
-border-radius: 14px;
-cursor: pointer;
-position: relative;
-box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
-width: calc(100% - 28px);
-margin: 0 14px;
-touch-action: none;
-}
-.music-player .progress-fill {
-height: 100%;
-width: 0%;
-background: linear-gradient(90deg, #6366f1, #8b5cf6, #a78bfa);
-border-radius: 14px;
-transition: width 0.1s linear;
-position: relative;
-box-shadow: 0 0 12px rgba(99,102,241,0.5);
-}
-.music-player .progress-bar:hover .progress-fill {
-background: linear-gradient(90deg, #818cf8, #a78bfa, #c4b5fd);
-box-shadow: 0 0 16px rgba(139,92,246,0.65);
-}
-
-/* 拖拽按钮（thumb） */
-.music-player .progress-thumb {
-position: absolute;
-top: 50%;
-left: 0%;
-width: 28px;
-height: 28px;
-border-radius: 50%;
-background: #ffffff;
-border: 3px solid #8b5cf6;
-box-shadow: 0 0 10px rgba(139,92,246,0.7), 0 2px 6px rgba(0,0,0,0.3);
-transform: translate(-50%, -50%);
-cursor: grab;
-z-index: 5;
-transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s, opacity 0.3s;
-opacity: 0;
-visibility: hidden;
-touch-action: none;
-}
-.music-player .progress-thumb.visible {
-opacity: 1;
-visibility: visible;
-}
-.music-player .progress-bar:hover .progress-thumb {
-opacity: 1;
-visibility: visible;
-}
-.music-player .progress-thumb.dragging {
-cursor: grabbing;
-transform: translate(-50%, -50%) scale(1.2);
-box-shadow: 0 0 20px rgba(139,92,246,1), 0 0 30px rgba(99,102,241,0.5);
-border-color: #a78bfa;
-opacity: 1;
-visibility: visible;
-}
-.music-player .progress-bar.dragging .progress-fill {
-box-shadow: 0 0 16px rgba(139,92,246,0.8);
-}
-
-/* 时间信息 */
-.music-player .time-info {
-display: flex;
-justify-content: space-between;
-font-size: 12px;
-color: rgba(255,255,255,0.6);
-margin-top: 6px;
-padding: 0 4px;
-font-variant-numeric: tabular-nums;
-}
-.music-player .ctrl-btn {
-background: rgba(255,255,255,0.1);
-border: none;
-color: #fff;
-width: 40px;
-height: 40px;
-border-radius: 50%;
-cursor: pointer;
-font-size: 15px;
-display: flex;
-align-items: center;
-justify-content: center;
-transition: all 0.25s;
--webkit-tap-highlight-color: transparent;
-flex-shrink: 0;
-}
-.music-player .ctrl-btn:hover {
-background: rgba(255,255,255,0.2);
-transform: scale(1.1);
-}
-.music-player .ctrl-btn.play-btn {
-width: 50px;
-height: 50px;
-font-size: 20px;
-background: linear-gradient(135deg, #6366f1, #8b5cf6);
-box-shadow: 0 4px 16px rgba(99,102,241,0.45);
-}
-.music-player .ctrl-btn.play-btn:hover {
-background: linear-gradient(135deg, #818cf8, #a78bfa);
-transform: scale(1.12);
-}
-.music-player .loop-btn {
-font-size: 11px;
-padding: 5px 10px;
-border-radius: 20px;
-background: rgba(255,255,255,0.1);
-color: rgba(255,255,255,0.7);
-border: none;
-cursor: pointer;
-transition: all 0.2s;
-white-space: nowrap;
-min-height: 30px;
--webkit-tap-highlight-color: transparent;
-}
-.music-player .loop-btn:hover {
-background: rgba(255,255,255,0.2);
-color: #fff;
-}
-
-/* 播放列表 */
-.music-player .playlist {
-width: 100%;
-margin-top: 14px;
-border-top: 1px solid rgba(255,255,255,0.1);
-padding-top: 10px;
-display: flex;
-gap: 6px;
-flex-wrap: wrap;
-}
-.music-player .playlist-item {
-display: flex;
-align-items: center;
-gap: 8px;
-padding: 5px 12px;
-border-radius: 8px;
-cursor: pointer;
-transition: all 0.2s;
-font-size: 12px;
-background: rgba(255,255,255,0.05);
-border: 1px solid transparent;
-min-height: 34px;
--webkit-tap-highlight-color: transparent;
-flex: 1 1 auto;
-min-width: 140px;
-max-width: 240px;
-}
-.music-player .playlist-item:hover {
-background: rgba(255,255,255,0.1);
-}
-.music-player .playlist-item.active {
-background: rgba(99,102,241,0.3);
-color: #c7d2fe;
-border-color: rgba(99,102,241,0.4);
-}
-.music-player .playlist-item .pl-num {
-width: 18px;
-height: 18px;
-border-radius: 50%;
-background: rgba(255,255,255,0.1);
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 9px;
-flex-shrink: 0;
-}
-.music-player .playlist-item.active .pl-num {
-background: rgba(99,102,241,0.6);
-}
-.music-player .playlist-item .pl-info {
-flex: 1;
-min-width: 0;
-}
-.music-player .playlist-item .pl-title {
-font-weight: 500;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-}
-.music-player .playlist-item .pl-artist {
-font-size: 10px;
-color: rgba(255,255,255,0.5);
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-}
-.music-player .playlist-item .pl-playing-icon {
-display: none;
-color: #8b5cf6;
-font-size: 12px;
-}
-.music-player .playlist-item.active .pl-playing-icon {
-display: inline;
-}
-
-/* ============================================
-   ===== 平板适配 (768px ~ 1024px) =====
-   ============================================ */
-@media (min-width: 768px) and (max-width: 1024px) {
-body {
-padding: 24px 20px 36px;
-max-width: 900px;
-}
-.page-header {
-padding: 36px 28px 30px;
-margin-bottom: 32px;
-}
-.page-header h1 {
-font-size: 32px;
-}
-.search-container {
-max-width: 480px;
-margin-top: 20px;
-}
-.collapse-card {
-margin-bottom: 16px;
-border-radius: var(--radius-md);
-}
-.card-head {
-padding: 14px 20px;
-min-height: 52px;
-}
-.collapse-card.open .card-body {
-padding: 12px 20px 16px;
-}
-.link-row {
-padding: 11px 12px;
-gap: 10px;
-}
-/* 播放器平板 */
-.music-player {
-padding: 18px 20px;
-margin: 16px 0 14px;
-border-radius: var(--radius-md);
-}
-.music-player .player-content {
-gap: 12px;
-}
-.music-player .player-top {
-gap: 16px;
-}
-.music-player .album-cover {
-width: 56px;
-height: 56px;
-font-size: 24px;
-border-radius: 12px;
-}
-.music-player .track-info {
-max-width: 200px;
-}
-.music-player .track-name {
-font-size: 15px;
-}
-.music-player .progress-bar {
-height: 26px;
-border-radius: 13px;
-width: calc(100% - 24px);
-margin: 0 12px;
-}
-.music-player .progress-fill {
-border-radius: 13px;
-}
-.music-player .progress-thumb {
-width: 26px;
-height: 26px;
-border-width: 3px;
-}
-.music-player .ctrl-btn {
-width: 38px;
-height: 38px;
-font-size: 14px;
-}
-.music-player .ctrl-btn.play-btn {
-width: 46px;
-height: 46px;
-font-size: 18px;
-}
-}
-
-/* ============================================
-   ===== 手机适配 (≤576px) =====
-   ============================================ */
-@media (max-width: 576px) {
-body {
-padding: 14px 10px 24px;
-max-width: 100%;
-}
-.page-header {
-padding: 24px 14px 20px;
-margin-bottom: 20px;
-border-radius: var(--radius-lg);
-}
-.page-header h1 {
-font-size: 22px;
-letter-spacing: 1px;
-margin-bottom: 8px;
-}
-.page-header .desc .badge {
-font-size: 10px;
-padding: 2px 8px;
-}
-.stats-bar {
-gap: 6px;
-margin-top: 12px;
-}
-.stat-item {
-padding: 3px 8px;
-font-size: 11px;
-}
-.stat-item .stat-num {
-font-size: 12px;
-}
-.search-container {
-margin-top: 14px;
-padding: 0 2px;
-}
-.search-box {
-padding: 11px 14px 11px 40px;
-font-size: 14px;
-border-radius: 10px;
-}
-.search-icon {
-left: 13px;
-font-size: 15px;
-}
-.collapse-card {
-margin-bottom: 10px;
-border-radius: var(--radius-md);
-}
-.card-head {
-padding: 12px 14px;
-min-height: 48px;
-}
-.card-head h2 {
-font-size: 14px;
-gap: 8px;
-}
-.card-head h2 .icon-wrap {
-width: 26px;
-height: 26px;
-font-size: 13px;
-border-radius: 6px;
-}
-.card-head .arrow {
-width: 22px;
-height: 22px;
-font-size: 11px;
-}
-.collapse-card.open .card-body {
-padding: 8px 12px 12px;
-}
-.tip-block {
-font-size: 11px;
-padding: 4px 10px;
-margin: 6px 0 4px;
-}
-.link-row {
-padding: 9px 8px;
-gap: 6px;
-margin: 2px 0;
-border-radius: 8px;
-}
-.link-text {
-min-width: 100px;
-font-size: 12px;
-line-height: 1.4;
-}
-.link-text.no-link {
-font-size: 11px;
-}
-.tag {
-font-size: 9px;
-padding: 2px 6px;
-border-radius: 99px;
-}
-.copy-btn {
-padding: 4px 8px;
-font-size: 10px;
-min-height: 32px;
-min-width: 50px;
-border-radius: 6px;
-}
-.toolbar {
-gap: 6px;
-margin-bottom: 12px;
-justify-content: center;
-}
-.tool-btn {
-padding: 6px 12px;
-font-size: 11px;
-min-height: 34px;
-flex: 1;
-max-width: 120px;
-border-radius: 8px;
-}
-.no-result {
-padding: 30px 16px;
-font-size: 14px;
-}
-.toast {
-font-size: 13px;
-padding: 10px 20px;
-border-radius: 10px;
-}
-.back-to-top {
-bottom: 14px;
-right: 14px;
-width: 40px;
-height: 40px;
-font-size: 16px;
-}
-footer {
-margin-top: 28px;
-padding: 16px 10px;
-font-size: 11px;
-}
-
-/* ===== 播放器手机端 ===== */
-.music-player {
-padding: 14px 14px;
-margin: 12px 0 10px;
-border-radius: var(--radius-md);
-}
-.music-player .player-content {
-gap: 10px;
-}
-.music-player .player-top {
-gap: 10px;
-}
-.music-player .now-playing {
-gap: 10px;
-}
-.music-player .album-cover {
-width: 48px;
-height: 48px;
-font-size: 20px;
-border-radius: 10px;
-}
-.music-player .track-info {
-max-width: none;
-}
-.music-player .track-name {
-font-size: 14px;
-}
-.music-player .track-artist {
-font-size: 11px;
-}
-.music-player .track-album {
-font-size: 10px;
-}
-/* 进度条全宽 */
-.music-player .player-center {
-width: 100%;
-}
-.music-player .progress-wrap {
-padding: 2px 0;
-}
-.music-player .progress-bar {
-height: 24px;
-border-radius: 12px;
-width: calc(100% - 24px);
-margin: 0 12px;
-}
-.music-player .progress-fill {
-border-radius: 12px;
-}
-.music-player .progress-thumb {
-width: 24px;
-height: 24px;
-border-width: 2px;
-}
-.music-player .time-info {
-font-size: 11px;
-margin-top: 4px;
-}
-/* 控制按钮行 */
-.music-player .controls-row {
-gap: 6px;
-}
-.music-player .ctrl-btn {
-width: 36px;
-height: 36px;
-font-size: 13px;
-}
-.music-player .ctrl-btn.play-btn {
-width: 44px;
-height: 44px;
-font-size: 17px;
-}
-.music-player .loop-btn {
-font-size: 10px;
-padding: 4px 8px;
-min-height: 28px;
-}
-/* 播放列表：手机上两列 */
-.music-player .playlist {
-margin-top: 10px;
-padding-top: 8px;
-gap: 5px;
-}
-.music-player .playlist-item {
-padding: 4px 8px;
-font-size: 11px;
-min-height: 30px;
-min-width: calc(50% - 3px);
-max-width: none;
-flex: 1 1 calc(50% - 3px);
-}
-}
-
-/* ===== 小屏手机 (≤375px) ===== */
-@media (max-width: 375px) {
-.page-header h1 { font-size: 20px; }
-.music-player .album-cover {
-width: 42px;
-height: 42px;
-font-size: 18px;
-}
-.music-player .track-name { font-size: 13px; }
-.music-player .ctrl-btn {
-width: 32px;
-height: 32px;
-font-size: 12px;
-}
-.music-player .ctrl-btn.play-btn {
-width: 40px;
-height: 40px;
-font-size: 15px;
-}
-.music-player .progress-thumb {
-width: 22px;
-height: 22px;
-}
-}
-
-/* ===== 横屏手机适配 ===== */
-@media (max-width: 900px) and (orientation: landscape) {
-body { padding: 10px 16px 20px; }
-.page-header { padding: 16px 20px; margin-bottom: 14px; }
-.page-header h1 { font-size: 20px; }
-.music-player { padding: 10px 16px; margin: 8px 0; }
-.music-player .player-content { gap: 8px; }
-.music-player .player-top { gap: 12px; }
-.music-player .album-cover { width: 44px; height: 44px; font-size: 18px; }
-.music-player .progress-bar { height: 22px; }
-.music-player .progress-thumb { width: 20px; height: 20px; }
-.stats-bar { margin-top: 8px; }
-}
-
-/* ============================================
-   ===== 暗色模式支持 =====
-   ============================================ */
-@media (prefers-color-scheme: dark) {
-:root {
---bg-main: #0f172a;
---bg-card: #1e293b;
---bg-card-hover: #334155;
---bg-section: #1a2438;
---border-color: #334155;
---text-primary: #e2e8f0;
---text-secondary: #94a3b8;
---text-muted: #64748b;
---tag-bg: #312e81;
---tag-text: #a5b4fc;
-}
-body {
-background: linear-gradient(180deg, #0f172a 0%, #1a1f3a 100%);
-}
-.page-header {
-background: linear-gradient(135deg, rgba(30,41,59,0.95), rgba(30,41,59,0.85));
-border-color: rgba(255,255,255,0.08);
-}
-.search-box {
-background: #1e293b;
-color: #e2e8f0;
-border-color: #334155;
-}
-.tool-btn {
-background: #1e293b;
-color: #94a3b8;
-border-color: #334155;
-}
-.copy-btn {
-box-shadow: 0 2px 6px rgba(99,102,241,0.2);
-}
-.tip-block {
-background: #1a2438;
-border-left-color: #6366f1;
-}
-.collapse-card {
-background: #1e293b;
-border-color: #334155;
-}
-.collapse-card:nth-child(1) .card-head { background: linear-gradient(135deg, #1e1b4b, #312e81); }
-.collapse-card:nth-child(2) .card-head { background: linear-gradient(135deg, #4c1d24, #831843); }
-.collapse-card:nth-child(3) .card-head { background: linear-gradient(135deg, #064e3b, #065f46); }
-.collapse-card:nth-child(4) .card-head { background: linear-gradient(135deg, #451a03, #78350f); }
-.collapse-card:nth-child(5) .card-head { background: linear-gradient(135deg, #0c2d48, #164e63); }
-.collapse-card:nth-child(6) .card-head { background: linear-gradient(135deg, #2e1065, #4c1d95); }
-.collapse-card:nth-child(7) .card-head { background: linear-gradient(135deg, #14532d, #166534); }
-.collapse-card:nth-child(8) .card-head { background: linear-gradient(135deg, #450a0a, #7f1d1d); }
-.card-head h2 { color: #e2e8f0; }
-.arrow { background: rgba(255,255,255,0.1) !important; color: #94a3b8 !important; }
-}
-</style>
-</head>
-<body>
-<!-- Toast 通知 -->
-<div class="toast" id="toast">✅ 链接已复制到剪贴板</div>
-
-<!-- 页面头部 -->
-<div class="page-header">
-<h1>📺 TVBox 工具导航</h1>
-<div class="desc">
-<span class="badge">接口</span>
-<span class="badge">软件</span>
-<span class="badge">IPTV</span>
-<span class="badge">音乐</span>
-<span class="badge">加速</span>
-</div>
-<div class="stats-bar">
-<div class="stat-item">📁 <span class="stat-num" id="stat-cards">8</span> 个分类</div>
-<div class="stat-item">🔗 <span class="stat-num" id="stat-links">0</span> 条链接</div>
-<div class="stat-item">⚡ 一键复制</div>
-</div>
-<!-- 搜索框 -->
-<div class="search-container">
-<span class="search-icon">🔍</span>
-<input type="text" class="search-box" id="searchInput" placeholder="搜索链接名称或地址...">
-</div>
-</div>
-
-<!-- 全局音乐播放器 -->
-<div class="music-player" id="musicPlayer">
-<div class="player-content">
-<!-- 上行：封面+信息 和 控制按钮 -->
-<div class="player-top">
-<!-- 左侧：封面+信息 -->
-<div class="now-playing">
-<div class="album-cover" id="mpCover">♪</div>
-<div class="track-info">
-<div class="track-name" id="mpTitle">溢愛</div>
-<div class="track-artist" id="mpArtist">上松範康</div>
-<div class="track-album" id="mpAlbum">喰霊-零- 5 スペシャルCD</div>
-</div>
-</div>
-<!-- 右侧：控制按钮 -->
-<div class="controls-row">
-<button class="ctrl-btn" id="mpPrev" title="上一首">⏮</button>
-<button class="ctrl-btn play-btn" id="mpPlay" title="播放/暂停">▶</button>
-<button class="ctrl-btn" id="mpNext" title="下一首">⏭</button>
-<button class="loop-btn" id="mpLoop" title="循环模式">🔁 列表循环</button>
-</div>
-</div>
-<!-- 下行：进度条 -->
-<div class="player-center">
-<div class="progress-wrap">
-<div class="progress-bar" id="mpBar">
-<div class="progress-fill" id="mpProgress"></div>
-<div class="progress-thumb" id="mpThumb"></div>
-</div>
-<div class="time-info">
-<span id="mpCurrent">0:00</span>
-<span id="mpTotal">0:00</span>
-</div>
-</div>
-</div>
-<!-- 播放列表 -->
-<div class="playlist" id="mpPlaylist"></div>
-</div>
-</div>
-
-<!-- 工具栏 -->
-<div class="toolbar">
-<button class="tool-btn" id="expandAll">📂 全部展开</button>
-<button class="tool-btn" id="collapseAll">📁 全部折叠</button>
-</div>
-
-<!-- 无搜索结果 -->
-<div class="no-result" id="noResult">😢 没有找到匹配的链接，换个关键词试试～</div>
-
-<!-- 1 TVbox接口 -->
-<div class="collapse-card open">
-<div class="card-head">
-<h2><span class="icon-wrap" style="background:rgba(99,102,241,0.1)">🔗</span> TVBox影视接口</h2>
-<span class="arrow">▼</span>
-</div>
-<div class="card-body">
-<div class="tip-block">📡 多线路</div>
-<div class="link-row">
-<span class="tag tag-type-acc">shturl加速</span>
-<div class="link-text"><a target="_blank" href="https://gh-proxy.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt">多线路</a></div>
-<button class="copy-btn" data-clip="https://gh-proxy.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">gh.xxooo加速</span>
-<div class="link-text"><a target="_blank" href="https://gh.xxooo.cf/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt">多线路</a></div>
-<button class="copy-btn" data-clip="https://gh.xxooo.cf/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-github">GitLab</span>
-<div class="link-text"><a target="_blank" href="https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dxl/T&S.txt">多线路</a></div>
-<button class="copy-btn" data-clip="https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dxl/T&S.txt">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-web">酷云</span>
-<div class="link-text"><a target="_blank" href="https://fastlink.cokey.xyz/f/RNBYso/T&S.txt">多线路</a></div>
-<button class="copy-btn" data-clip="https://fastlink.cokey.xyz/f/RNBYso/T&S.txt">📋 复制</button>
-</div>
-<div class="tip-block">📡 多仓库</div>
-<div class="link-row">
-<span class="tag tag-type-acc">shturl加速</span>
-<div class="link-text"><a target="_blank" href="https://gh-proxy.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt">多仓库</a></div>
-<button class="copy-btn" data-clip="https://gh-proxy.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">gh.xxooo加速</span>
-<div class="link-text"><a target="_blank" href="https://gh.xxooo.cf/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt">多仓库</a></div>
-<button class="copy-btn" data-clip="https://gh.xxooo.cf/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-github">GitLab</span>
-<div class="link-text"><a target="_blank" href="https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dck/duo.txt">多仓库</a></div>
-<button class="copy-btn" data-clip="https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dck/duo.txt">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-web">酷云</span>
-<div class="link-text"><a target="_blank" href="https://fastlink.cokey.xyz/f/EQJQIX/duo.txt">多仓库</a></div>
-<button class="copy-btn" data-clip="https://fastlink.cokey.xyz/f/EQJQIX/duo.txt">📋 复制</button>
-</div>
-<div class="tip-block">📡 单线路</div>
-<div class="link-row">
-<span class="tag tag-type-acc">shturl加速</span>
-<div class="link-text"><a target="_blank" href="https://gh-proxy.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt">单线路</a></div>
-<button class="copy-btn" data-clip="https://gh-proxy.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">gh.xxooo加速</span>
-<div class="link-text"><a target="_blank" href="https://gh.xxooo.cf/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt">单线路</a></div>
-<button class="copy-btn" data-clip="https://gh.xxooo.cf/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-github">GitLab</span>
-<div class="link-text"><a target="_blank" href="https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dan/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt">单线路</a></div>
-<button class="copy-btn" data-clip="https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dan/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-web">酷云</span>
-<div class="link-text"><a target="_blank" href="https://fastlink.cokey.xyz/f/OVeRsM/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt">单线路</a></div>
-<button class="copy-btn" data-clip="https://fastlink.cokey.xyz/f/OVeRsM/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt">📋 复制</button>
-</div>
-</div>
-</div>
-
-<!-- 2 软件下载 -->
-<div class="collapse-card">
-<div class="card-head">
-<h2><span class="icon-wrap" style="background:rgba(236,72,153,0.1)">📦</span> 影视软件下载</h2>
-<span class="arrow">▼</span>
-</div>
-<div class="card-body">
-<div class="link-row">
-<span class="tag tag-type-github">FongMi</span>
-<div class="link-text"><a target="_blank" href="https://github.com/FongMi/TV">FongMi 影视项目主页</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-github">FongMi</span>
-<div class="link-text"><a target="_blank" href="https://github.com/FongMi/Release">FongMi 影视项目下载</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-github">鱼壳</span>
-<div class="link-text"><a target="_blank" href="https://github.com/fish2018/webhtv">webhtv（鱼壳）</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-github">默影视</span>
-<div class="link-text"><a target="_blank" href="https://github.com/Silent1566/webhtv">默影视，可与原版共存</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-ios">羊壳‑iOS</span>
-<div class="link-text"><a target="_blank" href="https://github.com/ingriddaleusag-dotcom/PickTV">PeekPro 羊壳</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-github">TVBox</span>
-<div class="link-text"><a target="_blank" href="https://github.com/takagen99/Box">TVBox‑T版 深色黑版</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-github">TVBox</span>
-<div class="link-text"><a target="_blank" href="https://github.com/q215613905/TVBoxOS">TVBox‑Q版 浅色白版</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-github">FreeBox</span>
-<div class="link-text"><a target="_blank" href="https://github.com/kknifer7/FreeBox">FreeBox PC端</a></div>
-</div>
-</div>
-</div>
-
-<!-- 3 开源点播项目 -->
-<div class="collapse-card">
-<div class="card-head">
-<h2><span class="icon-wrap" style="background:rgba(16,185,129,0.1)">📡</span> 开源点播项目</h2>
-<span class="arrow">▼</span>
-</div>
-<div class="card-body">
-<div class="tip-block">⭐ 高天流云新项目</div>
-<div class="link-row">
-<span class="tag tag-type-github">GitHub</span>
-<div class="link-text"><a target="_blank" href="https://github.com/qist/tvbox">高天流云新项目</a></div>
-<button class="copy-btn" data-clip="https://gh-proxy.org/https://raw.githubusercontent.com/qist/tvbox/refs/heads/master/jsm.json">📋 复制接口</button>
-</div>
-<div class="tip-block">⭐ 南风</div>
-<div class="link-row">
-<span class="tag tag-type-github">GitHub</span>
-<div class="link-text"><a target="_blank" href="https://raw.githubusercontent.com/yoursmile66/TVBox/refs/heads/main/XC.json">南风</a></div>
-<button class="copy-btn" data-clip="https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/refs/heads/main/XC.json">📋 复制接口</button>
-</div>
-<div class="tip-block">⭐ 香雅情</div>
-<div class="link-row">
-<span class="tag tag-type-github">GitHub</span>
-<div class="link-text"><a target="_blank" href="https://github.com/xyq254245/xyqonlinerule">香雅情</a></div>
-<button class="copy-btn" data-clip="https://gh-proxy.org/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json">📋 复制接口</button>
-</div>
-<div class="tip-block">⭐ one多多在线</div>
-<div class="link-row">
-<span class="tag tag-type-github">GitHub</span>
-<div class="link-text"><a target="_blank" href="https://github.com/leevi0709/one">one多多在线</a></div>
-<button class="copy-btn" data-clip="https://gh-proxy.org/https://raw.githubusercontent.com/leevi0709/one/refs/heads/main/config.bin">📋 复制接口</button>
-</div>
-<div class="tip-block">⭐ 裤佬项目</div>
-<div class="link-row">
-<span class="tag tag-type-github">GitHub</span>
-<div class="link-text"><a target="_blank" href="https://github.com/jsnzkpg/jsnzkpg">裤佬 GitHub 项目</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-web">网页</span>
-<div class="link-text"><a target="_blank" href="https://jsnzkpg.com/">裤佬导航网页</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">订阅</span>
-<div class="link-text"><a target="_blank" href="https://gh-proxy.org/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg">裤佬订阅地址</a></div>
-<button class="copy-btn" data-clip="https://gh-proxy.org/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg">📋 复制</button>
-</div>
-<div class="tip-block">⭐ maflya项目</div>
-<div class="link-row">
-<span class="tag tag-type-github">GitHub</span>
-<div class="link-text"><a target="_blank" href="https://github.com/mhmdxahmd/mafly">maflya GitHub 项目（参考裤佬）</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-web">网页</span>
-<div class="link-text"><a target="_blank" href="https://www.maflya.com">maflya 导航网页</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">订阅</span>
-<div class="link-text"><a target="_blank" href="https://gh-proxy.org/https://raw.githubusercontent.com/mhmdxahmd/mafly/refs/heads/main/MAfly1/mafly2">maflya 订阅地址</a></div>
-<button class="copy-btn" data-clip="https://gh-proxy.org/https://raw.githubusercontent.com/mhmdxahmd/mafly/refs/heads/main/MAfly1/mafly2">📋 复制</button>
-</div>
-</div>
-</div>
-
-<!-- 4 资料网站 -->
-<div class="collapse-card">
-<div class="card-head">
-<h2><span class="icon-wrap" style="background:rgba(245,158,11,0.1)">📚</span> 资料网站</h2>
-<span class="arrow">▼</span>
-</div>
-<div class="card-body">
-<div class="tip-block">📦 影用仓库</div>
-<div class="link-row">
-<span class="tag tag-type-web">仓库</span>
-<div class="link-text"><a target="_blank" href="https://wmdz.top/  ">影用仓库</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-web">备用1</span>
-<div class="link-text"><a target="_blank" href="https://apkck.top/tv.html">影用仓库备用网站 1</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-web">备用2</span>
-<div class="link-text"><a target="_blank" href="https://zouming.com/  ">影用仓库备用网站 2</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-web">备用3</span>
-<div class="link-text"><a target="_blank" href="https://jkss.com/">影用仓库备用网站 3</a></div>
-</div>
-<div class="tip-block">🔧 接口资料网站</div>
-<div class="link-row">
-<span class="tag tag-type-web">资源</span>
-<div class="link-text"><a target="_blank" href="http://a.qiqiv.cn/zy.php">奇奇资源站</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-web">IPTV索引</span>
-<div class="link-text"><a target="_blank" href="https://www.iptvindex.com/">iptvindex</a></div>
-</div>
-<div class="tip-block">💿 软件类网站</div>
-<div class="link-row">
-<span class="tag tag-type-web">应用库</span>
-<div class="link-text"><a target="_blank" href="https://www.lsapk.com">蓝鲨应用库</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-web">下载站</span>
-<div class="link-text"><a target="_blank" href="https://www.7xiazai.com">小兵下载站</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-web">盒子</span>
-<div class="link-text"><a target="_blank" href="https://juwanhezi.com/">聚玩盒子</a></div>
-</div>
-<div class="tip-block">⭐ 常用导航</div>
-<div class="link-row">
-<span class="tag tag-type-web">饭太硬</span>
-<div class="link-text"><a target="_blank" href="http://www.xn--oeq30g0sbd.cc">饭太硬</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-web">王二小</span>
-<div class="link-text"><a target="_blank" href="https://www.xn--k6qx62bm4a1q4a.top/">王二小放牛娃</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-web">摸鱼儿</span>
-<div class="link-text"><a target="_blank" href="https://xn--k5q797o.cc/">摸鱼儿</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-web">菜妮丝</span>
-<div class="link-text"><a target="_blank" href="https://tv.xn--k5q08mu5c.top">菜妮丝</a></div>
-</div>
-</div>
-</div>
-
-<!-- 5 ZB项目 -->
-<div class="collapse-card">
-<div class="card-head">
-<h2><span class="icon-wrap" style="background:rgba(14,165,233,0.1)">📺</span> ZB 直播项目</h2>
-<span class="arrow">▼</span>
-</div>
-<div class="card-body">
-<div class="link-row">
-<span class="tag tag-type-github">Guovin</span>
-<div class="link-text"><a target="_blank" href="https://github.com/Guovin/iptv-api">Guovin 只提供项目代码</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-github">Fork</span>
-<div class="link-text"><a target="_blank" href="https://github.com/mytv-android/iptv-api">Guovin Fork 版</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-github">kakaxi</span>
-<div class="link-text"><a target="_blank" href="https://github.com/kakaxi-1/IPTV">kakaxi‑1/IPTV</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-github">zbds</span>
-<div class="link-text"><a target="_blank" href="https://github.com/vbskycn/iptv">zbds GitHub 项目</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-web">zbds</span>
-<div class="link-text"><a target="_blank" href="https://live.zbds.top/">zbds 直播网站</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-github">migu</span>
-<div class="link-text"><a target="_blank" href="https://github.com/ioptu/migu_video">migu_video</a></div>
-</div>
-</div>
-</div>
-
-<!-- 6 音乐工具 -->
-<div class="collapse-card">
-<div class="card-head">
-<h2><span class="icon-wrap" style="background:rgba(168,85,247,0.1)">🎵</span> 音乐工具</h2>
-<span class="arrow">▼</span>
-</div>
-<div class="card-body">
-<div class="link-row">
-<span class="tag tag-type-web">官网</span>
-<div class="link-text"><a target="_blank" href="https://lxmusic.toside.cn/">洛雪音乐官网</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-github">PC</span>
-<div class="link-text"><a target="_blank" href="https://github.com/lyswhut/lx-music-desktop">洛雪音乐电脑版</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-github">安卓</span>
-<div class="link-text"><a target="_blank" href="https://github.com/lyswhut/lx-music-mobile">洛雪音乐手机版</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-github">安卓</span>
-<div class="link-text"><a target="_blank" href="https://github.com/kejichangqing/QingMusic">青听音乐</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-github">安卓</span>
-<div class="link-text"><a target="_blank" href="https://github.com/maotoumao/MusicFree">MusicFree</a></div>
-</div>
-</div>
-</div>
-
-<!-- 7 iOS相关 -->
-<div class="collapse-card">
-<div class="card-head">
-<h2><span class="icon-wrap" style="background:rgba(34,197,94,0.1)">🍎</span> iOS 相关</h2>
-<span class="arrow">▼</span>
-</div>
-<div class="card-body">
-<div class="tip-block">🎬 Miraplay（魔力云播）专用 md5 接口</div>
-<div class="link-row">
-<span class="tag tag-type-acc">接口</span>
-<div class="link-text no-link">https://9280.kstore.vip/cat/index.js.md5</div>
-<button class="copy-btn" data-clip="https://9280.kstore.vip/cat/index.js.md5">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-web">伪上架</span>
-<div class="link-text"><a target="_blank" href="https://juwanhezi.com/">聚玩盒子</a></div>
-</div>
-<div class="link-row">
-<span class="tag tag-type-web">教程</span>
-<div class="link-text"><a target="_blank" href="https://yinghezhinan.com/ios-app/">硬核指南 iOS</a></div>
-</div>
-<div class="tip-block">⚠️ PeekPro 羊壳、UZ 需要巨魔/自签安装</div>
-</div>
-</div>
-
-<!-- 8 加速站点 -->
-<div class="collapse-card">
-<div class="card-head">
-<h2><span class="icon-wrap" style="background:rgba(239,68,68,0.1)">⚡</span> GitHub 加速站点</h2>
-<span class="arrow">▼</span>
-</div>
-<div class="card-body">
-<div class="link-row">
-<span class="tag tag-type-acc">加速1</span>
-<div class="link-text no-link">shturl.cc/JproNDrkLXZ</div>
-<button class="copy-btn" data-clip="shturl.cc/JproNDrkLXZ">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">加速2</span>
-<div class="link-text no-link">https://github.catvod.com/</div>
-<button class="copy-btn" data-clip="https://github.catvod.com/">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">加速3</span>
-<div class="link-text no-link">https://gh.xxooo.cf/</div>
-<button class="copy-btn" data-clip="https://gh.xxooo.cf/">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">加速4</span>
-<div class="link-text no-link">https://gh.llkk.cc/</div>
-<button class="copy-btn" data-clip="https://gh.llkk.cc/">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">加速5</span>
-<div class="link-text no-link">https://github.ednovas.xyz/</div>
-<button class="copy-btn" data-clip="https://github.ednovas.xyz/">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">加速6</span>
-<div class="link-text no-link">https://gitdl.cn/</div>
-<button class="copy-btn" data-clip="https://gitdl.cn/">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">加速7</span>
-<div class="link-text no-link">https://cf.ghproxy.cc/</div>
-<button class="copy-btn" data-clip="https://cf.ghproxy.cc/">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">加速8</span>
-<div class="link-text no-link">https://ghproxy.net/</div>
-<button class="copy-btn" data-clip="https://ghproxy.net/">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">加速9</span>
-<div class="link-text no-link">https://gh.aptv.app/</div>
-<button class="copy-btn" data-clip="https://gh.aptv.app/">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">加速10</span>
-<div class="link-text no-link">https://gitpr.xmcom.us.kg/</div>
-<button class="copy-btn" data-clip="https://gitpr.xmcom.us.kg/">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">加速11</span>
-<div class="link-text no-link">https://ghproxy.cn/</div>
-<button class="copy-btn" data-clip="https://ghproxy.cn/">📋 复制</button>
-</div>
-</div>
-</div>
-
-<!-- 回到顶部按钮 -->
-<button class="back-to-top" id="backToTop">↑</button>
-
-<footer>
-📺 TVBox 工具导航 &nbsp;|&nbsp; 仅用于个人学习测试，请勿传播盗版资源。
-</footer>
-
-<script>
-// ===== 折叠面板 =====
-document.querySelectorAll('.card-head').forEach(head => {
-head.addEventListener('click', () => {
-const card = head.parentElement;
-card.classList.toggle('open');
-});
-});
-
-// ===== 全部展开 / 折叠 =====
-document.getElementById('expandAll').addEventListener('click', () => {
-document.querySelectorAll('.collapse-card').forEach(card => {
-card.classList.add('open');
-});
-});
-document.getElementById('collapseAll').addEventListener('click', () => {
-document.querySelectorAll('.collapse-card').forEach(card => {
-card.classList.remove('open');
-});
-});
-
-// ===== 复制按钮（Toast 提示） =====
-const toast = document.getElementById('toast');
-let toastTimer = null;
-function showToast(msg) {
-toast.textContent = msg;
-toast.classList.add('show');
-clearTimeout(toastTimer);
-toastTimer = setTimeout(() => {
-toast.classList.remove('show');
-}, 2000);
-}
-document.querySelectorAll('.copy-btn').forEach(btn => {
-btn.addEventListener('click', async function (e) {
-e.stopPropagation();
-const text = this.dataset.clip;
-try {
-await navigator.clipboard.writeText(text);
-showToast('✅ 链接已复制到剪贴板');
-this.textContent = '✅ 已复制';
-this.classList.add('success');
-setTimeout(() => {
-this.textContent = '📋 复制';
-this.classList.remove('success');
-}, 1500);
-} catch (err) {
-const ta = document.createElement('textarea');
-ta.value = text;
-ta.style.position = 'fixed';
-ta.style.left = '-9999px';
-document.body.appendChild(ta);
-ta.select();
-try {
-document.execCommand('copy');
-showToast('✅ 链接已复制到剪贴板');
-} catch (e2) {
-showToast('❌ 复制失败，请手动复制');
-}
-document.body.removeChild(ta);
-}
-});
-});
-
-// ===== 搜索功能 =====
-const searchInput = document.getElementById('searchInput');
-const noResult = document.getElementById('noResult');
-searchInput.addEventListener('input', function () {
-const keyword = this.value.trim().toLowerCase();
-let totalVisible = 0;
-document.querySelectorAll('.collapse-card').forEach(card => {
-let cardHasMatch = false;
-const linkRows = card.querySelectorAll('.link-row');
-linkRows.forEach(row => {
-const text = row.textContent.toLowerCase();
-if (keyword === '' || text.includes(keyword)) {
-row.style.display = '';
-cardHasMatch = true;
-totalVisible++;
-} else {
-row.style.display = 'none';
-}
-});
-const tips = card.querySelectorAll('.tip-block');
-tips.forEach(tip => {
-const text = tip.textContent.toLowerCase();
-if (keyword !== '' && text.includes(keyword)) {
-cardHasMatch = true;
-}
-});
-if (keyword === '' || cardHasMatch) {
-card.style.display = '';
-if (keyword !== '') {
-card.classList.add('open');
-}
-} else {
-card.style.display = 'none';
-}
-});
-if (keyword !== '' && totalVisible === 0) {
-noResult.style.display = 'block';
-} else {
-noResult.style.display = 'none';
-}
-if (keyword === '') {
-document.querySelectorAll('.link-row').forEach(row => {
-row.style.display = '';
-});
-document.querySelectorAll('.collapse-card').forEach(card => {
-card.style.display = '';
-});
-}
-});
-
-// ===== 回到顶部 =====
-const backToTop = document.getElementById('backToTop');
-window.addEventListener('scroll', () => {
-if (window.scrollY > 300) {
-backToTop.classList.add('show');
-} else {
-backToTop.classList.remove('show');
-}
-});
-backToTop.addEventListener('click', () => {
-window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// ===== 统计链接数量 =====
-const linkCount = document.querySelectorAll('.link-row').length;
-document.getElementById('stat-links').textContent = linkCount;
-
-// ===== 音乐播放器（完整修复版） =====
-(function () {
-const playlist = [
-{
-src: "https://mpimg.cn/view.php/928aca64f3429dc864c30073775b7127.flac",
-title: "溢愛",
-artist: "上松範康",
-album: "喰霊-零- 5 スペシャルCD"
-},
-{
-src: "https://mpimg.cn/view.php/bde3e509ea01a37b2d1c0a19c914e947.flac",
-title: "雨幕",
-artist: "灵空GTech",
-album: "雨幕"
-},
-{
-src: "https://mpimg.cn/view.php/0445d9c69565842a0e219a5d7d69c94c.flac",
-title: "River Flows In You",
-artist: "Martin Ermen",
-album: "Kuschelklassik Piano Dreams, Vol. 2"
-}
-];
-const audio = new Audio();
-let index = 0;
-let loopMode = 1; // 0=不循环 1=列表循环 2=单曲循环
-let isSeeking = false; // 防止拖拽时timeupdate冲突
-
-const player = document.getElementById('musicPlayer');
-const mpTitle = document.getElementById('mpTitle');
-const mpArtist = document.getElementById('mpArtist');
-const mpAlbum = document.getElementById('mpAlbum');
-const mpProgress = document.getElementById('mpProgress');
-const mpBar = document.getElementById('mpBar');
-const mpThumb = document.getElementById('mpThumb');
-const mpCurrent = document.getElementById('mpCurrent');
-const mpTotal = document.getElementById('mpTotal');
-const mpPlay = document.getElementById('mpPlay');
-const mpPrev = document.getElementById('mpPrev');
-const mpNext = document.getElementById('mpNext');
-const mpLoop = document.getElementById('mpLoop');
-const mpPlaylist = document.getElementById('mpPlaylist');
-
-function formatTime(t) {
-if (isNaN(t) || t < 0) return "0:00";
-const m = Math.floor(t / 60);
-const s = Math.floor(t % 60);
-return m + ":" + (s < 10 ? "0" : "") + s;
-}
-
-function loadSong(i) {
-const s = playlist[i];
-audio.src = s.src;
-mpTitle.textContent = s.title;
-mpArtist.textContent = s.artist;
-mpAlbum.textContent = s.album;
-mpProgress.style.width = "0px";
-mpThumb.style.left = "0px";
-mpThumb.classList.remove('visible');
-mpCurrent.textContent = "0:00";
-mpTotal.textContent = "0:00";
-updatePlaylistUI();
-}
-
-function togglePlay() {
-if (audio.paused) {
-audio.play().catch(err => console.log('播放失败:', err));
-} else {
-audio.pause();
-}
-}
-
-function nextSong() {
-index = (index + 1) % playlist.length;
-loadSong(index);
-audio.play().catch(err => console.log('播放失败:', err));
-}
-
-function prevSong() {
-index = (index - 1 + playlist.length) % playlist.length;
-loadSong(index);
-audio.play().catch(err => console.log('播放失败:', err));
-}
-
-function updatePlaylistUI() {
-mpPlaylist.querySelectorAll('.playlist-item').forEach((item, i) => {
-item.classList.toggle('active', i === index);
-});
-}
-
-// 渲染播放列表
-playlist.forEach((song, i) => {
-const item = document.createElement('div');
-item.className = 'playlist-item' + (i === index ? ' active' : '');
-item.innerHTML = `
-<div class="pl-num">${i + 1}</div>
-<div class="pl-info">
-<div class="pl-title">${song.title}</div>
-<div class="pl-artist">${song.artist} · ${song.album}</div>
-</div>
-<span class="pl-playing-icon">🎵</span>
-`;
-item.addEventListener('click', () => {
-index = i;
-loadSong(index);
-audio.play().catch(err => console.log('播放失败:', err));
-});
-mpPlaylist.appendChild(item);
-});
-
-// 事件绑定
-mpPlay.addEventListener('click', togglePlay);
-mpNext.addEventListener('click', nextSong);
-mpPrev.addEventListener('click', prevSong);
-mpLoop.addEventListener('click', () => {
-loopMode = (loopMode + 1) % 3;
-const modes = ["🔂 不循环", "🔁 列表循环", "🔄 单曲循环"];
-mpLoop.textContent = modes[loopMode];
-});
-
-audio.addEventListener('play', () => {
-mpPlay.textContent = "⏸";
-player.classList.add('playing');
-mpThumb.classList.add('visible');
-});
-
-audio.addEventListener('pause', () => {
-mpPlay.textContent = "▶";
-player.classList.remove('playing');
-});
-
-audio.addEventListener('timeupdate', () => {
-if (isSeeking) return; // 拖拽中不更新
-if (!audio.duration || isNaN(audio.duration)) return;
-const pct = audio.currentTime / audio.duration;
-const fillWidth = pct * mpBar.clientWidth;
-mpProgress.style.width = fillWidth + "px";
-const thumbLeft = Math.min(fillWidth, mpBar.clientWidth - mpThumb.offsetWidth / 2);
-mpThumb.style.left = thumbLeft + "px";
-mpCurrent.textContent = formatTime(audio.currentTime);
-});
-
-audio.addEventListener('loadedmetadata', () => {
-if (!isNaN(audio.duration)) {
-mpTotal.textContent = formatTime(audio.duration);
-}
-});
-
-audio.addEventListener('ended', () => {
-if (loopMode === 2) {
-audio.currentTime = 0;
-audio.play().catch(err => console.log('播放失败:', err));
-} else if (loopMode === 1) {
-nextSong();
-} else {
-if (index < playlist.length - 1) {
-nextSong();
-} else {
-mpPlay.textContent = "▶";
-player.classList.remove('playing');
-}
-}
-});
-
-// ===== 进度条拖拽（完整修复） =====
-let isDragging = false;
-
-function getPercentFromEvent(e) {
-const rect = mpBar.getBoundingClientRect();
-let clientX;
-if (e.touches && e.touches.length > 0) {
-clientX = e.touches[0].clientX;
-} else if (e.changedTouches && e.changedTouches.length > 0) {
-clientX = e.changedTouches[0].clientX;
-} else {
-clientX = e.clientX;
-}
-let pct = (clientX - rect.left) / rect.width;
-return Math.max(0, Math.min(1, pct));
-}
-
-function seekToPercent(pct) {
-if (audio.duration && !isNaN(audio.duration)) {
-audio.currentTime = pct * audio.duration;
-}
-const fillWidth = pct * mpBar.clientWidth;
-mpProgress.style.width = fillWidth + "px";
-// thumb 定位：在 fill 的右端，不超出 bar
-const thumbLeft = Math.min(fillWidth, mpBar.clientWidth - mpThumb.offsetWidth / 2);
-mpThumb.style.left = thumbLeft + "px";
-mpCurrent.textContent = formatTime(pct * (audio.duration || 0));
-}
-
-function seekFromEvent(e) {
-seekToPercent(getPercentFromEvent(e));
-}
-
-// 点击进度条跳转
-mpBar.addEventListener('click', (e) => {
-if (e.target === mpThumb) return;
-seekFromEvent(e);
-});
-
-// 鼠标拖拽
-mpThumb.addEventListener('mousedown', (e) => {
-e.preventDefault();
-e.stopPropagation();
-isDragging = true;
-isSeeking = true;
-mpThumb.classList.add('dragging');
-mpBar.classList.add('dragging');
-});
-
-document.addEventListener('mousemove', (e) => {
-if (isDragging) {
-e.preventDefault();
-seekFromEvent(e);
-}
-}, { passive: false });
-
-document.addEventListener('mouseup', (e) => {
-if (isDragging) {
-isDragging = false;
-isSeeking = false;
-mpThumb.classList.remove('dragging');
-mpBar.classList.remove('dragging');
-seekFromEvent(e);
-}
-});
-
-// 触摸拖拽
-mpThumb.addEventListener('touchstart', (e) => {
-e.preventDefault();
-e.stopPropagation();
-isDragging = true;
-isSeeking = true;
-mpThumb.classList.add('dragging');
-mpBar.classList.add('dragging');
-}, { passive: false });
-
-document.addEventListener('touchmove', (e) => {
-if (isDragging) {
-e.preventDefault();
-seekFromEvent(e);
-}
-}, { passive: false });
-
-document.addEventListener('touchend', (e) => {
-if (isDragging) {
-isDragging = false;
-isSeeking = false;
-mpThumb.classList.remove('dragging');
-mpBar.classList.remove('dragging');
-seekFromEvent(e);
-}
-});
-
-// 窗口大小变化时重新定位
-window.addEventListener('resize', () => {
-if (audio.duration && !isNaN(audio.duration) && !isDragging) {
-const pct = audio.currentTime / audio.duration;
-const fillWidth = pct * mpBar.clientWidth;
-mpProgress.style.width = fillWidth + "px";
-const thumbLeft = Math.min(fillWidth, mpBar.clientWidth - mpThumb.offsetWidth / 2);
-mpThumb.style.left = thumbLeft + "px";
-}
-});
-
-// 防止双击缩放
-mpBar.addEventListener('dblclick', (e) => { e.preventDefault(); });
-
-// 初始化
-loadSong(0);
-})();
-</script>
-</body>
-</html>
+<h1>常用TVbox-fongmi接口以及影音网站汇总</h1>
+
+
+<h1>1.影视TVbox接口 </h1>
+<h2>1.1  多线路接口： </h2>  
+<P>https://gh-proxy.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt<br>  
+https://gh.xxooo.cf/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt<br>  
+https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dxl/T%26S.txt</P>  
+
+<P>gitlab<br>  
+https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dxl/T&S.txt</P>  
+
+<P>酷云 <br>  
+https://fastlink.cokey.xyz/f/RNBYso/T&S.txt</P>  
+
+
+
+<h2>1.2  多仓库接口： </h2>   
+<P>https://gh-proxy.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt <br>   
+https://gh.xxooo.cf/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt  <br>  
+https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dck/duo.txt</P>   
+
+<P>gitlab<br>    
+https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dck/duo.txt</P>      
+
+<P>酷云<br>    
+https://fastlink.cokey.xyz/f/EQJQIX/duo.txt</P>     
+
+
+<h2>1.3 单线路  </h2>   
+<P><a href="https://gh-proxy.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt" title="https://gh-proxy.com/ 加速">https://gh-proxy.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt</a><br>      
+<a href="https://gh.xxooo.cf/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt" title="https://gh.xxooo.cf/ 加速">https://gh.xxooo.cf/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/单线路.txt</a><br>      
+<a href="https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dan/单线路.txt" title="jsdelivr cdn 加速">https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dan/单线路.txt</a></P>
+
+
+<P>gitlab  <br>  
+<a href="https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dan/单线路.txt " title="gitlab项目">https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dan/单线路.txt </a></P>
+
+
+<P>酷云 <br>  
+<a href="https://fastlink.cokey.xyz/f/OVeRsM/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt " title="酷云网盘">https://fastlink.cokey.xyz/f/OVeRsM/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt</a></P>
+
+
+
+
+
+
+<h1>2.常用软件下载 </h1> 
+<P>github项目右边的releases是下载地址</P>  
+
+
+<h2>2.1 <h2>2.1 影视（fongmi）</h2>    </h2>    
+
+<P>影视 webhtv  暗影视 版本说明</P>    
+<P>电视版32位：（电视首选）armeabi_v7a.apk ;    电视版64位：   leanback-arm64_v8a.apk<br>     
+手机版64位：（手机首选: mobile-arm64_v8a.apk     ； 手机版32位 mobile-armeabi_v7a.apk</P>   
+
+   
+
+<h3>2.1.1 影视（fongmi）</h3>    
+
+<P>基于  CatVod项目（已经删库）： <br>  
+<a href="https://github.com/CatVodTVOfficial/CatVodTVJarLoader " title="官方已经删库">https://github.com/CatVodTVOfficial/CatVodTVJarLoader</a></P>
+
+<P>项目地址   <br>  
+<a href="https://github.com/FongMi/TV " title="影视官方">https://github.com/FongMi/TV</a><br>  
+软件下载地址（另外的仓库）   <br>  
+<a href="https://github.com/FongMi/Release " title="影视官方">https://github.com/FongMi/Release</a></P>
+
+<P>电视版32位（电视首选）armeabi_v7a.apk  <br>   
+<a href="https://gh-proxy.org/https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/leanback-armeabi_v7a.apk" title="电视版32位（电视首选）">https://gh-proxy.org/https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/leanback-armeabi_v7a.apk</a><br>  
+电视版64位   leanback-arm64_v8a.apk  <br>  
+<a href="https://gh-proxy.org/https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/leanback-arm64_v8a.apk" title="电视版64位">https://gh-proxy.org/https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/leanback-arm64_v8a.apk</a><br>  
+手机版  64位（手机首选） mobile-arm64_v8a.apk  <br>   
+<a href="https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/leanback-armeabi_v7a.apk" title="手机版  64位（手机首选）">https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/leanback-armeabi_v7a.apk</a><br>  
+手机版  32位    mobile-armeabi_v7a.apk  <br>  
+<a href="https://gh-proxy.org/https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/mobile-armeabi_v7a.apk" title="手机版 32位">https://gh-proxy.org/https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/mobile-armeabi_v7a.apk</a></P>
+
+
+<h3>2.1.2 webhtv  </h3>  
+
+<P>影视的二次开发版，因github项目作者名fish2018 外号鱼壳  ，软件包名和原版一致不共存    <br>  
+软件包名和原版一致不共存  <br>  
+项目地址 <br>   
+<a href="https://github.com/fish2018/webhtv " title="鱼壳官方">https://github.com/fish2018/webhtv</a></P>
+
+  
+
+
+<h3>2.1.3 默影视  </h3>  
+
+<P>webhtv的二次开发版   <br>
+软件包名和原版不同，可以共存  <br>
+项目地址 <br>   
+<a href="https://github.com/Silent1566/webhtv " title="默视官方">https://github.com/Silent1566/webhtv</a></P>
+ 
+<h2>2.2 影视多平台版 </h2>   
+
+<h3>2.2.1PeekPro </h3>   
+<P>影视的二次开发版，最早版本PeekMill 外号羊壳，不支持TV。支持ios  <br>
+功能很强，类似以前的猫影视。<br>
+其中ios windows版 支持  t4 .md5两种格式，安卓版还支持tvbox的格式, 运行php还需要安装php。 <br>
+项目地址  <br>
+<a href="https://github.com/ingriddaleusag-dotcom/PickTV " title="PeekPro  官方">https://github.com/ingriddaleusag-dotcom/PickTV</a></P>
+
+
+<h3>2.2.2 FreeBox  </h3>  
+<P>影视的二次开发版，支持PC，目前功能不是很完善。不兼容影视/Tvbox的接口</P>  
+
+<P>项目地址    <br>  
+<a href=" https://github.com/kknifer7/FreeBox " title="Freebox官方">https://github.com/kknifer7/FreeBox </a></P>
+
+<P>影视-K版  <br>  
+<a href="https://github.com/kknifer7/TV-K" title="Freebox官方">https://github.com/kknifer7/TV-K</a><br>  
+影视-K版与 FreeBox 搭配使用的安卓端FongMi影视，详情请去 FreeBox 项目中查看。</P>
+
+
+<h3>2.2.3 TV-Multiplatform </h3>   
+<P>影视的二次开发版，支持PC，目前功能不是很完善。不兼容影视/Tvbox的接口</P>  
+
+<P>项目地址    <br>  
+<a href=" https://github.com/Greatwallcorner/TV-Multiplatform " title="TV-Multiplatform官方">https://github.com/Greatwallcorner/TV-Multiplatform </a></P>
+
+
+
+<h2>2.3TVbox  </h2>  
+
+<h3>2.3.1 TVbox  </h3>  
+<P>基于TVBoxOSC（已经删库） 项目：   <br>
+<a href=" https://github.com/CatVodTVOfficial/TVBoxOSC " title="PeekPro  官方"> https://github.com/CatVodTVOfficial/TVBoxOSC</a></P>
+目前的两个版本不支持一次导入多条线路。只能单条线路导入，只支持TV，没有手机版。     </P> 
+<P>分两个版本  </P> 
+<P>q版，白版（界面浅色）俊版<br>   
+<a href=" https://github.com/q215613905/TVBoxOS" title="Q版tvbox官方"> https://github.com/q215613905/TVBoxOS</a></P>
+
+<P>T版，黑版（界面深色）  <br>  
+<a href=" https://github.com/takagen99/Box" title="T版tvbox官方"> https://github.com/takagen99/Box</a></P>
+
+<P>下载项目地址（两个版本打包发布）<br>    
+<a href=" https://github.com/o0HalfLife0o/TVBoxOSC" title="官方合作第三方打包">https://github.com/o0HalfLife0o/TVBoxOSC</a></P>
+
+
+<h3>2.3.2 影视仓  </h3>  
+<P>不开源。作者安卓哥开发。支持一次导入多个不同地址的仓库。  </P>
+
+
+
+<h2>2.4网盘下载 </h2>  
+
+<P>网盘（版本可能会老一些，隔一段时间才能有空更新），影视可以用下面的链接直接下载<br>      
+<a href=" https://share.feijipan.com/s/AnEEQTwX" title="小飞机网盘">https://share.feijipan.com/s/AnEEQTwX</a><br>      
+<a href=" https://links.8uid.com/s/5c6459b28f73e65dafa5d0c9582e40a4" title="个人笔记网盘">https://links.8uid.com/s/5c6459b28f73e65dafa5d0c9582e40a4</a><br>      
+<a href=" https://www.go127.com/s/BdRH7" title="127网盘">https://www.go127.com/s/BdRH7</a></P> 
+
+<P>第三方网盘  <br>      
+<a href=" https://526900.xyz/" title="裤佬网盘">https://526900.xyz/</a></P> 
+
+
+
+
+
+<h1>3开源点播接口  </h1>
+
+<h2>3.1高天流云  </h2>  
+<P>新地址  <br> 
+<a href="https://github.com/qist/tvbox" title="新项目，高天流云等大佬参与">https://github.com/qist/tvbox</a></P>
+
+<P>高天流云项目停更  <br> 
+<a href="https://github.com/gaotianliuyun/gao " title="原项目停更">https://github.com/gaotianliuyun/gao </a></P>
+
+<h2>3.2. 南风  </h2>  
+<P><a href="https://github.com/yoursmile66/TVBox " title="南风项目官方">https://github.com/yoursmile66/TVBox </a></P>
+
+<h2>3.3香雅情  </h2>  
+<P><a href="https://github.com/xyq254245/xyqonlinerule " title="香雅情官方，有海阔世界规则">https://github.com/xyq254245/xyqonlinerule </a></P>
+
+<h2>3.4.one 多多在线 </h2>   
+<P><a href="https://github.com/leevi0709/one " title="多多在线官">https://github.com/leevi0709/one </a></P>
+
+
+<h2>3.5裤老  </h2>  
+<P>官网  <br>    
+<a href="https://github.com/jsnzkpg/jsnzkpg  " title="裤佬github">https://github.com/jsnzkpg/jsnzkpg  </a> <br> 
+导航网页 <br>   
+<a href="https://jsnzkpg.com/ " title="裤佬导航">https://jsnzkpg.com/  </a> </P> 
+
+<P>maflya <br>  
+参考裤佬项目 <br>  
+官网<br>      
+<a href="https://github.com/mhmdxahmd/mafly    " title="maflya github">https://github.com/mhmdxahmd/mafly    </a> <br> 
+导航网页 <br>
+<a href="https://www.maflya.com     " title="maflya导航">https://www.maflya.com     </a></P>   
+
+
+
+<h2>3.6小米  </h2>  
+<P><a href="https://github.com/ggrrttyyiii/CatVodSpider" title="小米官方">https://github.com/ggrrttyyiii/CatVodSpider </a> </P> 
+
+<P>参考奇奇资源 <br>    
+<a href="http://a.qiqiv.cn/zy.php" title="奇奇资源官方">http://a.qiqiv.cn/zy.php</a> </P> 
+
+
+
+<h2>3.7 lubin776</h2>    
+<P>项目地址<br>     
+<a href="https://github.com/lubin776/tvbox  " title="lubin776">https://github.com/lubin776/tvbox </a></P>
+
+
+
+
+
+
+
+
+
+
+<h1>4.资料网站 </h1> 
+
+<h2>4.1影用仓库 </h2>   
+<P><a href="https://wmdz.top/ " title="影用仓库 官方">https://wmdz.top/ </a><br>      
+备用<br>
+<a href="https://apkck.top/tv.html" title="影用仓库 官方">https://apkck.top/tv.html </a><br>     
+<a href="https://zouming.com/   " title="影用仓库 官方">https://zouming.com/   </a><br>     
+<a href="https://jkss.com/  " title="影用仓库 官方">https://jkss.com/   </a></P>       
+
+<h2>4.2奇奇  </h2>  
+<P><a href="http://a.qiqiv.cn/zy.php " title="奇奇资源官方">http://a.qiqiv.cn/zy.php  </a><br>     
+<a href="https://bbs.qiqiv.cn/thread-11996-1-1.html" title="奇奇资源官方">https://bbs.qiqiv.cn/thread-11996-1-1.html  </a></P>   
+
+
+<h2>4.3看电视 </h2>   
+<P><a href="https://www.iptvindex.com/ " title="看电视源官方">https://www.iptvindex.com/  </a></P>   
+  
+<h2>4.4蓝鲨应用库    </h2>  
+<P><a href="https://www.lsapk.com" title="蓝鲨应用官方">https://www.lsapk.com</a></P>   
+
+
+<h2>4.5.小兵下载站 </h2>   
+<P><a href="https://www.iptvindex.com/ " title="看电视源官方">https://www.iptvindex.com/  </a></P>   
+
+<h2>4.6聚玩盒子  </h2>  
+<P><a href="https://juwanhezi.com/  " title="聚玩盒子">https://juwanhezi.com/  </a><br>  
+接口部分更新较慢。广告非常多。有伪装上架（伪上架）的ios软件  </P>   
+
+
+
+
+
+<h2>4.7汇总软件和接口</h2>    
+
+<h3>4.7.1 </h3>  
+<P><a href="https://github.com/youhunwl/TVAPP   " title="软件比较老">https://github.com/youhunwl/TVAPP   </a><br>  
+有很多下载软件，但是版本比较老 </P>   
+
+
+
+<h3>4.7.2 </h3>   
+<P><a href="https://github.com/tushen6/Tomorrow " title="加速网站比较多">https://github.com/tushen6/Tomorrow </a></P>    
+
+<P>Github加速站点<br>     
+<a href="https://gh-proxy.com/   " title="最常用">https://gh-proxy.com/  </a><br>     
+<a href="https://github.catvod.com/   " title="可能已经失">https://github.catvod.com/   </a><br>    
+<a href="https://gh.xxooo.cf/ " title="饭太硬加速">https://gh.xxooo.cf/  </a><br>       
+<a href="https://github.ednovas.xyz/   " title="https://github.ednovas.xyz/  ">https://github.ednovas.xyz/   </a><br>    
+<a href="https://ghproxy.net/   " title="https://ghproxy.net/  ">https://ghproxy.net/   </a><br>    
+<a href="https://ghproxy.cn/   " title="按网站提示操作 ">https://cdn.jsdelivr.net   </a></P>      
+
+
+ <h2>4.8常用导航网站  </h2>    
+
+<P>饭太硬  <br>
+<a href="http://www.饭太硬.cc " title="饭太硬">http://www.饭太硬.cc </a><br>  
+<a href="http://www.饭太硬.net" title="饭太硬">http://www.饭太硬.net</a><br>  
+菜妮丝   <br> 
+<a href="https://tv.菜妮丝.top" title="菜妮丝">https://tv.菜妮丝.top</a><br>  
+王二小放牛娃    <br>
+<a href="https://www.王二小放牛娃.top/  " title="王二小放牛娃 ">https://www.王二小放牛娃.top/  </a><br>  
+摸鱼儿    <br>
+<a href="https://摸鱼儿.cc/ " title="摸鱼儿">https://摸鱼儿.cc/  </a><br>  
+<a href="http://我不是.摸鱼儿.cc/ " title="摸鱼儿">http://我不是.摸鱼儿.cc/  </a><br> 
+<a href="https://www.小不点.com/  " title="摸鱼儿">https://www.小不点.com/  </a></P>   
+
+
+
+
+
+
+<h1> 5.ZB项目</h1>  
+<h2>5.1 </h2>   
+<P>一个自动获取的项目。很多项目都是从这里衍生出来的。本身的源设置更新很慢。可以使用fork的源  <br>
+<a href="https://github.com/Guovin/iptv-api   " title="项目长期更新  ">https://github.com/Guovin/iptv-api    </a></P>      
+
+<P>例如  
+<a href="https://github.com/mytv-android/iptv-api  " title="Mytv-andriod官网  ">https://github.com/mytv-android/iptv-api   </a></P>    
+
+<h2>5.2 </h2>    
+<P><a href="https://github.com/kakaxi-1/IPTV " title="长期维护">https://github.com/kakaxi-1/IPTV</a></P>   
+
+<h2>5.3</h2>   
+<P><a href="https://github.com/vbskycn/iptv " title="长期维护">https://github.com/vbskycn/iptv</a><br>
+<a href="https://live.zbds.top/  " title="长期维护">https://live.zbds.top/ </P>   
+<P>同时提供软件  </P>   
+
+
+<h2>5.4 </h2>    
+<P><a href="https://github.com/qingtingjjjjjjj/iptv-auto-update " title="长期维护">https://github.com/qingtingjjjjjjj/iptv-auto-update</a></P>    
+
+<h2>5.5咪咕源</h2>    
+<P><a href="https://github.com/ioptu/migu_video   " title="长期维护">https://github.com/ioptu/migu_video  </a>  </P>  
+
+
+
+
+
+<h1>6.其它常见软件  </h1>
+<h2>6.1 UZ  </h2>  
+<P>项目地址：<br>    
+<a href="https://github.com/YYDS678/uzVideo   " title="UZ官方，需要加tg下载新版本">https://github.com/YYDS678/uzVideo  </a><br> 
+软件支持多平台，支持ios,但是不开源。tg中发布新版本 </P>    
+
+<P><a href="t.me/uzvideoplay  " title="频道 t.me/uzvideoplay">t.me/uzvideoplay  </a><br>    
+<a href="t.me/uzVideoApp  " title="群组 t.me/uzVideoApp">t.me/uzVideoApp   </a></P>  
+
+
+
+
+<h2>6.2 洛雪 </h2>   
+<P>音乐软件 <br>     
+<a href="https://lxmusic.toside.cn/   " title="官网">https://lxmusic.toside.cn/   </a></P>  
+ 
+<P>官网文档<br>     
+<a href="https://docs.lxmusic.top/   " title="官网">https://docs.lxmusic.top/  </a></P>   
+
+<P>Github <br>      
+电脑版  <br> 
+<a href="https://github.com/lyswhut/lx-music-desktop    " title="官网">https://github.com/lyswhut/lx-music-desktop   </a><br>       
+手机版  <br>
+<a href="https://github.com/lyswhut/lx-music-mobile   " title="官网">https://github.com/lyswhut/lx-music-mobile   </a><br>  
+绿色版：直接解压不需要安装</P>       
+
+<P>音源：<br>  
+六音软件www.sixyin.com 搜索“音源”  (已经无法打开)  <br>
+https://www.sixyin.com/8498.html   </P>   
+
+<P>其它音源下载<br>      
+<a href="https://www.iptvindex.com/     " title="看电视官网">https://www.iptvindex.com/     </a><br>  
+<a href="https://awaw.cc/post/lx-music-source    " title="第三方网站">https://awaw.cc/post/lx-music-source    </a> </P>   
+
+
+<P>官网源 <br>     
+https://ghproxy.net/raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js <br>     
+裤佬<br>      
+https://dogpan.com/f/KOyDi4/%E8%A3%A4%E4%BD%ACSVIP%E9%9F%B3%E6%BA%90.js <br>     
+maflya  <br>    
+https://raw.githubusercontent.com/mhmdxahmd/mafly/refs/heads/main/MAfly1/lx-maflya-Pro.js  </P>   
+
+
+<h2>6.3 青听音乐</h2>     
+<P>只有安卓版 <br>   
+<a href="https://github.com/kejichangqing/QingMusic   " title="青听官网">https://github.com/kejichangqing/QingMusic    </a> <br> 
+接口   <br> 
+https://13413.kstore.space/QingMusic/music.json</P>     
+
+<h2>6.4Music Free </h2>    
+<P>官网   可能已经停更  <br> 
+<P>安卓版  <br> 
+<a href="https://github.com/maotoumao/MusicFree   " title="Music Free">https://github.com/maotoumao/MusicFree    </a> <br> 
+电脑版<br>   
+<a href="https://github.com/maotoumao/MusicFreeDesktop   " Music Free">https://github.com/maotoumao/MusicFreeDesktop    </a> </P>   
+
+
+<P>接口  <br>   
+官方 <br>     
+https://raw.gitcode.com/maotoumao/MusicFreePlugins/raw/master/plugins.json  <br>   
+裤佬  <br>   
+https://dogpan.com/f/JZxpTK/%E8%A3%A4%E4%BD%ACSVIP%E9%9F%B3%E6%BA%90.js  <br>   
+maflya  <br>   
+https://gh-proxy.org/https://raw.githubusercontent.com/mhmdxahmd/mafly/refs/heads/main/MAfly1/music/musicfree.js  </P>   
+
+<P>其它第三方  <br>   
+<a href="https://github.com/wzh15802/lxmusic   " Music Free">https://github.com/wzh15802/lxmusic    </a> </P>   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>7 ios</h1>  
+<h2>7.1 </h2>   
+<P>Miraplay （魔力云播  ）   <br>   
+苹果应用商店上架   <br>   
+王二小   <br>   
+Miraplay 专用接口： <br>   
+https://9280.kstore.vip/cat/index.js.md5   <br> 
+
+md5接口 猫影视最后版本 猫爪  UZN   MIraPlay  PeeKPro 蚂蚁通用   <br> 
+
+比较麻烦 需要使用非国区ID登陆安装，或者非国区苹果电脑下载后传入手机安装，<br> 
+
+类似的还有JSTV </P>   
+
+
+<h2>7.2伪上架</h2>    
+<P>聚玩盒子<br>   
+<a href="https://juwanhezi.com/   " 聚玩盒子官网e">https://juwanhezi.com/   </a><br>    
+广告非常多。有伪装上架（伪上架）的ios软件  </P> 
+
+
+<P>硬核指南  <br> 
+<a href="https://yinghezhinan.com/ios-app/   "硬核指南  官网">https://yinghezhinan.com/ios-app/   </a> </P>   
+
+
+
+<h2>7.3  </h2>  
+<P>需要自签或者使用巨魔 <br>    
+羊壳 PeeKPro  <br> 
+UZ </P>    
+
+
+
+
+
+
+
+
+
+
+

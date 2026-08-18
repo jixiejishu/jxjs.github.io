@@ -2,18 +2,15 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#6366f1">
 <title>📺 TVBox 工具导航</title>
 <style>
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
 :root {
-/* 主色调 */
 --bg-main: #f0f2f8;
 --bg-card: #ffffff;
 --bg-card-hover: #f8faff;
@@ -22,35 +19,23 @@ box-sizing: border-box;
 --text-primary: #1e293b;
 --text-secondary: #64748b;
 --text-muted: #94a3b8;
-/* 渐变色 */
 --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
---accent-gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
---accent-gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
---accent-gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
---accent-gradient-5: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
---accent-gradient-6: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
---accent-gradient-7: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
---accent-gradient-8: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-/* 功能色 */
 --accent-blue: #6366f1;
 --accent-purple: #8b5cf6;
 --btn-bg: #6366f1;
 --btn-success: #10b981;
---btn-danger: #ef4444;
-/* 标签色 */
 --tag-bg: #eef2ff;
 --tag-text: #4f46e5;
-/* 阴影 */
 --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
 --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
 --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
---shadow-xl: 0 20px 60px rgba(0,0,0,0.15);
-/* 圆角 */
 --radius-sm: 8px;
 --radius-md: 12px;
 --radius-lg: 16px;
 --radius-xl: 24px;
+--tv-focus: 0 0 0 3px #fff, 0 0 0 6px var(--accent-blue), 0 0 20px rgba(99,102,241,0.6);
 }
+
 /* ===== 全局样式 ===== */
 body {
 background: linear-gradient(180deg, #e8ecf4 0%, #f0f2f8 30%, #f5f7fb 100%);
@@ -67,6 +52,7 @@ min-height: 100vh;
 text-size-adjust: 100%;
 -webkit-text-size-adjust: 100%;
 }
+
 /* 美化滚动条 */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 5px; }
@@ -85,20 +71,6 @@ box-shadow: var(--shadow-lg);
 border: 1px solid rgba(255,255,255,0.6);
 position: relative;
 overflow: hidden;
-}
-.page-header::before {
-content: '';
-position: absolute;
-top: -50%;
-left: -50%;
-width: 200%;
-height: 200%;
-background: conic-gradient(from 0deg, transparent, rgba(99,102,241,0.03), transparent, rgba(139,92,246,0.03), transparent);
-animation: rotate 30s linear infinite;
-}
-@keyframes rotate {
-0% { transform: rotate(0deg); }
-100% { transform: rotate(360deg); }
 }
 .page-header h1 {
 font-size: 36px;
@@ -176,9 +148,7 @@ appearance: none;
 border-color: var(--accent-blue);
 box-shadow: 0 0 0 4px rgba(99,102,241,0.1);
 }
-.search-box::placeholder {
-color: var(--text-muted);
-}
+.search-box::placeholder { color: var(--text-muted); }
 .search-icon {
 position: absolute;
 left: 16px;
@@ -203,9 +173,7 @@ transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 box-shadow: var(--shadow-md);
 transform: translateY(-1px);
 }
-.collapse-card.open {
-box-shadow: var(--shadow-md);
-}
+.collapse-card.open { box-shadow: var(--shadow-md); }
 .collapse-card:nth-child(1) .card-head { background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%); }
 .collapse-card:nth-child(2) .card-head { background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%); }
 .collapse-card:nth-child(3) .card-head { background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); }
@@ -214,6 +182,7 @@ box-shadow: var(--shadow-md);
 .collapse-card:nth-child(6) .card-head { background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); }
 .collapse-card:nth-child(7) .card-head { background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); }
 .collapse-card:nth-child(8) .card-head { background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); }
+
 .card-head {
 padding: 16px 24px;
 cursor: pointer;
@@ -223,6 +192,12 @@ align-items: center;
 user-select: none;
 position: relative;
 min-height: 56px;
+outline: none;
+transition: box-shadow 0.2s;
+}
+.card-head:focus-visible {
+box-shadow: var(--tv-focus);
+border-radius: var(--radius-lg);
 }
 .card-head::after {
 content: '';
@@ -264,9 +239,8 @@ border-radius: 50%;
 background: rgba(255,255,255,0.6);
 flex-shrink: 0;
 }
-.collapse-card.open .arrow {
-transform: rotate(180deg);
-}
+.collapse-card.open .arrow { transform: rotate(180deg); }
+
 .card-body {
 padding: 0 24px;
 max-height: 0;
@@ -304,17 +278,22 @@ padding: 12px 14px;
 border-radius: var(--radius-md);
 margin: 4px 0;
 transition: all 0.25s ease;
-border: 1px solid transparent;
-min-height: 44px;
+border: 2px solid transparent;
+min-height: 48px;
+outline: none;
 }
 .link-row:hover {
 background: var(--bg-card-hover);
-border-color: rgba(99,102,241,0.1);
+border-color: rgba(99,102,241,0.15);
 transform: translateX(4px);
 }
-.link-row:hover .link-text a {
-color: var(--accent-blue);
+.link-row:focus-visible {
+border-color: var(--accent-blue);
+box-shadow: 0 0 0 3px rgba(99,102,241,0.2);
+background: var(--bg-card-hover);
+transform: translateX(4px);
 }
+.link-row:hover .link-text a { color: var(--accent-blue); }
 
 /* ===== 标签 ===== */
 .tag {
@@ -328,10 +307,7 @@ flex-shrink: 0;
 white-space: nowrap;
 transition: all 0.2s;
 }
-.link-row:hover .tag {
-background: var(--accent-blue);
-color: #fff;
-}
+.link-row:hover .tag { background: var(--accent-blue); color: #fff; }
 .tag-type-github { background: #f0f0f0; color: #24292e; }
 .tag-type-ios { background: #e8f4fd; color: #007aff; }
 .tag-type-acc { background: #eef2ff; color: #4f46e5; }
@@ -353,20 +329,12 @@ transition: color 0.2s;
 display: inline-flex;
 align-items: center;
 gap: 4px;
+outline: none;
 }
-.link-text a::after {
-content: '↗';
-font-size: 12px;
-opacity: 0;
-transition: opacity 0.2s;
-}
-.link-text a:hover::after {
-opacity: 1;
-}
-.link-text a:hover {
-color: var(--accent-blue);
-text-decoration: none;
-}
+.link-text a:focus-visible { color: var(--accent-blue); text-decoration: underline; }
+.link-text a::after { content: '↗'; font-size: 12px; opacity: 0; transition: opacity 0.2s; }
+.link-text a:hover::after { opacity: 1; }
+.link-text a:hover { color: var(--accent-blue); text-decoration: none; }
 .link-text.no-link {
 color: var(--text-secondary);
 font-family: "SF Mono", "Fira Code", monospace;
@@ -390,24 +358,18 @@ display: inline-flex;
 align-items: center;
 gap: 4px;
 box-shadow: 0 2px 6px rgba(99,102,241,0.3);
-min-height: 36px;
-min-width: 64px;
+min-height: 38px;
+min-width: 70px;
 justify-content: center;
+outline: none;
+-webkit-tap-highlight-color: transparent;
 }
-.copy-btn:hover {
-background: #4f46e5;
-box-shadow: 0 4px 12px rgba(99,102,241,0.4);
-transform: translateY(-1px);
-}
-.copy-btn:active {
-transform: scale(0.95);
-}
-.copy-btn.success {
-background: var(--btn-success);
-box-shadow: 0 2px 6px rgba(16,185,129,0.3);
-}
+.copy-btn:hover { background: #4f46e5; box-shadow: 0 4px 12px rgba(99,102,241,0.4); transform: translateY(-1px); }
+.copy-btn:active { transform: scale(0.95); }
+.copy-btn:focus-visible { box-shadow: 0 0 0 3px rgba(99,102,241,0.4), 0 2px 6px rgba(99,102,241,0.3); }
+.copy-btn.success { background: var(--btn-success); box-shadow: 0 2px 6px rgba(16,185,129,0.3); }
 
-/* ===== 一键展开/折叠 按钮 ===== */
+/* ===== 工具栏 ===== */
 .toolbar {
 display: flex;
 justify-content: flex-end;
@@ -428,14 +390,13 @@ transition: all 0.25s;
 display: inline-flex;
 align-items: center;
 gap: 6px;
-min-height: 38px;
+min-height: 40px;
 justify-content: center;
+outline: none;
+-webkit-tap-highlight-color: transparent;
 }
-.tool-btn:hover {
-background: var(--accent-blue);
-color: #fff;
-border-color: var(--accent-blue);
-}
+.tool-btn:hover { background: var(--accent-blue); color: #fff; border-color: var(--accent-blue); }
+.tool-btn:focus-visible { box-shadow: 0 0 0 3px rgba(99,102,241,0.3); }
 
 /* ===== 回到顶部按钮 ===== */
 .back-to-top {
@@ -458,15 +419,11 @@ z-index: 100;
 display: flex;
 align-items: center;
 justify-content: center;
+outline: none;
 }
-.back-to-top.show {
-opacity: 1;
-visibility: visible;
-}
-.back-to-top:hover {
-transform: translateY(-3px);
-box-shadow: var(--shadow-lg);
-}
+.back-to-top.show { opacity: 1; visibility: visible; }
+.back-to-top:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.back-to-top:focus-visible { box-shadow: var(--shadow-lg), 0 0 0 3px rgba(99,102,241,0.4); }
 
 /* ===== 页脚 ===== */
 footer {
@@ -477,10 +434,7 @@ color: var(--text-muted);
 padding: 24px;
 border-top: 1px solid var(--border-color);
 }
-footer a {
-color: var(--accent-blue);
-text-decoration: none;
-}
+footer a { color: var(--accent-blue); text-decoration: none; }
 
 /* ===== 无搜索结果提示 ===== */
 .no-result {
@@ -496,9 +450,7 @@ display: none;
 from { opacity: 0; transform: translateY(20px); }
 to { opacity: 1; transform: translateY(0); }
 }
-.collapse-card {
-animation: fadeInUp 0.5s ease backwards;
-}
+.collapse-card { animation: fadeInUp 0.5s ease backwards; }
 .collapse-card:nth-child(1) { animation-delay: 0.05s; }
 .collapse-card:nth-child(2) { animation-delay: 0.1s; }
 .collapse-card:nth-child(3) { animation-delay: 0.15s; }
@@ -527,12 +479,10 @@ display: flex;
 align-items: center;
 gap: 8px;
 }
-.toast.show {
-transform: translateX(-50%) translateY(0);
-}
+.toast.show { transform: translateX(-50%) translateY(0); }
 
 /* ============================================
-   ===== 音乐播放器（核心修复区域） =====
+   ===== 音乐播放器 =====
    ============================================ */
 .music-player {
 background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
@@ -545,19 +495,6 @@ position: relative;
 overflow: hidden;
 z-index: 10;
 }
-.music-player::before {
-content: '';
-position: absolute;
-top: -50%;
-left: -50%;
-width: 200%;
-height: 200%;
-background: conic-gradient(from 0deg, transparent, rgba(99,102,241,0.05), transparent, rgba(139,92,246,0.05), transparent);
-animation: rotate 40s linear infinite;
-pointer-events: none;
-}
-
-/* 播放器主体布局 - 桌面端（两行布局：上行封面+按钮，下行进度条） */
 .music-player .player-content {
 position: relative;
 z-index: 1;
@@ -565,15 +502,11 @@ display: flex;
 flex-direction: column;
 gap: 12px;
 }
-
-/* 上行：封面+信息 和 控制按钮 并排 */
 .music-player .player-top {
 display: flex;
 align-items: center;
 gap: 20px;
 }
-
-/* 左侧：专辑封面 + 歌曲信息 */
 .music-player .now-playing {
 display: flex;
 align-items: center;
@@ -581,8 +514,6 @@ gap: 14px;
 flex: 1;
 min-width: 0;
 }
-
-/* 专辑封面 */
 .music-player .album-cover {
 width: 64px;
 height: 64px;
@@ -593,67 +524,16 @@ align-items: center;
 justify-content: center;
 font-size: 28px;
 flex-shrink: 0;
-animation: rotate 15s linear infinite;
-animation-play-state: paused;
 box-shadow: 0 4px 20px rgba(99,102,241,0.5);
 }
-.music-player.playing .album-cover {
-animation-play-state: running;
-}
+.music-player .track-info { flex: 1; min-width: 0; max-width: 260px; }
+.music-player .track-name { font-size: 16px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.music-player .track-artist { font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.music-player .track-album { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.music-player .controls-row { display: flex; align-items: center; justify-content: center; gap: 8px; flex: 0 0 auto; }
 
-/* 歌曲信息 */
-.music-player .track-info {
-flex: 1;
-min-width: 0;
-max-width: 260px;
-}
-.music-player .track-name {
-font-size: 16px;
-font-weight: 700;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-}
-.music-player .track-artist {
-font-size: 12px;
-color: rgba(255,255,255,0.7);
-margin-top: 2px;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-}
-.music-player .track-album {
-font-size: 11px;
-color: rgba(255,255,255,0.5);
-margin-top: 1px;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-}
-
-/* 右侧：控制按钮 */
-.music-player .controls-row {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 8px;
-flex: 0 0 auto;
-}
-
-/* 中间：进度条 + 时间（独占一行，全宽） */
-.music-player .player-center {
-width: 100%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-}
-
-/* 进度条区域 */
-.music-player .progress-wrap {
-margin: 0;
-padding: 4px 0;
-width: 100%;
-}
+/* 进度条 */
+.music-player .progress-wrap { margin: 0; padding: 4px 0; width: 100%; }
 .music-player .progress-bar {
 height: 28px;
 background: rgba(255,255,255,0.10);
@@ -664,7 +544,9 @@ box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
 width: calc(100% - 28px);
 margin: 0 14px;
 touch-action: none;
+outline: none;
 }
+.music-player .progress-bar:focus-visible { box-shadow: inset 0 2px 5px rgba(0,0,0,0.3), 0 0 0 3px rgba(139,92,246,0.5); }
 .music-player .progress-fill {
 height: 100%;
 width: 0%;
@@ -674,60 +556,38 @@ transition: width 0.1s linear;
 position: relative;
 box-shadow: 0 0 12px rgba(99,102,241,0.5);
 }
-.music-player .progress-bar:hover .progress-fill {
-background: linear-gradient(90deg, #818cf8, #a78bfa, #c4b5fd);
-box-shadow: 0 0 16px rgba(139,92,246,0.65);
-}
-
-/* 拖拽按钮（thumb） */
 .music-player .progress-thumb {
 position: absolute;
 top: 50%;
 left: 0%;
-width: 28px;
-height: 28px;
+width: 20px;
+height: 20px;
 border-radius: 50%;
 background: #ffffff;
 border: 3px solid #8b5cf6;
 box-shadow: 0 0 10px rgba(139,92,246,0.7), 0 2px 6px rgba(0,0,0,0.3);
-transform: translate(-50%, -50%);
+transform: translate(0, -50%);
 cursor: grab;
 z-index: 5;
-transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s, opacity 0.3s;
 opacity: 0;
 visibility: hidden;
 touch-action: none;
+margin-left: -10px;
+transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s, opacity 0.3s;
 }
-.music-player .progress-thumb.visible {
-opacity: 1;
-visibility: visible;
-}
-.music-player .progress-bar:hover .progress-thumb {
-opacity: 1;
-visibility: visible;
-}
+.music-player .progress-thumb.visible { opacity: 1; visibility: visible; }
+.music-player .progress-bar:hover .progress-thumb { opacity: 1; visibility: visible; }
 .music-player .progress-thumb.dragging {
 cursor: grabbing;
-transform: translate(-50%, -50%) scale(1.2);
+transform: translate(0, -50%) scale(1.2);
 box-shadow: 0 0 20px rgba(139,92,246,1), 0 0 30px rgba(99,102,241,0.5);
 border-color: #a78bfa;
 opacity: 1;
 visibility: visible;
 }
-.music-player .progress-bar.dragging .progress-fill {
-box-shadow: 0 0 16px rgba(139,92,246,0.8);
-}
+.music-player .time-info { display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 6px; padding: 0 4px; font-variant-numeric: tabular-nums; }
 
-/* 时间信息 */
-.music-player .time-info {
-display: flex;
-justify-content: space-between;
-font-size: 12px;
-color: rgba(255,255,255,0.6);
-margin-top: 6px;
-padding: 0 4px;
-font-variant-numeric: tabular-nums;
-}
+/* 控制按钮 */
 .music-player .ctrl-btn {
 background: rgba(255,255,255,0.1);
 border: none;
@@ -743,11 +603,10 @@ justify-content: center;
 transition: all 0.25s;
 -webkit-tap-highlight-color: transparent;
 flex-shrink: 0;
+outline: none;
 }
-.music-player .ctrl-btn:hover {
-background: rgba(255,255,255,0.2);
-transform: scale(1.1);
-}
+.music-player .ctrl-btn:hover { background: rgba(255,255,255,0.2); transform: scale(1.1); }
+.music-player .ctrl-btn:focus-visible { box-shadow: 0 0 0 3px rgba(255,255,255,0.4); background: rgba(255,255,255,0.2); }
 .music-player .ctrl-btn.play-btn {
 width: 50px;
 height: 50px;
@@ -755,10 +614,7 @@ font-size: 20px;
 background: linear-gradient(135deg, #6366f1, #8b5cf6);
 box-shadow: 0 4px 16px rgba(99,102,241,0.45);
 }
-.music-player .ctrl-btn.play-btn:hover {
-background: linear-gradient(135deg, #818cf8, #a78bfa);
-transform: scale(1.12);
-}
+.music-player .ctrl-btn.play-btn:hover { background: linear-gradient(135deg, #818cf8, #a78bfa); transform: scale(1.12); }
 .music-player .loop-btn {
 font-size: 11px;
 padding: 5px 10px;
@@ -771,11 +627,10 @@ transition: all 0.2s;
 white-space: nowrap;
 min-height: 30px;
 -webkit-tap-highlight-color: transparent;
+outline: none;
 }
-.music-player .loop-btn:hover {
-background: rgba(255,255,255,0.2);
-color: #fff;
-}
+.music-player .loop-btn:hover { background: rgba(255,255,255,0.2); color: #fff; }
+.music-player .loop-btn:focus-visible { box-shadow: 0 0 0 2px rgba(255,255,255,0.4); }
 
 /* 播放列表 */
 .music-player .playlist {
@@ -798,398 +653,185 @@ transition: all 0.2s;
 font-size: 12px;
 background: rgba(255,255,255,0.05);
 border: 1px solid transparent;
-min-height: 34px;
+min-height: 36px;
 -webkit-tap-highlight-color: transparent;
 flex: 1 1 auto;
 min-width: 140px;
 max-width: 240px;
+outline: none;
 }
-.music-player .playlist-item:hover {
-background: rgba(255,255,255,0.1);
-}
-.music-player .playlist-item.active {
-background: rgba(99,102,241,0.3);
-color: #c7d2fe;
-border-color: rgba(99,102,241,0.4);
-}
-.music-player .playlist-item .pl-num {
-width: 18px;
-height: 18px;
-border-radius: 50%;
-background: rgba(255,255,255,0.1);
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 9px;
-flex-shrink: 0;
-}
-.music-player .playlist-item.active .pl-num {
-background: rgba(99,102,241,0.6);
-}
-.music-player .playlist-item .pl-info {
-flex: 1;
-min-width: 0;
-}
-.music-player .playlist-item .pl-title {
-font-weight: 500;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-}
-.music-player .playlist-item .pl-artist {
-font-size: 10px;
-color: rgba(255,255,255,0.5);
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-}
-.music-player .playlist-item .pl-playing-icon {
-display: none;
-color: #8b5cf6;
-font-size: 12px;
-}
-.music-player .playlist-item.active .pl-playing-icon {
-display: inline;
+.music-player .playlist-item:hover { background: rgba(255,255,255,0.1); }
+.music-player .playlist-item:focus-visible { box-shadow: 0 0 0 2px rgba(139,92,246,0.6); background: rgba(255,255,255,0.15); }
+.music-player .playlist-item.active { background: rgba(99,102,241,0.3); color: #c7d2fe; border-color: rgba(99,102,241,0.4); }
+.music-player .playlist-item .pl-num { width: 18px; height: 18px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 9px; flex-shrink: 0; }
+.music-player .playlist-item.active .pl-num { background: rgba(99,102,241,0.6); }
+.music-player .playlist-item .pl-info { flex: 1; min-width: 0; }
+.music-player .playlist-item .pl-title { font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.music-player .playlist-item .pl-artist { font-size: 10px; color: rgba(255,255,255,0.5); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.music-player .playlist-item .pl-playing-icon { display: none; color: #8b5cf6; font-size: 12px; }
+.music-player .playlist-item.active .pl-playing-icon { display: inline; }
+
+/* ============================================
+   ===== 🖥️ 大屏桌面 (≥1200px) =====
+   ============================================ */
+@media (min-width: 1200px) {
+body { padding: 40px 24px 60px; max-width: 1400px; font-size: 16px; }
+.page-header { padding: 48px 32px 44px; margin-bottom: 48px; border-radius: 28px; }
+.page-header h1 { font-size: 44px; margin-bottom: 16px; }
+.page-header .desc { font-size: 17px; }
+.page-header .desc .badge { font-size: 14px; padding: 4px 14px; }
+.stats-bar { gap: 32px; margin-top: 28px; }
+.stat-item { padding: 8px 20px; font-size: 15px; }
+.stat-item .stat-num { font-size: 18px; }
+.search-container { max-width: 600px; margin-top: 32px; }
+.search-box { padding: 16px 24px 16px 52px; font-size: 17px; border-radius: 18px; }
+.search-icon { left: 20px; font-size: 20px; }
+.collapse-card { border-radius: 20px; margin-bottom: 24px; }
+.card-head { padding: 20px 28px; min-height: 64px; border-radius: 20px 20px 0 0; }
+.card-head h2 { font-size: 20px; gap: 12px; }
+.card-head h2 .icon-wrap { width: 38px; height: 38px; font-size: 19px; border-radius: 10px; }
+.card-head .arrow { width: 32px; height: 32px; font-size: 16px; }
+.collapse-card.open .card-body { padding: 18px 28px 24px; }
+.tip-block { font-size: 13px; padding: 8px 16px; margin: 12px 0 8px; border-radius: 10px; }
+.link-row { padding: 14px 16px; gap: 14px; min-height: 52px; border-radius: 14px; }
+.link-text { font-size: 15px; min-width: 240px; }
+.link-text.no-link { font-size: 14px; }
+.tag { font-size: 12px; padding: 4px 12px; }
+.copy-btn { padding: 8px 16px; font-size: 13px; min-height: 40px; min-width: 76px; border-radius: 10px; }
+.toolbar { gap: 14px; margin-bottom: 24px; }
+.tool-btn { padding: 10px 22px; font-size: 14px; min-height: 44px; border-radius: 10px; }
+/* 播放器大屏 */
+.music-player { padding: 24px 28px; margin: 24px 0 20px; border-radius: 20px; }
+.music-player .player-content { gap: 16px; }
+.music-player .player-top { gap: 24px; }
+.music-player .album-cover { width: 80px; height: 80px; font-size: 34px; border-radius: 18px; }
+.music-player .track-info { max-width: 320px; }
+.music-player .track-name { font-size: 19px; }
+.music-player .track-artist { font-size: 14px; margin-top: 4px; }
+.music-player .track-album { font-size: 12px; margin-top: 2px; }
+.music-player .progress-bar { height: 32px; border-radius: 16px; width: calc(100% - 32px); margin: 0 16px; }
+.music-player .progress-thumb { width: 24px; height: 24px; margin-left: -12px; }
+.music-player .time-info { font-size: 13px; margin-top: 8px; }
+.music-player .ctrl-btn { width: 48px; height: 48px; font-size: 18px; }
+.music-player .ctrl-btn.play-btn { width: 60px; height: 60px; font-size: 24px; }
+.music-player .loop-btn { font-size: 13px; padding: 6px 14px; min-height: 34px; border-radius: 24px; }
+.music-player .playlist { margin-top: 18px; padding-top: 14px; gap: 8px; }
+.music-player .playlist-item { padding: 6px 14px; font-size: 13px; min-height: 40px; border-radius: 10px; min-width: 180px; max-width: 300px; }
+.back-to-top { width: 56px; height: 56px; font-size: 24px; bottom: 36px; right: 36px; }
+footer { margin-top: 60px; padding: 28px; font-size: 14px; }
 }
 
 /* ============================================
-   ===== 平板适配 (768px ~ 1024px) =====
+   ===== 📱 平板 (768px ~ 1199px) =====
    ============================================ */
-@media (min-width: 768px) and (max-width: 1024px) {
-body {
-padding: 24px 20px 36px;
-max-width: 900px;
-}
-.page-header {
-padding: 36px 28px 30px;
-margin-bottom: 32px;
-}
-.page-header h1 {
-font-size: 32px;
-}
-.search-container {
-max-width: 480px;
-margin-top: 20px;
-}
-.collapse-card {
-margin-bottom: 16px;
-border-radius: var(--radius-md);
-}
-.card-head {
-padding: 14px 20px;
-min-height: 52px;
-}
-.collapse-card.open .card-body {
-padding: 12px 20px 16px;
-}
-.link-row {
-padding: 11px 12px;
-gap: 10px;
-}
-/* 播放器平板 */
-.music-player {
-padding: 18px 20px;
-margin: 16px 0 14px;
-border-radius: var(--radius-md);
-}
-.music-player .player-content {
-gap: 12px;
-}
-.music-player .player-top {
+@media (min-width: 768px) and (max-width: 1199px) {
+body { padding: 24px 20px 36px; max-width: 900px; }
+.page-header { padding: 36px 28px 30px; margin-bottom: 32px; }
+.page-header h1 { font-size: 32px; }
+.search-container { max-width: 480px; margin-top: 20px; }
+.collapse-card { margin-bottom: 16px; border-radius: var(--radius-md); }
+.card-head { padding: 14px 20px; min-height: 52px; }
+.collapse-card.open .card-body { padding: 12px 20px 16px; }
+.link-row { padding: 11px 12px; gap: 10px; }
+/* 平板双列布局 */
+.main-wrapper {
+display: grid;
+grid-template-columns: 1fr 1fr;
 gap: 16px;
 }
-.music-player .album-cover {
-width: 56px;
-height: 56px;
-font-size: 24px;
-border-radius: 12px;
-}
-.music-player .track-info {
-max-width: 200px;
-}
-.music-player .track-name {
-font-size: 15px;
-}
-.music-player .progress-bar {
-height: 26px;
-border-radius: 13px;
-width: calc(100% - 24px);
-margin: 0 12px;
-}
-.music-player .progress-fill {
-border-radius: 13px;
-}
-.music-player .progress-thumb {
-width: 26px;
-height: 26px;
-border-width: 3px;
-}
-.music-player .ctrl-btn {
-width: 38px;
-height: 38px;
-font-size: 14px;
-}
-.music-player .ctrl-btn.play-btn {
-width: 46px;
-height: 46px;
-font-size: 18px;
-}
+.collapse-card { margin-bottom: 0; }
+/* 播放器平板 */
+.music-player { padding: 18px 20px; margin: 16px 0 14px; border-radius: var(--radius-md); }
+.music-player .player-content { gap: 12px; }
+.music-player .player-top { gap: 16px; }
+.music-player .album-cover { width: 56px; height: 56px; font-size: 24px; border-radius: 12px; }
+.music-player .track-info { max-width: 200px; }
+.music-player .track-name { font-size: 15px; }
+.music-player .progress-bar { height: 26px; border-radius: 13px; width: calc(100% - 24px); margin: 0 12px; }
+.music-player .progress-thumb { width: 22px; height: 22px; margin-left: -11px; }
+.music-player .ctrl-btn { width: 38px; height: 38px; font-size: 14px; }
+.music-player .ctrl-btn.play-btn { width: 46px; height: 46px; font-size: 18px; }
 }
 
 /* ============================================
-   ===== 手机适配 (≤576px) =====
+   ===== 📱 手机 (≤767px) =====
    ============================================ */
-@media (max-width: 576px) {
-body {
-padding: 14px 10px 24px;
-max-width: 100%;
-}
-.page-header {
-padding: 24px 14px 20px;
-margin-bottom: 20px;
-border-radius: var(--radius-lg);
-}
-.page-header h1 {
-font-size: 22px;
-letter-spacing: 1px;
-margin-bottom: 8px;
-}
-.page-header .desc .badge {
-font-size: 10px;
-padding: 2px 8px;
-}
-.stats-bar {
-gap: 6px;
-margin-top: 12px;
-}
-.stat-item {
-padding: 3px 8px;
-font-size: 11px;
-}
-.stat-item .stat-num {
-font-size: 12px;
-}
-.search-container {
-margin-top: 14px;
-padding: 0 2px;
-}
-.search-box {
-padding: 11px 14px 11px 40px;
-font-size: 14px;
-border-radius: 10px;
-}
-.search-icon {
-left: 13px;
-font-size: 15px;
-}
-.collapse-card {
-margin-bottom: 10px;
-border-radius: var(--radius-md);
-}
-.card-head {
-padding: 12px 14px;
-min-height: 48px;
-}
-.card-head h2 {
-font-size: 14px;
-gap: 8px;
-}
-.card-head h2 .icon-wrap {
-width: 26px;
-height: 26px;
-font-size: 13px;
-border-radius: 6px;
-}
-.card-head .arrow {
-width: 22px;
-height: 22px;
-font-size: 11px;
-}
-.collapse-card.open .card-body {
-padding: 8px 12px 12px;
-}
-.tip-block {
-font-size: 11px;
-padding: 4px 10px;
-margin: 6px 0 4px;
-}
-.link-row {
-padding: 9px 8px;
-gap: 6px;
-margin: 2px 0;
-border-radius: 8px;
-}
-.link-text {
-min-width: 100px;
-font-size: 12px;
-line-height: 1.4;
-}
-.link-text.no-link {
-font-size: 11px;
-}
-.tag {
-font-size: 9px;
-padding: 2px 6px;
-border-radius: 99px;
-}
-.copy-btn {
-padding: 4px 8px;
-font-size: 10px;
-min-height: 32px;
-min-width: 50px;
-border-radius: 6px;
-}
-.toolbar {
-gap: 6px;
-margin-bottom: 12px;
-justify-content: center;
-}
-.tool-btn {
-padding: 6px 12px;
-font-size: 11px;
-min-height: 34px;
-flex: 1;
-max-width: 120px;
-border-radius: 8px;
-}
-.no-result {
-padding: 30px 16px;
-font-size: 14px;
-}
-.toast {
-font-size: 13px;
-padding: 10px 20px;
-border-radius: 10px;
-}
-.back-to-top {
-bottom: 14px;
-right: 14px;
-width: 40px;
-height: 40px;
-font-size: 16px;
-}
-footer {
-margin-top: 28px;
-padding: 16px 10px;
-font-size: 11px;
-}
+@media (max-width: 767px) {
+body { padding: 14px 10px 100px; max-width: 100%; }
+.page-header { padding: 24px 14px 20px; margin-bottom: 20px; border-radius: var(--radius-lg); }
+.page-header h1 { font-size: 22px; letter-spacing: 1px; margin-bottom: 8px; }
+.page-header .desc .badge { font-size: 10px; padding: 2px 8px; }
+.stats-bar { gap: 6px; margin-top: 12px; }
+.stat-item { padding: 3px 8px; font-size: 11px; }
+.stat-item .stat-num { font-size: 12px; }
+.search-container { margin-top: 14px; padding: 0 2px; }
+.search-box { padding: 11px 14px 11px 40px; font-size: 14px; border-radius: 10px; }
+.search-icon { left: 13px; font-size: 15px; }
+.collapse-card { margin-bottom: 10px; border-radius: var(--radius-md); }
+.card-head { padding: 12px 14px; min-height: 48px; }
+.card-head h2 { font-size: 14px; gap: 8px; }
+.card-head h2 .icon-wrap { width: 26px; height: 26px; font-size: 13px; border-radius: 6px; }
+.card-head .arrow { width: 22px; height: 22px; font-size: 11px; }
+.collapse-card.open .card-body { padding: 8px 12px 12px; }
+.tip-block { font-size: 11px; padding: 4px 10px; margin: 6px 0 4px; }
+.link-row { padding: 9px 8px; gap: 6px; margin: 2px 0; border-radius: 8px; }
+.link-text { min-width: 100px; font-size: 12px; line-height: 1.4; }
+.link-text.no-link { font-size: 11px; }
+.tag { font-size: 9px; padding: 2px 6px; border-radius: 99px; }
+.copy-btn { padding: 4px 8px; font-size: 10px; min-height: 32px; min-width: 50px; border-radius: 6px; }
+.toolbar { gap: 6px; margin-bottom: 12px; justify-content: center; }
+.tool-btn { padding: 6px 12px; font-size: 11px; min-height: 34px; flex: 1; max-width: 120px; border-radius: 8px; }
+.no-result { padding: 30px 16px; font-size: 14px; }
+.toast { font-size: 13px; padding: 10px 20px; border-radius: 10px; }
+.back-to-top { bottom: 80px; right: 14px; width: 40px; height: 40px; font-size: 16px; }
+footer { margin-top: 28px; padding: 16px 10px; font-size: 11px; }
 
-/* ===== 播放器手机端 ===== */
-.music-player {
-padding: 14px 14px;
-margin: 12px 0 10px;
-border-radius: var(--radius-md);
-}
-.music-player .player-content {
-gap: 10px;
-}
-.music-player .player-top {
-gap: 10px;
-}
-.music-player .now-playing {
-gap: 10px;
-}
-.music-player .album-cover {
-width: 48px;
-height: 48px;
-font-size: 20px;
-border-radius: 10px;
-}
-.music-player .track-info {
-max-width: none;
-}
-.music-player .track-name {
-font-size: 14px;
-}
-.music-player .track-artist {
-font-size: 11px;
-}
-.music-player .track-album {
-font-size: 10px;
-}
-/* 进度条全宽 */
-.music-player .player-center {
-width: 100%;
-}
-.music-player .progress-wrap {
-padding: 2px 0;
-}
-.music-player .progress-bar {
-height: 24px;
-border-radius: 12px;
-width: calc(100% - 24px);
-margin: 0 12px;
-}
-.music-player .progress-fill {
-border-radius: 12px;
-}
-.music-player .progress-thumb {
-width: 24px;
-height: 24px;
-border-width: 2px;
-}
-.music-player .time-info {
-font-size: 11px;
-margin-top: 4px;
-}
-/* 控制按钮行 */
-.music-player .controls-row {
-gap: 6px;
-}
-.music-player .ctrl-btn {
-width: 36px;
-height: 36px;
-font-size: 13px;
-}
-.music-player .ctrl-btn.play-btn {
-width: 44px;
-height: 44px;
-font-size: 17px;
-}
-.music-player .loop-btn {
-font-size: 10px;
-padding: 4px 8px;
-min-height: 28px;
-}
-/* 播放列表：手机上两列 */
-.music-player .playlist {
-margin-top: 10px;
-padding-top: 8px;
-gap: 5px;
-}
-.music-player .playlist-item {
-padding: 4px 8px;
-font-size: 11px;
-min-height: 30px;
-min-width: calc(50% - 3px);
-max-width: none;
-flex: 1 1 calc(50% - 3px);
+/* 播放器手机端 */
+.music-player { padding: 14px 14px; margin: 12px 0 10px; border-radius: var(--radius-md); }
+.music-player .player-content { gap: 10px; }
+.music-player .player-top { gap: 10px; }
+.music-player .now-playing { gap: 10px; }
+.music-player .album-cover { width: 48px; height: 48px; font-size: 20px; border-radius: 10px; }
+.music-player .track-info { max-width: none; }
+.music-player .track-name { font-size: 14px; }
+.music-player .track-artist { font-size: 11px; }
+.music-player .track-album { font-size: 10px; }
+.music-player .player-center { width: 100%; }
+.music-player .progress-wrap { padding: 2px 0; }
+.music-player .progress-bar { height: 24px; border-radius: 12px; width: calc(100% - 24px); margin: 0 12px; }
+.music-player .progress-thumb { width: 20px; height: 20px; margin-left: -10px; }
+.music-player .time-info { font-size: 11px; margin-top: 4px; }
+.music-player .controls-row { gap: 6px; }
+.music-player .ctrl-btn { width: 36px; height: 36px; font-size: 13px; }
+.music-player .ctrl-btn.play-btn { width: 44px; height: 44px; font-size: 17px; }
+.music-player .loop-btn { font-size: 10px; padding: 4px 8px; min-height: 28px; }
+.music-player .playlist { margin-top: 10px; padding-top: 8px; gap: 5px; }
+.music-player .playlist-item { padding: 4px 8px; font-size: 11px; min-height: 30px; min-width: calc(50% - 3px); max-width: none; flex: 1 1 calc(50% - 3px); }
+
+/* 底部悬浮工具栏 */
+.toolbar {
+position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+background: var(--bg-card);
+padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+z-index: 200;
+margin: 0;
+border-radius: 16px 16px 0 0;
+justify-content: space-around;
 }
 }
 
 /* ===== 小屏手机 (≤375px) ===== */
 @media (max-width: 375px) {
 .page-header h1 { font-size: 20px; }
-.music-player .album-cover {
-width: 42px;
-height: 42px;
-font-size: 18px;
-}
+.music-player .album-cover { width: 42px; height: 42px; font-size: 18px; }
 .music-player .track-name { font-size: 13px; }
-.music-player .ctrl-btn {
-width: 32px;
-height: 32px;
-font-size: 12px;
-}
-.music-player .ctrl-btn.play-btn {
-width: 40px;
-height: 40px;
-font-size: 15px;
-}
-.music-player .progress-thumb {
-width: 22px;
-height: 22px;
-}
+.music-player .ctrl-btn { width: 32px; height: 32px; font-size: 12px; }
+.music-player .ctrl-btn.play-btn { width: 40px; height: 40px; font-size: 15px; }
+.music-player .progress-thumb { width: 18px; height: 18px; margin-left: -9px; }
 }
 
 /* ===== 横屏手机适配 ===== */
@@ -1202,12 +844,132 @@ body { padding: 10px 16px 20px; }
 .music-player .player-top { gap: 12px; }
 .music-player .album-cover { width: 44px; height: 44px; font-size: 18px; }
 .music-player .progress-bar { height: 22px; }
-.music-player .progress-thumb { width: 20px; height: 20px; }
+.music-player .progress-thumb { width: 18px; height: 18px; margin-left: -9px; }
+.music-player .playlist { display: none; }
 .stats-bar { margin-top: 8px; }
+.toolbar { position: static; box-shadow: none; border-radius: 0; padding: 6px; }
+body { padding-bottom: 20px; }
 }
 
 /* ============================================
-   ===== 暗色模式支持 =====
+   ===== 📺 电视/投影专用适配 =====
+   ============================================ */
+/* 大屏触控设备（如平板横屏） */
+@media (pointer: coarse) and (min-width: 1200px) {
+body { padding: 32px 48px; max-width: 1600px; }
+.page-header h1 { font-size: 40px; }
+}
+
+/* TV 遥控器焦点样式 */
+.collapse-card .card-head:focus-visible,
+.tool-btn:focus-visible,
+.copy-btn:focus-visible,
+.back-to-top:focus-visible,
+.music-player .ctrl-btn:focus-visible,
+.music-player .loop-btn:focus-visible,
+.music-player .playlist-item:focus-visible,
+.music-player .progress-bar:focus-visible {
+outline: 3px solid #fff;
+outline-offset: 2px;
+}
+
+/* 改善TV/触屏上的触摸目标大小 */
+@media (pointer: coarse) {
+.copy-btn { min-height: 44px; min-width: 72px; }
+.tool-btn { min-height: 44px; }
+.music-player .ctrl-btn { width: 48px; height: 48px; }
+.music-player .ctrl-btn.play-btn { width: 56px; height: 56px; }
+.link-row { min-height: 50px; }
+}
+
+/* TV 设备专属增强 */
+.device-tv,
+.device-projector {
+font-size: 18px;
+line-height: 1.8;
+}
+.device-tv .page-header h1,
+.device-projector .page-header h1 {
+font-size: 52px !important;
+letter-spacing: 4px;
+}
+.device-tv .link-row,
+.device-projector .link-row {
+min-height: 64px;
+padding: 16px 20px;
+font-size: 18px;
+}
+/* 遥控器焦点：取消所有 hover，只保留 focus */
+.device-tv *:hover,
+.device-projector *:hover {
+transform: none !important;
+background: inherit !important;
+}
+.device-tv :focus-visible,
+.device-projector :focus-visible {
+outline: none !important;
+box-shadow: 0 0 0 5px #fff, 0 0 0 10px #6366f1, 0 0 40px rgba(99,102,241,0.9) !important;
+border-radius: 14px;
+z-index: 99;
+}
+/* 播放器 TV 模式 */
+.device-tv .music-player,
+.device-projector .music-player {
+padding: 32px 40px;
+border-radius: 28px;
+}
+.device-tv .ctrl-btn,
+.device-projector .ctrl-btn {
+width: 64px;
+height: 64px;
+font-size: 26px;
+}
+.device-tv .ctrl-btn.play-btn,
+.device-projector .ctrl-btn.play-btn {
+width: 80px;
+height: 80px;
+font-size: 32px;
+}
+.device-tv .album-cover,
+.device-projector .album-cover {
+width: 100px;
+height: 100px;
+font-size: 42px;
+}
+.device-tv .playlist-item,
+.device-projector .playlist-item {
+min-height: 48px;
+font-size: 16px;
+}
+.device-tv .progress-bar,
+.device-projector .progress-bar {
+height: 36px;
+border-radius: 18px;
+}
+.device-tv .progress-thumb,
+.device-projector .progress-thumb {
+width: 36px;
+height: 36px;
+margin-left: -18px;
+}
+/* 投影：更高对比度 */
+.device-projector {
+--text-primary: #ffffff;
+--bg-card: #111827;
+--border-color: #374151;
+}
+.device-projector .progress-thumb {
+width: 28px;
+height: 28px;
+}
+/* 电视隐藏鼠标 */
+.device-tv { cursor: none; }
+.device-tv button, .device-tv a { cursor: none; }
+/* 电视禁止自动播放 */
+.device-tv .music-player .playlist { display: block; }
+
+/* ============================================
+   ===== 🌙 暗色模式支持 =====
    ============================================ */
 @media (prefers-color-scheme: dark) {
 :root {
@@ -1222,34 +984,13 @@ body { padding: 10px 16px 20px; }
 --tag-bg: #312e81;
 --tag-text: #a5b4fc;
 }
-body {
-background: linear-gradient(180deg, #0f172a 0%, #1a1f3a 100%);
-}
-.page-header {
-background: linear-gradient(135deg, rgba(30,41,59,0.95), rgba(30,41,59,0.85));
-border-color: rgba(255,255,255,0.08);
-}
-.search-box {
-background: #1e293b;
-color: #e2e8f0;
-border-color: #334155;
-}
-.tool-btn {
-background: #1e293b;
-color: #94a3b8;
-border-color: #334155;
-}
-.copy-btn {
-box-shadow: 0 2px 6px rgba(99,102,241,0.2);
-}
-.tip-block {
-background: #1a2438;
-border-left-color: #6366f1;
-}
-.collapse-card {
-background: #1e293b;
-border-color: #334155;
-}
+body { background: linear-gradient(180deg, #0f172a 0%, #1a1f3a 100%); }
+.page-header { background: linear-gradient(135deg, rgba(30,41,59,0.95), rgba(30,41,59,0.85)); border-color: rgba(255,255,255,0.08); }
+.search-box { background: #1e293b; color: #e2e8f0; border-color: #334155; }
+.tool-btn { background: #1e293b; color: #94a3b8; border-color: #334155; }
+.copy-btn { box-shadow: 0 2px 6px rgba(99,102,241,0.2); }
+.tip-block { background: #1a2438; border-left-color: #6366f1; }
+.collapse-card { background: #1e293b; border-color: #334155; }
 .collapse-card:nth-child(1) .card-head { background: linear-gradient(135deg, #1e1b4b, #312e81); }
 .collapse-card:nth-child(2) .card-head { background: linear-gradient(135deg, #4c1d24, #831843); }
 .collapse-card:nth-child(3) .card-head { background: linear-gradient(135deg, #064e3b, #065f46); }
@@ -1261,9 +1002,22 @@ border-color: #334155;
 .card-head h2 { color: #e2e8f0; }
 .arrow { background: rgba(255,255,255,0.1) !important; color: #94a3b8 !important; }
 }
+
+/* 减少动画偏好 */
+@media (prefers-reduced-motion: reduce) {
+* { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+:root { --border-color: #000; --text-secondary: #000; }
+.collapse-card { border-width: 2px; }
+.copy-btn { border: 2px solid #fff; }
+}
 </style>
 </head>
 <body>
+
 <!-- Toast 通知 -->
 <div class="toast" id="toast">✅ 链接已复制到剪贴板</div>
 
@@ -1292,29 +1046,25 @@ border-color: #334155;
 <!-- 全局音乐播放器 -->
 <div class="music-player" id="musicPlayer">
 <div class="player-content">
-<!-- 上行：封面+信息 和 控制按钮 -->
 <div class="player-top">
-<!-- 左侧：封面+信息 -->
 <div class="now-playing">
-<div class="album-cover" id="mpCover">♪</div>
+<div class="album-cover" id="mpCover" tabindex="0">♪</div>
 <div class="track-info">
 <div class="track-name" id="mpTitle">溢愛</div>
 <div class="track-artist" id="mpArtist">上松範康</div>
 <div class="track-album" id="mpAlbum">喰霊-零- 5 スペシャルCD</div>
 </div>
 </div>
-<!-- 右侧：控制按钮 -->
 <div class="controls-row">
-<button class="ctrl-btn" id="mpPrev" title="上一首">⏮</button>
-<button class="ctrl-btn play-btn" id="mpPlay" title="播放/暂停">▶</button>
-<button class="ctrl-btn" id="mpNext" title="下一首">⏭</button>
-<button class="loop-btn" id="mpLoop" title="循环模式">🔁 列表循环</button>
+<button class="ctrl-btn" id="mpPrev" title="上一首 (Ctrl+←)" tabindex="0">⏮</button>
+<button class="ctrl-btn play-btn" id="mpPlay" title="播放/暂停 (Space)" tabindex="0">▶</button>
+<button class="ctrl-btn" id="mpNext" title="下一首 (Ctrl+→)" tabindex="0">⏭</button>
+<button class="loop-btn" id="mpLoop" title="循环模式" tabindex="0">🔁 列表循环</button>
 </div>
 </div>
-<!-- 下行：进度条 -->
 <div class="player-center">
 <div class="progress-wrap">
-<div class="progress-bar" id="mpBar">
+<div class="progress-bar" id="mpBar" tabindex="0" role="slider" aria-label="播放进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
 <div class="progress-fill" id="mpProgress"></div>
 <div class="progress-thumb" id="mpThumb"></div>
 </div>
@@ -1324,86 +1074,103 @@ border-color: #334155;
 </div>
 </div>
 </div>
-<!-- 播放列表 -->
 <div class="playlist" id="mpPlaylist"></div>
 </div>
 </div>
 
 <!-- 工具栏 -->
 <div class="toolbar">
-<button class="tool-btn" id="expandAll">📂 全部展开</button>
-<button class="tool-btn" id="collapseAll">📁 全部折叠</button>
+<button class="tool-btn" id="expandAll" tabindex="0">📂 全部展开</button>
+<button class="tool-btn" id="collapseAll" tabindex="0">📁 全部折叠</button>
 </div>
 
 <!-- 无搜索结果 -->
 <div class="no-result" id="noResult">😢 没有找到匹配的链接，换个关键词试试～</div>
 
+<!-- 主内容区域（平板双列用） -->
+<div class="main-wrapper" id="mainWrapper">
+
 <!-- 1 TVbox接口 -->
 <div class="collapse-card open">
-<div class="card-head">
+<div class="card-head" tabindex="0" role="button" aria-expanded="true">
 <h2><span class="icon-wrap" style="background:rgba(99,102,241,0.1)">🔗</span> TVBox影视接口</h2>
 <span class="arrow">▼</span>
 </div>
 <div class="card-body">
 <div class="tip-block">📡 多线路</div>
-<div class="link-row">
-<span class="tag tag-type-acc">shturl加速</span>
+<div class="link-row" tabindex="0">
+<span class="tag tag-type-acc">gh-proxy.com加速</span>
 <div class="link-text"><a target="_blank" href="https://gh-proxy.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt">多线路</a></div>
 <button class="copy-btn" data-clip="https://gh-proxy.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt">📋 复制</button>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-acc">gh.xxooo加速</span>
 <div class="link-text"><a target="_blank" href="https://gh.xxooo.cf/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt">多线路</a></div>
 <button class="copy-btn" data-clip="https://gh.xxooo.cf/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dxl/T%26S.txt">📋 复制</button>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
+<span class="tag tag-type-acc">jsdelivr.net加速</span>
+<div class="link-text"><a target="_blank" href="https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dxl/T%26S.txt">多线路</a></div>
+<button class="copy-btn" data-clip="https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dxl/T%26S.txt">📋 复制</button>
+</div>
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">GitLab</span>
 <div class="link-text"><a target="_blank" href="https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dxl/T&S.txt">多线路</a></div>
 <button class="copy-btn" data-clip="https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dxl/T&S.txt">📋 复制</button>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">酷云</span>
 <div class="link-text"><a target="_blank" href="https://fastlink.cokey.xyz/f/RNBYso/T&S.txt">多线路</a></div>
 <button class="copy-btn" data-clip="https://fastlink.cokey.xyz/f/RNBYso/T&S.txt">📋 复制</button>
 </div>
 <div class="tip-block">📡 多仓库</div>
-<div class="link-row">
-<span class="tag tag-type-acc">shturl加速</span>
+<div class="link-row" tabindex="0">
+<span class="tag tag-type-acc">gh-proxy.com加速</span>
 <div class="link-text"><a target="_blank" href="https://gh-proxy.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt">多仓库</a></div>
 <button class="copy-btn" data-clip="https://gh-proxy.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt">📋 复制</button>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-acc">gh.xxooo加速</span>
 <div class="link-text"><a target="_blank" href="https://gh.xxooo.cf/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt">多仓库</a></div>
 <button class="copy-btn" data-clip="https://gh.xxooo.cf/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dck/duo.txt">📋 复制</button>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
+<span class="tag tag-type-acc">jsdelivr.net加速</span>
+<div class="link-text"><a target="_blank" href="https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dck/duo.txt">多仓库</a></div>
+<button class="copy-btn" data-clip="https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dck/duo.txt">📋 复制</button>
+</div>
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">GitLab</span>
 <div class="link-text"><a target="_blank" href="https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dck/duo.txt">多仓库</a></div>
 <button class="copy-btn" data-clip="https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dck/duo.txt">📋 复制</button>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">酷云</span>
 <div class="link-text"><a target="_blank" href="https://fastlink.cokey.xyz/f/EQJQIX/duo.txt">多仓库</a></div>
 <button class="copy-btn" data-clip="https://fastlink.cokey.xyz/f/EQJQIX/duo.txt">📋 复制</button>
 </div>
 <div class="tip-block">📡 单线路</div>
-<div class="link-row">
-<span class="tag tag-type-acc">shturl加速</span>
+<div class="link-row" tabindex="0">
+<span class="tag tag-type-acc">gh-proxy.com加速</span>
 <div class="link-text"><a target="_blank" href="https://gh-proxy.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt">单线路</a></div>
 <button class="copy-btn" data-clip="https://gh-proxy.org/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt">📋 复制</button>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-acc">gh.xxooo加速</span>
 <div class="link-text"><a target="_blank" href="https://gh.xxooo.cf/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt">单线路</a></div>
 <button class="copy-btn" data-clip="https://gh.xxooo.cf/https://raw.githubusercontent.com/jixiejishu/tvboxinformation/main/tvboxtools/jk/dan/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt">📋 复制</button>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
+<span class="tag tag-type-acc">jsdelivr.net加速</span>
+<div class="link-text"><a target="_blank" href="https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dan/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt">单线路</a></div>
+<button class="copy-btn" data-clip="https://cdn.jsdelivr.net/gh/jixiejishu/tvboxinformation@main/tvboxtools/jk/dan/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt">📋 复制</button>
+</div>
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">GitLab</span>
 <div class="link-text"><a target="_blank" href="https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dan/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt">单线路</a></div>
 <button class="copy-btn" data-clip="https://gitlab.com/jixiejishu/tvboxinformation/-/raw/main/tvboxtools/jk/dan/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt">📋 复制</button>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">酷云</span>
 <div class="link-text"><a target="_blank" href="https://fastlink.cokey.xyz/f/OVeRsM/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt">单线路</a></div>
 <button class="copy-btn" data-clip="https://fastlink.cokey.xyz/f/OVeRsM/%E5%8D%95%E7%BA%BF%E8%B7%AF.txt">📋 复制</button>
@@ -1413,101 +1180,128 @@ border-color: #334155;
 
 <!-- 2 软件下载 -->
 <div class="collapse-card">
-<div class="card-head">
+<div class="card-head" tabindex="0" role="button" aria-expanded="false">
 <h2><span class="icon-wrap" style="background:rgba(236,72,153,0.1)">📦</span> 影视软件下载</h2>
 <span class="arrow">▼</span>
 </div>
 <div class="card-body">
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">FongMi</span>
 <div class="link-text"><a target="_blank" href="https://github.com/FongMi/TV">FongMi 影视项目主页</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">FongMi</span>
 <div class="link-text"><a target="_blank" href="https://github.com/FongMi/Release">FongMi 影视项目下载</a></div>
 </div>
 <div class="link-row">
+<span class="tag tag-type-github">版本说明</span>
+<div class="link-text no-link">电视32位首选: armeabi_v7a.apk | 电视64位: leanback-arm64_v8a.apk | 手机64位首选: mobile-arm64_v8a.apk | 手机32位: mobile-armeabi_v7a.apk</div>
+</div>
+<div class="link-row" tabindex="0">
+<span class="tag tag-type-github">FongMi下载</span>
+<div class="link-text"><a target="_blank" href="https://gh-proxy.org/https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/leanback-armeabi_v7a.apk">32位TV版首选</a></div>
+<div class="link-text"><a target="_blank" href="https://gh-proxy.org/https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/leanback-arm64_v8a.apk">64位电视版</a></div>
+<div class="link-text"><a target="_blank" href="https://gh-proxy.org/https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/mobile-arm64_v8a.apk">64位手机版首选</a></div>
+<div class="link-text"><a target="_blank" href="https://gh-proxy.org/https://github.com/FongMi/Release/raw/refs/heads/fongmi/apk/mobile-armeabi_v7a.apk">32位手机版</a></div>
+</div>
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">鱼壳</span>
 <div class="link-text"><a target="_blank" href="https://github.com/fish2018/webhtv">webhtv（鱼壳）</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">默影视</span>
 <div class="link-text"><a target="_blank" href="https://github.com/Silent1566/webhtv">默影视，可与原版共存</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-ios">羊壳‑iOS</span>
 <div class="link-text"><a target="_blank" href="https://github.com/ingriddaleusag-dotcom/PickTV">PeekPro 羊壳</a></div>
 </div>
-<div class="link-row">
-<span class="tag tag-type-github">TVBox</span>
+<div class="link-row" tabindex="0">
+<span class="tag tag-type-github">TVBox‑T版</span>
 <div class="link-text"><a target="_blank" href="https://github.com/takagen99/Box">TVBox‑T版 深色黑版</a></div>
 </div>
-<div class="link-row">
-<span class="tag tag-type-github">TVBox</span>
+<div class="link-row" tabindex="0">
+<span class="tag tag-type-github">TVBox‑Q版</span>
 <div class="link-text"><a target="_blank" href="https://github.com/q215613905/TVBoxOS">TVBox‑Q版 浅色白版</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
+<span class="tag tag-type-github">官方合作</span>
+<div class="link-text"><a target="_blank" href="https://github.com/o0HalfLife0o/TVBoxOSC">TVBox 官方合作第三方下载</a></div>
+</div>
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">FreeBox</span>
 <div class="link-text"><a target="_blank" href="https://github.com/kknifer7/FreeBox">FreeBox PC端</a></div>
+</div>
+<div class="link-row" tabindex="0">
+<span class="tag tag-type-github">网盘</span>
+<div class="link-text"><a target="_blank" href="https://share.feijipan.com/s/AnEEQTwX">小飞机云盘</a></div>
+<div class="link-text"><a target="_blank" href="https://links.8uid.com/s/5c6459b28f73e65dafa5d0c9582e40a4">个人笔记网盘</a></div>
+<div class="link-text"><a target="_blank" href="https://www.go127.com/s/BdRH7">127网盘</a></div>
+<div class="link-text"><a target="_blank" href="https://526900.xyz/">裤佬网盘</a></div>
+</div>
+<div class="link-row" tabindex="0">
+<span class="tag tag-type-github">UZ</span>
+<div class="link-text"><a target="_blank" href="https://github.com/YYDS678/uzVideo">UZ项目 tg群组内发布新软件</a></div>
+<div class="link-text"><a target="_blank" href="t.me/uzvideoplay">UZ频道/群组</a></div>
 </div>
 </div>
 </div>
 
 <!-- 3 开源点播项目 -->
 <div class="collapse-card">
-<div class="card-head">
+<div class="card-head" tabindex="0" role="button" aria-expanded="false">
 <h2><span class="icon-wrap" style="background:rgba(16,185,129,0.1)">📡</span> 开源点播项目</h2>
 <span class="arrow">▼</span>
 </div>
 <div class="card-body">
 <div class="tip-block">⭐ 高天流云新项目</div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">GitHub</span>
 <div class="link-text"><a target="_blank" href="https://github.com/qist/tvbox">高天流云新项目</a></div>
-<button class="copy-btn" data-clip="https://gh-proxy.org/https://raw.githubusercontent.com/qist/tvbox/refs/heads/master/jsm.json">📋 复制接口</button>
+<button class="copy-btn" data-clip="https://raw.githubusercontent.com/qist/tvbox/refs/heads/master/jsm.json">📋 复制接口</button>
 </div>
 <div class="tip-block">⭐ 南风</div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">GitHub</span>
-<div class="link-text"><a target="_blank" href="https://raw.githubusercontent.com/yoursmile66/TVBox/refs/heads/main/XC.json">南风</a></div>
-<button class="copy-btn" data-clip="https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/refs/heads/main/XC.json">📋 复制接口</button>
+<div class="link-text"><a target="_blank" href="https://github.com/yoursmile66/TVBox">南风</a></div>
+<button class="copy-btn" data-clip="https://raw.githubusercontent.com/yoursmile66/TVBox/refs/heads/main/XC.json">📋 复制接口</button>
 </div>
 <div class="tip-block">⭐ 香雅情</div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">GitHub</span>
 <div class="link-text"><a target="_blank" href="https://github.com/xyq254245/xyqonlinerule">香雅情</a></div>
-<button class="copy-btn" data-clip="https://gh-proxy.org/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json">📋 复制接口</button>
+<button class="copy-btn" data-clip="https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json">📋 复制接口</button>
 </div>
 <div class="tip-block">⭐ one多多在线</div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">GitHub</span>
 <div class="link-text"><a target="_blank" href="https://github.com/leevi0709/one">one多多在线</a></div>
-<button class="copy-btn" data-clip="https://gh-proxy.org/https://raw.githubusercontent.com/leevi0709/one/refs/heads/main/config.bin">📋 复制接口</button>
+<button class="copy-btn" data-clip="https://raw.githubusercontent.com/leevi0709/one/refs/heads/main/config.bin">📋 复制接口</button>
 </div>
 <div class="tip-block">⭐ 裤佬项目</div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">GitHub</span>
 <div class="link-text"><a target="_blank" href="https://github.com/jsnzkpg/jsnzkpg">裤佬 GitHub 项目</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">网页</span>
 <div class="link-text"><a target="_blank" href="https://jsnzkpg.com/">裤佬导航网页</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-acc">订阅</span>
 <div class="link-text"><a target="_blank" href="https://gh-proxy.org/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg">裤佬订阅地址</a></div>
 <button class="copy-btn" data-clip="https://gh-proxy.org/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg">📋 复制</button>
 </div>
 <div class="tip-block">⭐ maflya项目</div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">GitHub</span>
 <div class="link-text"><a target="_blank" href="https://github.com/mhmdxahmd/mafly">maflya GitHub 项目（参考裤佬）</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">网页</span>
 <div class="link-text"><a target="_blank" href="https://www.maflya.com">maflya 导航网页</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-acc">订阅</span>
 <div class="link-text"><a target="_blank" href="https://gh-proxy.org/https://raw.githubusercontent.com/mhmdxahmd/mafly/refs/heads/main/MAfly1/mafly2">maflya 订阅地址</a></div>
 <button class="copy-btn" data-clip="https://gh-proxy.org/https://raw.githubusercontent.com/mhmdxahmd/mafly/refs/heads/main/MAfly1/mafly2">📋 复制</button>
@@ -1517,64 +1311,64 @@ border-color: #334155;
 
 <!-- 4 资料网站 -->
 <div class="collapse-card">
-<div class="card-head">
+<div class="card-head" tabindex="0" role="button" aria-expanded="false">
 <h2><span class="icon-wrap" style="background:rgba(245,158,11,0.1)">📚</span> 资料网站</h2>
 <span class="arrow">▼</span>
 </div>
 <div class="card-body">
 <div class="tip-block">📦 影用仓库</div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">仓库</span>
-<div class="link-text"><a target="_blank" href="https://wmdz.top/  ">影用仓库</a></div>
+<div class="link-text"><a target="_blank" href="https://wmdz.top/">影用仓库</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">备用1</span>
-<div class="link-text"><a target="_blank" href="https://apkck.top/tv.html">影用仓库备用网站 1</a></div>
+<div class="link-text"><a target="_blank" href="https://apkck.top/tv.html">影用仓库备用1</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">备用2</span>
-<div class="link-text"><a target="_blank" href="https://zouming.com/  ">影用仓库备用网站 2</a></div>
+<div class="link-text"><a target="_blank" href="https://zouming.com/">影用仓库备用2</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">备用3</span>
-<div class="link-text"><a target="_blank" href="https://jkss.com/">影用仓库备用网站 3</a></div>
+<div class="link-text"><a target="_blank" href="https://jkss.com/">影用仓库备用3</a></div>
 </div>
 <div class="tip-block">🔧 接口资料网站</div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">资源</span>
 <div class="link-text"><a target="_blank" href="http://a.qiqiv.cn/zy.php">奇奇资源站</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">IPTV索引</span>
 <div class="link-text"><a target="_blank" href="https://www.iptvindex.com/">iptvindex</a></div>
 </div>
 <div class="tip-block">💿 软件类网站</div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">应用库</span>
 <div class="link-text"><a target="_blank" href="https://www.lsapk.com">蓝鲨应用库</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">下载站</span>
 <div class="link-text"><a target="_blank" href="https://www.7xiazai.com">小兵下载站</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">盒子</span>
 <div class="link-text"><a target="_blank" href="https://juwanhezi.com/">聚玩盒子</a></div>
 </div>
 <div class="tip-block">⭐ 常用导航</div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">饭太硬</span>
 <div class="link-text"><a target="_blank" href="http://www.xn--oeq30g0sbd.cc">饭太硬</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">王二小</span>
 <div class="link-text"><a target="_blank" href="https://www.xn--k6qx62bm4a1q4a.top/">王二小放牛娃</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">摸鱼儿</span>
 <div class="link-text"><a target="_blank" href="https://xn--k5q797o.cc/">摸鱼儿</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">菜妮丝</span>
 <div class="link-text"><a target="_blank" href="https://tv.xn--k5q08mu5c.top">菜妮丝</a></div>
 </div>
@@ -1583,32 +1377,32 @@ border-color: #334155;
 
 <!-- 5 ZB项目 -->
 <div class="collapse-card">
-<div class="card-head">
-<h2><span class="icon-wrap" style="background:rgba(14,165,233,0.1)">📺</span> ZB 直播项目</h2>
+<div class="card-head" tabindex="0" role="button" aria-expanded="false">
+<h2><span class="icon-wrap" style="background:rgba(14,165,233,0.1)">📺</span> ZB项目</h2>
 <span class="arrow">▼</span>
 </div>
 <div class="card-body">
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">Guovin</span>
 <div class="link-text"><a target="_blank" href="https://github.com/Guovin/iptv-api">Guovin 只提供项目代码</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">Fork</span>
 <div class="link-text"><a target="_blank" href="https://github.com/mytv-android/iptv-api">Guovin Fork 版</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">kakaxi</span>
 <div class="link-text"><a target="_blank" href="https://github.com/kakaxi-1/IPTV">kakaxi‑1/IPTV</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">zbds</span>
 <div class="link-text"><a target="_blank" href="https://github.com/vbskycn/iptv">zbds GitHub 项目</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">zbds</span>
 <div class="link-text"><a target="_blank" href="https://live.zbds.top/">zbds 直播网站</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">migu</span>
 <div class="link-text"><a target="_blank" href="https://github.com/ioptu/migu_video">migu_video</a></div>
 </div>
@@ -1617,28 +1411,28 @@ border-color: #334155;
 
 <!-- 6 音乐工具 -->
 <div class="collapse-card">
-<div class="card-head">
+<div class="card-head" tabindex="0" role="button" aria-expanded="false">
 <h2><span class="icon-wrap" style="background:rgba(168,85,247,0.1)">🎵</span> 音乐工具</h2>
 <span class="arrow">▼</span>
 </div>
 <div class="card-body">
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">官网</span>
 <div class="link-text"><a target="_blank" href="https://lxmusic.toside.cn/">洛雪音乐官网</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">PC</span>
 <div class="link-text"><a target="_blank" href="https://github.com/lyswhut/lx-music-desktop">洛雪音乐电脑版</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">安卓</span>
 <div class="link-text"><a target="_blank" href="https://github.com/lyswhut/lx-music-mobile">洛雪音乐手机版</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">安卓</span>
 <div class="link-text"><a target="_blank" href="https://github.com/kejichangqing/QingMusic">青听音乐</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-github">安卓</span>
 <div class="link-text"><a target="_blank" href="https://github.com/maotoumao/MusicFree">MusicFree</a></div>
 </div>
@@ -1647,22 +1441,22 @@ border-color: #334155;
 
 <!-- 7 iOS相关 -->
 <div class="collapse-card">
-<div class="card-head">
+<div class="card-head" tabindex="0" role="button" aria-expanded="false">
 <h2><span class="icon-wrap" style="background:rgba(34,197,94,0.1)">🍎</span> iOS 相关</h2>
 <span class="arrow">▼</span>
 </div>
 <div class="card-body">
 <div class="tip-block">🎬 Miraplay（魔力云播）专用 md5 接口</div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-acc">接口</span>
 <div class="link-text no-link">https://9280.kstore.vip/cat/index.js.md5</div>
 <button class="copy-btn" data-clip="https://9280.kstore.vip/cat/index.js.md5">📋 复制</button>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">伪上架</span>
 <div class="link-text"><a target="_blank" href="https://juwanhezi.com/">聚玩盒子</a></div>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-web">教程</span>
 <div class="link-text"><a target="_blank" href="https://yinghezhinan.com/ios-app/">硬核指南 iOS</a></div>
 </div>
@@ -1672,82 +1466,97 @@ border-color: #334155;
 
 <!-- 8 加速站点 -->
 <div class="collapse-card">
-<div class="card-head">
+<div class="card-head" tabindex="0" role="button" aria-expanded="false">
 <h2><span class="icon-wrap" style="background:rgba(239,68,68,0.1)">⚡</span> GitHub 加速站点</h2>
 <span class="arrow">▼</span>
 </div>
 <div class="card-body">
-<div class="link-row">
-<span class="tag tag-type-acc">加速1</span>
-<div class="link-text no-link">shturl.cc/JproNDrkLXZ</div>
-<button class="copy-btn" data-clip="shturl.cc/JproNDrkLXZ">📋 复制</button>
+<div class="link-row" tabindex="0">
+<span class="tag tag-type-acc">加速1（常用）</span>
+<div class="link-text"><a target="_blank" href="https://gh-proxy.com">https://gh-proxy.com/</a></div>
+<button class="copy-btn" data-clip="https://gh-proxy.com/">📋 复制</button>
 </div>
-<div class="link-row">
-<span class="tag tag-type-acc">加速2</span>
-<div class="link-text no-link">https://github.catvod.com/</div>
+<div class="link-row" tabindex="0">
+<span class="tag tag-type-acc">加速2（可能失效）</span>
+<div class="link-text"><a target="_blank" href="https://github.catvod.com">https://github.catvod.com/</a></div>
 <button class="copy-btn" data-clip="https://github.catvod.com/">📋 复制</button>
 </div>
-<div class="link-row">
-<span class="tag tag-type-acc">加速3</span>
-<div class="link-text no-link">https://gh.xxooo.cf/</div>
+<div class="link-row" tabindex="0">
+<span class="tag tag-type-acc">加速3（饭太硬）</span>
+<div class="link-text"><a target="_blank" href="https://gh.xxooo.cf">https://gh.xxooo.cf/</a></div>
 <button class="copy-btn" data-clip="https://gh.xxooo.cf/">📋 复制</button>
 </div>
-<div class="link-row">
+<div class="link-row" tabindex="0">
 <span class="tag tag-type-acc">加速4</span>
-<div class="link-text no-link">https://gh.llkk.cc/</div>
-<button class="copy-btn" data-clip="https://gh.llkk.cc/">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">加速5</span>
-<div class="link-text no-link">https://github.ednovas.xyz/</div>
+<div class="link-text"><a target="_blank" href="https://github.ednovas.xyz">https://github.ednovas.xyz/</a></div>
 <button class="copy-btn" data-clip="https://github.ednovas.xyz/">📋 复制</button>
 </div>
-<div class="link-row">
-<span class="tag tag-type-acc">加速6</span>
-<div class="link-text no-link">https://gitdl.cn/</div>
-<button class="copy-btn" data-clip="https://gitdl.cn/">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">加速7</span>
-<div class="link-text no-link">https://cf.ghproxy.cc/</div>
-<button class="copy-btn" data-clip="https://cf.ghproxy.cc/">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">加速8</span>
-<div class="link-text no-link">https://ghproxy.net/</div>
+<div class="link-row" tabindex="0">
+<span class="tag tag-type-acc">加速5</span>
+<div class="link-text"><a target="_blank" href="https://ghproxy.net">https://ghproxy.net/</a></div>
 <button class="copy-btn" data-clip="https://ghproxy.net/">📋 复制</button>
 </div>
-<div class="link-row">
-<span class="tag tag-type-acc">加速9</span>
-<div class="link-text no-link">https://gh.aptv.app/</div>
-<button class="copy-btn" data-clip="https://gh.aptv.app/">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">加速10</span>
-<div class="link-text no-link">https://gitpr.xmcom.us.kg/</div>
-<button class="copy-btn" data-clip="https://gitpr.xmcom.us.kg/">📋 复制</button>
-</div>
-<div class="link-row">
-<span class="tag tag-type-acc">加速11</span>
-<div class="link-text no-link">https://ghproxy.cn/</div>
-<button class="copy-btn" data-clip="https://ghproxy.cn/">📋 复制</button>
+<div class="link-row" tabindex="0">
+<span class="tag tag-type-acc">加速6</span>
+<div class="link-text"><a target="_blank" href="https://cdn.jsdelivr.net">https://cdn.jsdelivr.net</a></div>
+<button class="copy-btn" data-clip="https://cdn.jsdelivr.net">📋 复制</button>
 </div>
 </div>
 </div>
 
+</div><!-- /main-wrapper -->
+
 <!-- 回到顶部按钮 -->
-<button class="back-to-top" id="backToTop">↑</button>
+<button class="back-to-top" id="backToTop" tabindex="0">↑</button>
 
 <footer>
 📺 TVBox 工具导航 &nbsp;|&nbsp; 仅用于个人学习测试，请勿传播盗版资源。
 </footer>
 
 <script>
+// ===== 设备检测（用于CSS精准命中） =====
+(function detectDevice() {
+const ua = navigator.userAgent;
+const width = window.innerWidth;
+const isTV = /TV|Android TV|Fire TV|WebOS|tizen|SmartTV|CrKey/i.test(ua)
+|| (width >= 1200 && !window.matchMedia('(pointer: fine)').matches);
+const isTablet = width >= 768 && width < 1200 && 'ontouchstart' in window;
+const isPhone = width < 768;
+const isProjector = width >= 1920 && window.devicePixelRatio <= 1.2;
+const body = document.body;
+if (isTV) body.classList.add('device-tv');
+if (isTablet) body.classList.add('device-tablet');
+if (isPhone) body.classList.add('device-phone');
+if (isProjector) body.classList.add('device-projector');
+if (!isPhone && !isTablet) body.classList.add('device-desktop');
+})();
+
+// ===== 键盘导航（TV遥控器/方向键） =====
+document.addEventListener('keydown', function(e) {
+if (document.activeElement.tagName === 'INPUT') return;
+const focusable = Array.from(document.querySelectorAll('[tabindex="0"], a[href], button, input'));
+const currentIdx = focusable.indexOf(document.activeElement);
+if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+e.preventDefault();
+if (currentIdx > -1 && currentIdx < focusable.length - 1) focusable[currentIdx + 1].focus();
+else focusable[0]?.focus();
+} else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+e.preventDefault();
+if (currentIdx > 0) focusable[currentIdx - 1].focus();
+else focusable[focusable.length - 1]?.focus();
+}
+if (e.key === 'Enter' && document.activeElement.classList.contains('card-head')) {
+e.preventDefault();
+document.activeElement.click();
+}
+});
+
 // ===== 折叠面板 =====
 document.querySelectorAll('.card-head').forEach(head => {
 head.addEventListener('click', () => {
 const card = head.parentElement;
 card.classList.toggle('open');
+head.setAttribute('aria-expanded', card.classList.contains('open'));
 });
 });
 
@@ -1755,11 +1564,15 @@ card.classList.toggle('open');
 document.getElementById('expandAll').addEventListener('click', () => {
 document.querySelectorAll('.collapse-card').forEach(card => {
 card.classList.add('open');
+const head = card.querySelector('.card-head');
+if (head) head.setAttribute('aria-expanded', 'true');
 });
 });
 document.getElementById('collapseAll').addEventListener('click', () => {
 document.querySelectorAll('.collapse-card').forEach(card => {
 card.classList.remove('open');
+const head = card.querySelector('.card-head');
+if (head) head.setAttribute('aria-expanded', 'false');
 });
 });
 
@@ -1770,36 +1583,31 @@ function showToast(msg) {
 toast.textContent = msg;
 toast.classList.add('show');
 clearTimeout(toastTimer);
-toastTimer = setTimeout(() => {
-toast.classList.remove('show');
-}, 2000);
+toastTimer = setTimeout(() => toast.classList.remove('show'), 2000);
 }
 document.querySelectorAll('.copy-btn').forEach(btn => {
-btn.addEventListener('click', async function (e) {
+btn.addEventListener('click', async function(e) {
 e.stopPropagation();
 const text = this.dataset.clip;
 try {
+if (navigator.clipboard && navigator.clipboard.writeText) {
 await navigator.clipboard.writeText(text);
+} else { throw new Error('Clipboard API not available'); }
 showToast('✅ 链接已复制到剪贴板');
 this.textContent = '✅ 已复制';
 this.classList.add('success');
-setTimeout(() => {
-this.textContent = '📋 复制';
-this.classList.remove('success');
-}, 1500);
+setTimeout(() => { this.textContent = '📋 复制'; this.classList.remove('success'); }, 1500);
 } catch (err) {
 const ta = document.createElement('textarea');
 ta.value = text;
-ta.style.position = 'fixed';
-ta.style.left = '-9999px';
-document.body.appendChild(ta);
-ta.select();
+ta.style.position = 'fixed'; ta.style.left = '-9999px'; ta.style.opacity = '0';
+document.body.appendChild(ta); ta.select();
 try {
 document.execCommand('copy');
 showToast('✅ 链接已复制到剪贴板');
-} catch (e2) {
-showToast('❌ 复制失败，请手动复制');
-}
+this.textContent = '✅ 已复制'; this.classList.add('success');
+setTimeout(() => { this.textContent = '📋 复制'; this.classList.remove('success'); }, 1500);
+} catch(e2) { showToast('❌ 复制失败，请手动复制'); }
 document.body.removeChild(ta);
 }
 });
@@ -1808,7 +1616,7 @@ document.body.removeChild(ta);
 // ===== 搜索功能 =====
 const searchInput = document.getElementById('searchInput');
 const noResult = document.getElementById('noResult');
-searchInput.addEventListener('input', function () {
+searchInput.addEventListener('input', function() {
 const keyword = this.value.trim().toLowerCase();
 let totalVisible = 0;
 document.querySelectorAll('.collapse-card').forEach(card => {
@@ -1816,173 +1624,83 @@ let cardHasMatch = false;
 const linkRows = card.querySelectorAll('.link-row');
 linkRows.forEach(row => {
 const text = row.textContent.toLowerCase();
-if (keyword === '' || text.includes(keyword)) {
-row.style.display = '';
-cardHasMatch = true;
-totalVisible++;
-} else {
-row.style.display = 'none';
-}
+if (keyword === '' || text.includes(keyword)) { row.style.display = ''; cardHasMatch = true; totalVisible++; }
+else { row.style.display = 'none'; }
 });
 const tips = card.querySelectorAll('.tip-block');
-tips.forEach(tip => {
-const text = tip.textContent.toLowerCase();
-if (keyword !== '' && text.includes(keyword)) {
-cardHasMatch = true;
-}
-});
+tips.forEach(tip => { if (keyword !== '' && tip.textContent.toLowerCase().includes(keyword)) cardHasMatch = true; });
 if (keyword === '' || cardHasMatch) {
 card.style.display = '';
-if (keyword !== '') {
-card.classList.add('open');
-}
-} else {
-card.style.display = 'none';
-}
+if (keyword !== '') { card.classList.add('open'); const head = card.querySelector('.card-head'); if (head) head.setAttribute('aria-expanded', 'true'); }
+} else { card.style.display = 'none'; }
 });
-if (keyword !== '' && totalVisible === 0) {
-noResult.style.display = 'block';
-} else {
-noResult.style.display = 'none';
-}
+noResult.style.display = (keyword !== '' && totalVisible === 0) ? 'block' : 'none';
 if (keyword === '') {
-document.querySelectorAll('.link-row').forEach(row => {
-row.style.display = '';
-});
-document.querySelectorAll('.collapse-card').forEach(card => {
-card.style.display = '';
-});
+document.querySelectorAll('.link-row').forEach(row => row.style.display = '');
+document.querySelectorAll('.collapse-card').forEach(card => card.style.display = '');
 }
 });
 
 // ===== 回到顶部 =====
 const backToTop = document.getElementById('backToTop');
 window.addEventListener('scroll', () => {
-if (window.scrollY > 300) {
-backToTop.classList.add('show');
-} else {
-backToTop.classList.remove('show');
-}
+backToTop.classList.toggle('show', window.scrollY > 300);
 });
-backToTop.addEventListener('click', () => {
-window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
 // ===== 统计链接数量 =====
-const linkCount = document.querySelectorAll('.link-row').length;
-document.getElementById('stat-links').textContent = linkCount;
+document.getElementById('stat-links').textContent = document.querySelectorAll('.link-row').length;
 
-// ===== 音乐播放器（完整修复版） =====
-(function () {
+// ===== 音乐播放器 =====
+(function() {
 const playlist = [
-{
-src: "https://mpimg.cn/view.php/928aca64f3429dc864c30073775b7127.flac",
-title: "溢愛",
-artist: "上松範康",
-album: "喰霊-零- 5 スペシャルCD"
-},
-{
-src: "https://mpimg.cn/view.php/bde3e509ea01a37b2d1c0a19c914e947.flac",
-title: "雨幕",
-artist: "灵空GTech",
-album: "雨幕"
-},
-{
-src: "https://mpimg.cn/view.php/0445d9c69565842a0e219a5d7d69c94c.flac",
-title: "River Flows In You",
-artist: "Martin Ermen",
-album: "Kuschelklassik Piano Dreams, Vol. 2"
-}
+{ src: "https://mpimg.cn/view.php/928aca64f3429dc864c30073775b7127.flac", title: "溢愛", artist: "上松範康", album: "喰霊-零- 5 スペシャルCD" },
+{ src: "https://mpimg.cn/view.php/bde3e509ea01a37b2d1c0a19c914e947.flac", title: "雨幕", artist: "灵空GTech", album: "雨幕" },
+{ src: "https://mpimg.cn/view.php/0445d9c69565842a0e219a5d7d69c94c.flac", title: "River Flows In You", artist: "Martin Ermen", album: "Kuschelklassik Piano Dreams, Vol. 2" }
 ];
 const audio = new Audio();
-let index = 0;
-let loopMode = 1; // 0=不循环 1=列表循环 2=单曲循环
-let isSeeking = false; // 防止拖拽时timeupdate冲突
-
+let index = 0, loopMode = 1, isSeeking = false, userInteracted = false;
 const player = document.getElementById('musicPlayer');
-const mpTitle = document.getElementById('mpTitle');
-const mpArtist = document.getElementById('mpArtist');
-const mpAlbum = document.getElementById('mpAlbum');
-const mpProgress = document.getElementById('mpProgress');
-const mpBar = document.getElementById('mpBar');
-const mpThumb = document.getElementById('mpThumb');
-const mpCurrent = document.getElementById('mpCurrent');
-const mpTotal = document.getElementById('mpTotal');
-const mpPlay = document.getElementById('mpPlay');
-const mpPrev = document.getElementById('mpPrev');
-const mpNext = document.getElementById('mpNext');
-const mpLoop = document.getElementById('mpLoop');
+const mpTitle = document.getElementById('mpTitle'), mpArtist = document.getElementById('mpArtist'), mpAlbum = document.getElementById('mpAlbum');
+const mpProgress = document.getElementById('mpProgress'), mpBar = document.getElementById('mpBar'), mpThumb = document.getElementById('mpThumb');
+const mpCurrent = document.getElementById('mpCurrent'), mpTotal = document.getElementById('mpTotal');
+const mpPlay = document.getElementById('mpPlay'), mpPrev = document.getElementById('mpPrev'), mpNext = document.getElementById('mpNext'), mpLoop = document.getElementById('mpLoop');
 const mpPlaylist = document.getElementById('mpPlaylist');
 
-function formatTime(t) {
-if (isNaN(t) || t < 0) return "0:00";
-const m = Math.floor(t / 60);
-const s = Math.floor(t % 60);
-return m + ":" + (s < 10 ? "0" : "") + s;
-}
+function formatTime(t) { if (isNaN(t) || t < 0) return "0:00"; const m = Math.floor(t/60), s = Math.floor(t%60); return m + ":" + (s < 10 ? "0" : "") + s; }
 
 function loadSong(i) {
 const s = playlist[i];
 audio.src = s.src;
-mpTitle.textContent = s.title;
-mpArtist.textContent = s.artist;
-mpAlbum.textContent = s.album;
-mpProgress.style.width = "0px";
-mpThumb.style.left = "0px";
-mpThumb.classList.remove('visible');
-mpCurrent.textContent = "0:00";
-mpTotal.textContent = "0:00";
-updatePlaylistUI();
+mpTitle.textContent = s.title; mpArtist.textContent = s.artist; mpAlbum.textContent = s.album;
+mpProgress.style.width = "0px"; mpThumb.style.left = "0px"; mpThumb.classList.remove('visible');
+mpCurrent.textContent = "0:00"; mpTotal.textContent = "0:00";
+updatePlaylistUI(); mpBar.setAttribute('aria-valuenow', '0');
 }
 
 function togglePlay() {
-if (audio.paused) {
-audio.play().catch(err => console.log('播放失败:', err));
-} else {
-audio.pause();
-}
+if (audio.paused) { audio.play().then(() => userInteracted = true).catch(() => showToast('⚠️ 播放被阻止，请点击播放按钮')); }
+else { audio.pause(); }
 }
 
-function nextSong() {
-index = (index + 1) % playlist.length;
-loadSong(index);
-audio.play().catch(err => console.log('播放失败:', err));
-}
+function nextSong() { index = (index + 1) % playlist.length; loadSong(index); if (userInteracted) audio.play().catch(()=>{}); }
+function prevSong() { index = (index - 1 + playlist.length) % playlist.length; loadSong(index); if (userInteracted) audio.play().catch(()=>{}); }
 
-function prevSong() {
-index = (index - 1 + playlist.length) % playlist.length;
-loadSong(index);
-audio.play().catch(err => console.log('播放失败:', err));
-}
-
-function updatePlaylistUI() {
-mpPlaylist.querySelectorAll('.playlist-item').forEach((item, i) => {
-item.classList.toggle('active', i === index);
-});
-}
+function updatePlaylistUI() { mpPlaylist.querySelectorAll('.playlist-item').forEach((item, i) => item.classList.toggle('active', i === index)); }
 
 // 渲染播放列表
 playlist.forEach((song, i) => {
 const item = document.createElement('div');
 item.className = 'playlist-item' + (i === index ? ' active' : '');
-item.innerHTML = `
-<div class="pl-num">${i + 1}</div>
-<div class="pl-info">
-<div class="pl-title">${song.title}</div>
-<div class="pl-artist">${song.artist} · ${song.album}</div>
-</div>
-<span class="pl-playing-icon">🎵</span>
-`;
-item.addEventListener('click', () => {
-index = i;
-loadSong(index);
-audio.play().catch(err => console.log('播放失败:', err));
-});
+item.tabIndex = 0; item.setAttribute('role', 'button'); item.setAttribute('aria-label', `播放 ${song.title} - ${song.artist}`);
+item.innerHTML = `<div class="pl-num">${i+1}</div><div class="pl-info"><div class="pl-title">${song.title}</div><div class="pl-artist">${song.artist} · ${song.album}</div></div><span class="pl-playing-icon">🎵</span>`;
+item.addEventListener('click', () => { index = i; loadSong(index); userInteracted = true; audio.play().catch(()=>{}); });
+item.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); } });
 mpPlaylist.appendChild(item);
 });
 
 // 事件绑定
-mpPlay.addEventListener('click', togglePlay);
+mpPlay.addEventListener('click', () => { userInteracted = true; togglePlay(); });
 mpNext.addEventListener('click', nextSong);
 mpPrev.addEventListener('click', prevSong);
 mpLoop.addEventListener('click', () => {
@@ -1991,156 +1709,89 @@ const modes = ["🔂 不循环", "🔁 列表循环", "🔄 单曲循环"];
 mpLoop.textContent = modes[loopMode];
 });
 
-audio.addEventListener('play', () => {
-mpPlay.textContent = "⏸";
-player.classList.add('playing');
-mpThumb.classList.add('visible');
+// 键盘快捷键
+document.addEventListener('keydown', (e) => {
+if (document.activeElement.tagName === 'INPUT') return;
+if (e.key === ' ') { e.preventDefault(); userInteracted = true; togglePlay(); }
+else if (e.key === 'ArrowRight' && e.ctrlKey) nextSong();
+else if (e.key === 'ArrowLeft' && e.ctrlKey) prevSong();
 });
 
-audio.addEventListener('pause', () => {
-mpPlay.textContent = "▶";
-player.classList.remove('playing');
-});
-
+audio.addEventListener('play', () => { mpPlay.textContent = "⏸"; player.classList.add('playing'); mpThumb.classList.add('visible'); });
+audio.addEventListener('pause', () => { mpPlay.textContent = "▶"; player.classList.remove('playing'); });
 audio.addEventListener('timeupdate', () => {
-if (isSeeking) return; // 拖拽中不更新
+if (isSeeking) return;
 if (!audio.duration || isNaN(audio.duration)) return;
 const pct = audio.currentTime / audio.duration;
 const fillWidth = pct * mpBar.clientWidth;
 mpProgress.style.width = fillWidth + "px";
-const thumbLeft = Math.min(fillWidth, mpBar.clientWidth - mpThumb.offsetWidth / 2);
-mpThumb.style.left = thumbLeft + "px";
+mpThumb.style.left = Math.min(fillWidth, mpBar.clientWidth - mpThumb.offsetWidth/2) + "px";
 mpCurrent.textContent = formatTime(audio.currentTime);
+mpBar.setAttribute('aria-valuenow', Math.round(pct * 100));
 });
-
 audio.addEventListener('loadedmetadata', () => {
-if (!isNaN(audio.duration)) {
-mpTotal.textContent = formatTime(audio.duration);
-}
+if (!isNaN(audio.duration)) { mpTotal.textContent = formatTime(audio.duration); mpBar.setAttribute('aria-valuemax', Math.round(audio.duration)); }
 });
-
 audio.addEventListener('ended', () => {
-if (loopMode === 2) {
-audio.currentTime = 0;
-audio.play().catch(err => console.log('播放失败:', err));
-} else if (loopMode === 1) {
-nextSong();
-} else {
-if (index < playlist.length - 1) {
-nextSong();
-} else {
-mpPlay.textContent = "▶";
-player.classList.remove('playing');
-}
-}
+if (loopMode === 2) { audio.currentTime = 0; audio.play().catch(()=>{}); }
+else if (loopMode === 1) { nextSong(); }
+else { if (index < playlist.length - 1) nextSong(); else { mpPlay.textContent = "▶"; player.classList.remove('playing'); } }
 });
 
-// ===== 进度条拖拽（完整修复） =====
+// ===== 进度条拖拽 =====
 let isDragging = false;
-
 function getPercentFromEvent(e) {
 const rect = mpBar.getBoundingClientRect();
-let clientX;
-if (e.touches && e.touches.length > 0) {
-clientX = e.touches[0].clientX;
-} else if (e.changedTouches && e.changedTouches.length > 0) {
-clientX = e.changedTouches[0].clientX;
-} else {
-clientX = e.clientX;
+let cx = e.clientX;
+if (e.touches && e.touches.length > 0) cx = e.touches[0].clientX;
+else if (e.changedTouches && e.changedTouches.length > 0) cx = e.changedTouches[0].clientX;
+return Math.max(0, Math.min(1, (cx - rect.left) / rect.width));
 }
-let pct = (clientX - rect.left) / rect.width;
-return Math.max(0, Math.min(1, pct));
-}
-
 function seekToPercent(pct) {
-if (audio.duration && !isNaN(audio.duration)) {
-audio.currentTime = pct * audio.duration;
-}
+if (audio.duration && !isNaN(audio.duration)) audio.currentTime = pct * audio.duration;
 const fillWidth = pct * mpBar.clientWidth;
 mpProgress.style.width = fillWidth + "px";
-// thumb 定位：在 fill 的右端，不超出 bar
-const thumbLeft = Math.min(fillWidth, mpBar.clientWidth - mpThumb.offsetWidth / 2);
-mpThumb.style.left = thumbLeft + "px";
+mpThumb.style.left = Math.min(fillWidth, mpBar.clientWidth - mpThumb.offsetWidth/2) + "px";
 mpCurrent.textContent = formatTime(pct * (audio.duration || 0));
+mpBar.setAttribute('aria-valuenow', Math.round(pct * 100));
 }
+mpBar.addEventListener('click', (e) => { if (e.target === mpThumb) return; userInteracted = true; seekToPercent(getPercentFromEvent(e)); });
 
-function seekFromEvent(e) {
-seekToPercent(getPercentFromEvent(e));
-}
+mpThumb.addEventListener('mousedown', (e) => { e.preventDefault(); e.stopPropagation(); isDragging = true; isSeeking = true; mpThumb.classList.add('dragging'); mpBar.classList.add('dragging'); });
+document.addEventListener('mousemove', (e) => { if (isDragging) { e.preventDefault(); seekToPercent(getPercentFromEvent(e)); } }, { passive: false });
+document.addEventListener('mouseup', (e) => { if (isDragging) { isDragging = false; isSeeking = false; mpThumb.classList.remove('dragging'); mpBar.classList.remove('dragging'); seekToPercent(getPercentFromEvent(e)); } });
 
-// 点击进度条跳转
-mpBar.addEventListener('click', (e) => {
-if (e.target === mpThumb) return;
-seekFromEvent(e);
+mpThumb.addEventListener('touchstart', (e) => { e.preventDefault(); e.stopPropagation(); isDragging = true; isSeeking = true; mpThumb.classList.add('dragging'); mpBar.classList.add('dragging'); }, { passive: false });
+document.addEventListener('touchmove', (e) => { if (isDragging) { e.preventDefault(); seekToPercent(getPercentFromEvent(e)); } }, { passive: false });
+document.addEventListener('touchend', (e) => { if (isDragging) { isDragging = false; isSeeking = false; mpThumb.classList.remove('dragging'); mpBar.classList.remove('dragging'); seekToPercent(getPercentFromEvent(e)); } });
+
+// 键盘控制进度条
+mpBar.addEventListener('keydown', (e) => {
+if (!audio.duration) return;
+const step = e.shiftKey ? 0.1 : 0.05;
+let pct = audio.currentTime / audio.duration;
+if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { e.preventDefault(); pct = Math.min(1, pct + step); seekToPercent(pct); audio.currentTime = pct * audio.duration; }
+else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { e.preventDefault(); pct = Math.max(0, pct - step); seekToPercent(pct); audio.currentTime = pct * audio.duration; }
+else if (e.key === 'Home') { e.preventDefault(); seekToPercent(0); audio.currentTime = 0; }
+else if (e.key === 'End') { e.preventDefault(); seekToPercent(1); audio.currentTime = audio.duration; }
 });
 
-// 鼠标拖拽
-mpThumb.addEventListener('mousedown', (e) => {
-e.preventDefault();
-e.stopPropagation();
-isDragging = true;
-isSeeking = true;
-mpThumb.classList.add('dragging');
-mpBar.classList.add('dragging');
-});
-
-document.addEventListener('mousemove', (e) => {
-if (isDragging) {
-e.preventDefault();
-seekFromEvent(e);
-}
-}, { passive: false });
-
-document.addEventListener('mouseup', (e) => {
-if (isDragging) {
-isDragging = false;
-isSeeking = false;
-mpThumb.classList.remove('dragging');
-mpBar.classList.remove('dragging');
-seekFromEvent(e);
-}
-});
-
-// 触摸拖拽
-mpThumb.addEventListener('touchstart', (e) => {
-e.preventDefault();
-e.stopPropagation();
-isDragging = true;
-isSeeking = true;
-mpThumb.classList.add('dragging');
-mpBar.classList.add('dragging');
-}, { passive: false });
-
-document.addEventListener('touchmove', (e) => {
-if (isDragging) {
-e.preventDefault();
-seekFromEvent(e);
-}
-}, { passive: false });
-
-document.addEventListener('touchend', (e) => {
-if (isDragging) {
-isDragging = false;
-isSeeking = false;
-mpThumb.classList.remove('dragging');
-mpBar.classList.remove('dragging');
-seekFromEvent(e);
-}
-});
-
-// 窗口大小变化时重新定位
 window.addEventListener('resize', () => {
 if (audio.duration && !isNaN(audio.duration) && !isDragging) {
 const pct = audio.currentTime / audio.duration;
 const fillWidth = pct * mpBar.clientWidth;
 mpProgress.style.width = fillWidth + "px";
-const thumbLeft = Math.min(fillWidth, mpBar.clientWidth - mpThumb.offsetWidth / 2);
-mpThumb.style.left = thumbLeft + "px";
+mpThumb.style.left = Math.min(fillWidth, mpBar.clientWidth - mpThumb.offsetWidth/2) + "px";
 }
 });
 
-// 防止双击缩放
-mpBar.addEventListener('dblclick', (e) => { e.preventDefault(); });
+mpBar.addEventListener('dblclick', (e) => e.preventDefault());
+
+// TV 设备：首焦落在播放键 & 禁止自动播放
+if (document.body.classList.contains('device-tv')) {
+audio.preload = 'none';
+// 不自动聚焦，等用户用遥控器操作
+}
 
 // 初始化
 loadSong(0);
