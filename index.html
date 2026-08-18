@@ -296,32 +296,26 @@ transform: translateX(4px);
 .link-row:hover .link-text a { color: var(--accent-blue); }
 
 /* ===== 标签 ===== */
+/* 核心原则：标签文字永远是深色，绝不用白色 */
 .tag {
 font-size: 11px;
-font-weight: 600;
+font-weight: 700;
 padding: 3px 10px;
 border-radius: 99px;
-background: var(--tag-bg);
-color: var(--tag-text);
 flex-shrink: 0;
 white-space: nowrap;
 transition: all 0.2s;
-border: 1px solid transparent;
+border: 1px solid;
 }
-/* hover 时标签反色：深色背景+白色文字 → 改为浅色背景+深色文字，确保可见 */
+/* 浅色模式 - 深色字 + 浅色底 + 同色系边框 */
+.tag-type-github { background: #f0f0f0; color: #24292e; border-color: #b0b0b0; }
+.tag-type-ios     { background: #e8f4fd; color: #004a99; border-color: #7cc0ea; }
+.tag-type-acc     { background: #eef2ff; color: #3730a3; border-color: #a5b4fc; }
+.tag-type-web     { background: #ecfdf5; color: #065f46; border-color: #6ee7b7; }
+.tag-type-warn    { background: #fef3c7; color: #92400e; border-color: #f0b040; }
+/* hover/focus 时：深蓝底 + 白色字（此时是高对比组合，白字可见） */
 .link-row:hover .tag,
-.link-row:focus-visible .tag {
-background: var(--accent-blue);
-color: #ffffff;
-box-shadow: 0 1px 4px rgba(99,102,241,0.35);
-}
-/* 各类型标签 - 浅色模式配色（深色字+浅色底，保证对比度） */
-.tag-type-github { background: #f0f0f0; color: #24292e; border-color: #d0d0d0; }
-.tag-type-ios     { background: #e8f4fd; color: #0056b3; border-color: #b8dff8; }
-.tag-type-acc     { background: #eef2ff; color: #4338ca; border-color: #c7d2fe; }
-.tag-type-web     { background: #ecfdf5; color: #047857; border-color: #a7f3d0; }
-.tag-type-warn    { background: #fef3c7; color: #b45309; border-color: #fde68a; }
-/* hover 时统一反色 */
+.link-row:focus-visible .tag,
 .link-row:hover .tag-type-github,
 .link-row:hover .tag-type-ios,
 .link-row:hover .tag-type-acc,
@@ -332,9 +326,10 @@ box-shadow: 0 1px 4px rgba(99,102,241,0.35);
 .link-row:focus-visible .tag-type-acc,
 .link-row:focus-visible .tag-type-web,
 .link-row:focus-visible .tag-type-warn {
-background: var(--accent-blue);
+background: #3730a3;
 color: #ffffff;
-border-color: var(--accent-blue);
+border-color: #3730a3;
+box-shadow: 0 1px 4px rgba(55,48,163,0.4);
 }
 
 /* ===== 链接文本 ===== */
@@ -984,12 +979,12 @@ margin-left: -18px;
 --bg-card: #111827;
 --border-color: #374151;
 }
-/* 投影模式标签 - 高对比 */
-.device-projector .tag-type-github { background: #1f2937; color: #f3f4f6; border-color: #4b5563; }
-.device-projector .tag-type-ios     { background: #1e3a5f; color: #93c5fd; border-color: #2563eb; }
-.device-projector .tag-type-acc     { background: #1e1b4b; color: #c7d2fe; border-color: #4338ca; }
-.device-projector .tag-type-web     { background: #064e3b; color: #6ee7b7; border-color: #059669; }
-.device-projector .tag-type-warn    { background: #451a03; color: #fcd34d; border-color: #d97706; }
+/* 投影模式标签 - 深色字+深色底，保证远距离可见 */
+.device-projector .tag-type-github { background: #1f2937; color: #e5e7eb; border-color: #6b7280; }
+.device-projector .tag-type-ios     { background: #1e3a5f; color: #7cb3f4; border-color: #3b82f6; }
+.device-projector .tag-type-acc     { background: #1e1b4b; color: #a5b4fc; border-color: #6366f1; }
+.device-projector .tag-type-web     { background: #064e3b; color: #34d399; border-color: #10b981; }
+.device-projector .tag-type-warn    { background: #451a03; color: #fbbf24; border-color: #f59e0b; }
 .device-projector .link-text.no-link { color: #d1d5db; }
 .device-projector .progress-thumb {
 width: 28px;
@@ -1017,13 +1012,13 @@ height: 28px;
 --tag-bg: #312e81;
 --tag-text: #c7d2fe;
 }
-/* 暗色模式下各类型标签配色 - 深色底+浅色字，保证高对比 */
-.tag-type-github { background: #2d333b; color: #e6edf3; border-color: #444c56; }
-.tag-type-ios     { background: #0c2d48; color: #79c0ff; border-color: #1f6feb; }
-.tag-type-acc     { background: #312e81; color: #c7d2fe; border-color: #4f46e5; }
-.tag-type-web     { background: #064e3b; color: #6ee7b7; border-color: #059669; }
-.tag-type-warn    { background: #451a03; color: #fcd34d; border-color: #d97706; }
-/* 暗色模式 hover 时仍是蓝底白字，保持可见 */
+/* 暗色模式 - 标签统一深色字+深色底，绝不用白色 */
+.tag-type-github { background: #2d333b; color: #c9d1d9; border-color: #555c66; }
+.tag-type-ios     { background: #0c2d48; color: #58a6ff; border-color: #1f6feb; }
+.tag-type-acc     { background: #1e1b4b; color: #a5b4fc; border-color: #4338ca; }
+.tag-type-web     { background: #064e3b; color: #34d399; border-color: #059669; }
+.tag-type-warn    { background: #451a03; color: #fbbf24; border-color: #d97706; }
+/* 暗色模式 hover 时深蓝底+白字（高对比，白字可见） */
 .link-row:hover .tag-type-github,
 .link-row:hover .tag-type-ios,
 .link-row:hover .tag-type-acc,
@@ -1034,9 +1029,9 @@ height: 28px;
 .link-row:focus-visible .tag-type-acc,
 .link-row:focus-visible .tag-type-web,
 .link-row:focus-visible .tag-type-warn {
-background: var(--accent-blue);
+background: #3730a3;
 color: #ffffff;
-border-color: var(--accent-blue);
+border-color: #3730a3;
 }
 body { background: linear-gradient(180deg, #0f172a 0%, #1a1f3a 100%); }
 .page-header { background: linear-gradient(135deg, rgba(30,41,59,0.95), rgba(30,41,59,0.85)); border-color: rgba(255,255,255,0.08); }
