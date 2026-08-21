@@ -1,22 +1,13 @@
 # 导航网页
 cloudfire  
-导航网页地址  
-[https://jxjs-github-io.pages.dev/](https://jxjs-github-io.pages.dev/ "常用软件汇总")   
-cloudfire 备用网页  
 [https://jxjs.jxjs888666.top/](https://jxjs.jxjs888666.top  "常用软件汇总")    
-
-
-githubpage    
-导航网页地址    
+  
+备用网址
 [https://tvbox.jxjs888666.top](https://tvbox.jxjs888666.top "常用软件汇总")   
-github被用网页  
-[https://jixiejishu.github.io/jxjs.github.io/](https://jixiejishu.github.io/jxjs.github.io/  "常用软件汇总")    
-
-
+    
 备用导航网页  
 [https://tvboxpage.jxjs888666.top  ](https://tvboxpage.jxjs888666.top   "备用导航网页")   
-备用地址  
-[https://tvboxpage.pages.dev/  ](https://tvboxpage.pages.dev/   "备用导航网页2")    
+
 
 
 
